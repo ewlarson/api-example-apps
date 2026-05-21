@@ -114,6 +114,15 @@
       }
 
       console.error(error);
+
+      if (isApiTokenExhaustion(error)) {
+        const message = "We're out of API tokens. Please wait a minute before continuing.";
+        setStatus("API tokens exhausted", "error");
+        showEmpty(message);
+        els.summaryText.textContent = message;
+        return;
+      }
+
       setStatus("API error", "error");
       showEmpty("The BTAA API did not return results.");
       els.summaryText.textContent = error.message || "Something went wrong.";
@@ -174,10 +183,37 @@
     });
 
     if (!response.ok) {
-      throw new Error(`API returned ${response.status}`);
+      throw await createApiError(response);
     }
 
     return response.json();
+  }
+
+  async function createApiError(response) {
+    const details = await readErrorDetails(response);
+    const message = details ? `API returned ${response.status}: ${details}` : `API returned ${response.status}`;
+    const error = new Error(message);
+    error.name = "ApiError";
+    error.status = response.status;
+    error.details = details;
+    return error;
+  }
+
+  async function readErrorDetails(response) {
+    try {
+      const text = await response.text();
+      return text.trim().slice(0, 240);
+    } catch (_) {
+      return "";
+    }
+  }
+
+  function isApiTokenExhaustion(error) {
+    if (error.status === 429 || error.status === 500) {
+      return true;
+    }
+
+    return /token|rate.?limit|quota|too many requests/i.test(error.details || error.message || "");
   }
 
   function buildSearchUrl(location, page) {
