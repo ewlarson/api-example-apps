@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Search Fight | api-example-apps</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">S</div>
+        <div>
+          <p class="eyebrow">BTAA Geospatial API</p>
+          <h1>Search Fight</h1>
+        </div>
+      </div>
+      <nav class="header-actions" aria-label="App links">
+        <a class="header-link" href="../../">Apps</a>
+        <a class="header-link" href="https://lib-geoportal-prd-web-01.oit.umn.edu/api/docs" target="_blank" rel="noreferrer">
+          API Docs
+        </a>
+      </nav>
+    </header>
+
+    <main class="fight-workspace">
+      <section class="control-band" aria-label="Compare search queries">
+        <form id="fightForm" class="fight-form">
+          <div class="matchup-grid">
+            <div class="field query-field query-a">
+              <label for="queryA">Search one</label>
+              <div class="input-with-icon">
+                <i data-lucide="search" aria-hidden="true"></i>
+                <input id="queryA" name="queryA" type="search" value="water" autocomplete="off" required>
+              </div>
+            </div>
+
+            <div class="versus-badge" aria-hidden="true">vs</div>
+
+            <div class="field query-field query-b">
+              <label for="queryB">Search two</label>
+              <div class="input-with-icon">
+                <i data-lucide="search" aria-hidden="true"></i>
+                <input id="queryB" name="queryB" type="search" value="railroads" autocomplete="off" required>
+              </div>
+            </div>
+
+            <button class="button button-primary" type="submit">
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+              <span>Compare</span>
+            </button>
+          </div>
+
+          <div class="option-row">
+            <div class="preset-row" aria-label="Preset matchups">
+              <button class="preset" type="button" data-a="water" data-b="railroads">Water / Railroads</button>
+              <button class="preset" type="button" data-a="parks" data-b="trails">Parks / Trails</button>
+              <button class="preset" type="button" data-a="aerial" data-b="topographic">Aerial / Topographic</button>
+            </div>
+
+            <div class="right-options">
+              <div class="segmented-control" role="group" aria-label="Timeline grouping">
+                <button class="mode-button" type="button" data-bucket="year">Year</button>
+                <button class="mode-button active" type="button" data-bucket="decade">Decade</button>
+              </div>
+              <label class="toggle">
+                <input id="shareMode" type="checkbox">
+                <span>Share mode</span>
+              </label>
+            </div>
+          </div>
+        </form>
+
+        <div id="apiStatus" class="api-status" aria-live="polite">Standing by</div>
+      </section>
+
+      <section class="summary-grid" aria-label="Match summary">
+        <article class="score-panel accent-a">
+          <p class="section-label">Search one</p>
+          <h2 id="queryALabel">water</h2>
+          <dl>
+            <div>
+              <dt>Matches</dt>
+              <dd id="queryATotal">0</dd>
+            </div>
+            <div>
+              <dt>Years</dt>
+              <dd id="queryAYears">0</dd>
+            </div>
+            <div>
+              <dt>Best period</dt>
+              <dd id="queryABest">-</dd>
+            </div>
+          </dl>
+          <a id="queryALink" class="result-link" href="https://lib-geoportal-prd-web-01.oit.umn.edu/search?q=water" target="_blank" rel="noreferrer">
+            Open results
+            <i data-lucide="external-link" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="winner-panel">
+          <p class="section-label">Winner</p>
+          <h2 id="winnerTitle">Run a fight</h2>
+          <p id="winnerText">Compare two keyword searches across BTAA Geoportal records.</p>
+          <div class="winner-meter" aria-hidden="true">
+            <span id="winnerMeterA"></span>
+            <span id="winnerMeterB"></span>
+          </div>
+        </article>
+
+        <article class="score-panel accent-b">
+          <p class="section-label">Search two</p>
+          <h2 id="queryBLabel">railroads</h2>
+          <dl>
+            <div>
+              <dt>Matches</dt>
+              <dd id="queryBTotal">0</dd>
+            </div>
+            <div>
+              <dt>Years</dt>
+              <dd id="queryBYears">0</dd>
+            </div>
+            <div>
+              <dt>Best period</dt>
+              <dd id="queryBBest">-</dd>
+            </div>
+          </dl>
+          <a id="queryBLink" class="result-link" href="https://lib-geoportal-prd-web-01.oit.umn.edu/search?q=railroads" target="_blank" rel="noreferrer">
+            Open results
+            <i data-lucide="external-link" aria-hidden="true"></i>
+          </a>
+        </article>
+      </section>
+
+      <section class="timeline-panel" aria-label="Timeline comparison">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Popularity over time</p>
+            <h2>Indexed-year counts</h2>
+          </div>
+          <div class="chart-legend" aria-label="Chart legend">
+            <span><b class="swatch swatch-a"></b><span id="legendA">water</span></span>
+            <span><b class="swatch swatch-b"></b><span id="legendB">railroads</span></span>
+          </div>
+        </div>
+        <div class="chart-shell">
+          <canvas id="timelineCanvas" aria-label="Search result counts by year or decade"></canvas>
+          <div id="chartMessage" class="chart-message" hidden></div>
+        </div>
+      </section>
+
+      <section class="details-grid" aria-label="Comparison details">
+        <section class="detail-panel" aria-label="Top periods">
+          <div class="section-heading compact">
+            <div>
+              <p class="section-label">Head-to-head</p>
+              <h2>Top periods</h2>
+            </div>
+          </div>
+          <div id="periodList" class="period-list"></div>
+        </section>
+
+        <section class="detail-panel" aria-label="Sample search results">
+          <div class="section-heading compact">
+            <div>
+              <p class="section-label">Live samples</p>
+              <h2>Top results</h2>
+            </div>
+          </div>
+          <div id="sampleGrid" class="sample-grid"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

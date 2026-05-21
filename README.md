@@ -9,6 +9,7 @@ The root page is an app gallery. Each demo lives in its own folder under `apps/`
 - `apps/nearby-maps/` - searches for map records near a latitude and longitude.
 - `apps/hexagons/` - maps API H3 hexagon aggregates for a viewport.
 - `apps/provider-bubbles/` - maps provider facet counts as campus bubbles and shows resource-class counts.
+- `apps/search-fight/` - compares two keyword searches by total matches and indexed-year facet counts.
 
 ## Links
 
@@ -65,3 +66,14 @@ https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/search/facets/gbl_resourceCl
 ```
 
 with `/search` for the overall Geoportal total, the provider facet endpoint for bubble sizes, and the resource-class facet endpoint for the selected provider breakdown.
+
+## Search Fight API Queries
+
+The Search Fight app calls:
+
+```text
+https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/search
+https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/search/facets/gbl_indexYear_im
+```
+
+with `/search` for each query's total match count and sample records, and the indexed-year facet endpoint for the timeline comparison.
