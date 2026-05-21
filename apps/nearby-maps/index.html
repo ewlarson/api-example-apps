@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Nearby Maps | api-example-apps</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">N</div>
+        <div>
+          <p class="eyebrow">BTAA Geospatial API</p>
+          <h1>Nearby Maps</h1>
+        </div>
+      </div>
+      <nav class="header-actions" aria-label="App links">
+        <a class="header-link" href="../../">Apps</a>
+        <a class="header-link" href="https://lib-geoportal-prd-web-01.oit.umn.edu/api/docs" target="_blank" rel="noreferrer">
+          API Docs
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="control-band" aria-label="Search controls">
+        <form id="searchForm" class="search-form">
+          <div class="field field-query">
+            <label for="query">Search</label>
+            <div class="input-with-icon">
+              <i data-lucide="search" aria-hidden="true"></i>
+              <input id="query" name="query" type="search" value="maps" autocomplete="off">
+            </div>
+          </div>
+
+          <div class="field field-radius">
+            <label for="radius">Radius</label>
+            <select id="radius" name="radius">
+              <option value="10">10 km</option>
+              <option value="25">25 km</option>
+              <option value="50" selected>50 km</option>
+              <option value="100">100 km</option>
+              <option value="250">250 km</option>
+            </select>
+          </div>
+
+          <div class="field field-coord">
+            <label for="lat">Latitude</label>
+            <input id="lat" name="lat" inputmode="decimal" value="44.9778">
+          </div>
+
+          <div class="field field-coord">
+            <label for="lon">Longitude</label>
+            <input id="lon" name="lon" inputmode="decimal" value="-93.2650">
+          </div>
+
+          <label class="toggle">
+            <input id="mapsOnly" name="mapsOnly" type="checkbox" checked>
+            <span>Maps only</span>
+          </label>
+
+          <button id="locateBtn" class="button button-secondary" type="button">
+            <i data-lucide="locate-fixed" aria-hidden="true"></i>
+            <span>Use Location</span>
+          </button>
+
+          <button class="button button-primary" type="submit">
+            <i data-lucide="map-pin" aria-hidden="true"></i>
+            <span>Find Maps</span>
+          </button>
+        </form>
+
+        <div class="preset-row" aria-label="Preset locations">
+          <button type="button" class="preset active" data-lat="44.9778" data-lon="-93.2650" data-label="Minneapolis">Minneapolis</button>
+          <button type="button" class="preset" data-lat="43.0731" data-lon="-89.4012" data-label="Madison">Madison</button>
+          <button type="button" class="preset" data-lat="40.0067" data-lon="-83.0305" data-label="Columbus">Columbus</button>
+          <button type="button" class="preset" data-lat="41.8781" data-lon="-87.6298" data-label="Chicago">Chicago</button>
+        </div>
+      </section>
+
+      <section class="summary-band" aria-live="polite">
+        <div>
+          <p id="locationLabel" class="summary-title">Minneapolis</p>
+          <p id="summaryText" class="summary-copy">Ready.</p>
+        </div>
+        <div id="apiStatus" class="api-status">Standing by</div>
+      </section>
+
+      <section class="results-shell">
+        <div id="emptyState" class="empty-state">
+          <div class="empty-icon" aria-hidden="true">
+            <i data-lucide="map" aria-hidden="true"></i>
+          </div>
+          <p>Loading local maps.</p>
+        </div>
+        <div id="resultsGrid" class="results-grid" aria-label="Local map results"></div>
+      </section>
+    </main>
+
+    <template id="cardTemplate">
+      <article class="map-card">
+        <a class="image-link" target="_blank" rel="noreferrer">
+          <img class="map-thumb" alt="">
+          <span class="distance-badge"></span>
+        </a>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="resource-class"></span>
+            <span class="resource-year"></span>
+          </div>
+          <h2><a class="record-link" target="_blank" rel="noreferrer"></a></h2>
+          <p class="description"></p>
+          <dl class="metadata-grid">
+            <div>
+              <dt>Provider</dt>
+              <dd class="provider"></dd>
+            </div>
+            <div>
+              <dt>Place</dt>
+              <dd class="spatial"></dd>
+            </div>
+          </dl>
+          <div class="card-actions">
+            <a class="button button-card source-link" target="_blank" rel="noreferrer">
+              <i data-lucide="external-link" aria-hidden="true"></i>
+              <span>Source</span>
+            </a>
+            <a class="button button-card detail-link" target="_blank" rel="noreferrer">
+              <i data-lucide="book-open" aria-hidden="true"></i>
+              <span>Record</span>
+            </a>
+          </div>
+        </div>
+      </article>
+    </template>
+  </body>
+</html>

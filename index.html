@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>api-example-apps</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">A</div>
+        <div>
+          <p class="eyebrow">BTAA Geospatial API</p>
+          <h1>api-example-apps</h1>
+        </div>
+      </div>
+      <a class="header-link" href="https://lib-geoportal-prd-web-01.oit.umn.edu/api/docs" target="_blank" rel="noreferrer">
+        API Docs
+      </a>
+    </header>
+
+    <main class="workspace">
+      <section class="intro-band">
+        <div>
+          <p class="section-label">Example apps</p>
+          <h2>Small, focused demos for API exploration.</h2>
+        </div>
+        <p>
+          Each app is a standalone static page that shows one practical BTAA Geospatial API pattern.
+        </p>
+      </section>
+
+      <section class="app-grid" aria-label="Example apps">
+        <a class="app-card" href="apps/nearby-maps/">
+          <span class="app-icon" aria-hidden="true">
+            <i data-lucide="map-pin"></i>
+          </span>
+          <span class="app-kicker">Search + distance</span>
+          <h2>Nearby Maps</h2>
+          <p>Find map records around a latitude and longitude, rank them by client-side distance, and open the source or BTAA record.</p>
+          <span class="app-action">
+            Open app
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </span>
+        </a>
+
+        <article class="app-card app-card-planned">
+          <span class="app-icon" aria-hidden="true">
+            <i data-lucide="tags"></i>
+          </span>
+          <span class="app-kicker">Facet pattern</span>
+          <h2>Subject Picker</h2>
+          <p>Planned demo for letting users start with a topic, then inspect the API filters behind the result set.</p>
+          <span class="planned-label">Planned</span>
+        </article>
+
+        <article class="app-card app-card-planned">
+          <span class="app-icon" aria-hidden="true">
+            <i data-lucide="braces"></i>
+          </span>
+          <span class="app-kicker">Record pattern</span>
+          <h2>Record Inspector</h2>
+          <p>Planned demo for opening one item and comparing API fields with the public record display.</p>
+          <span class="planned-label">Planned</span>
+        </article>
+      </section>
+
+      <section class="repo-band">
+        <div>
+          <p class="section-label">Project shape</p>
+          <h2>One folder per app, one idea per app.</h2>
+        </div>
+        <code>apps/nearby-maps/</code>
+      </section>
+    </main>
+  </body>
+</html>
