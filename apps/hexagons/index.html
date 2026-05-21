@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Hexagons | api-example-apps</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script defer src="https://unpkg.com/h3-js@4.1.0/dist/h3-js.umd.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">H</div>
+        <div>
+          <p class="eyebrow">BTAA Geospatial API</p>
+          <h1>Hexagons</h1>
+        </div>
+      </div>
+      <nav class="header-actions" aria-label="App links">
+        <a class="header-link" href="../../">Apps</a>
+        <a class="header-link" href="https://lib-geoportal-prd-web-01.oit.umn.edu/api/docs" target="_blank" rel="noreferrer">
+          API Docs
+        </a>
+      </nav>
+    </header>
+
+    <main class="hex-workspace">
+      <aside class="info-card" aria-label="Hexagon controls and details">
+        <div class="panel-heading">
+          <div>
+            <p class="section-label">H3 layer</p>
+            <h2>US coverage</h2>
+          </div>
+          <div id="apiStatus" class="api-status">Standing by</div>
+        </div>
+
+        <form id="hexForm" class="control-stack">
+          <div class="field">
+            <label for="query">Search</label>
+            <div class="input-with-icon">
+              <i data-lucide="search" aria-hidden="true"></i>
+              <input id="query" name="query" type="search" placeholder="All records" autocomplete="off">
+            </div>
+          </div>
+
+          <div class="control-grid">
+            <div class="field">
+              <label for="resourceClass">Class</label>
+              <select id="resourceClass" name="resourceClass">
+                <option value="">All</option>
+                <option value="Maps">Maps</option>
+                <option value="Imagery">Imagery</option>
+                <option value="Datasets">Datasets</option>
+                <option value="Websites">Websites</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="resolution">H3 resolution</label>
+              <select id="resolution" name="resolution">
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+            </div>
+          </div>
+
+          <label class="toggle">
+            <input id="autoRefresh" name="autoRefresh" type="checkbox">
+            <span>Auto refresh</span>
+          </label>
+
+          <button class="button button-primary" type="submit">
+            <i data-lucide="refresh-cw" aria-hidden="true"></i>
+            <span>Refresh Hexagons</span>
+          </button>
+        </form>
+
+        <dl class="stats-grid">
+          <div>
+            <dt>Hexes</dt>
+            <dd id="hexCount">0</dd>
+          </div>
+          <div>
+            <dt>Hex hits</dt>
+            <dd id="recordCount">0</dd>
+          </div>
+          <div>
+            <dt>API total</dt>
+            <dd id="globalCount">0</dd>
+          </div>
+          <div>
+            <dt>Resolution</dt>
+            <dd id="resolutionValue">3</dd>
+          </div>
+        </dl>
+
+        <section class="selected-card" aria-label="Selected hexagon">
+          <p class="section-label">Selected hex</p>
+          <h3 id="selectedTitle">None selected</h3>
+          <dl>
+            <div>
+              <dt>Records</dt>
+              <dd id="selectedCount">-</dd>
+            </div>
+            <div>
+              <dt>Share</dt>
+              <dd id="selectedShare">-</dd>
+            </div>
+            <div>
+              <dt>Center</dt>
+              <dd id="selectedCenter">-</dd>
+            </div>
+          </dl>
+        </section>
+
+        <div class="api-chip">
+          <span>Endpoint</span>
+          <code>/api/v1/map/h3</code>
+        </div>
+      </aside>
+
+      <section class="map-shell" aria-label="H3 hexagon map">
+        <div id="map"></div>
+        <div id="mapMessage" class="map-message" hidden></div>
+      </section>
+    </main>
+  </body>
+</html>
