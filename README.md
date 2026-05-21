@@ -30,6 +30,7 @@ Then open `http://localhost:4173`.
 ## GitHub Pages
 
 The published site uses GitHub Pages via GitHub Actions from the root of the `main` branch.
+The deployment workflow lives at `.github/workflows/pages.yml`.
 
 ## Nearby Maps API Query
 
