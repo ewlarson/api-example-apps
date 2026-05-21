@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Provider Bubbles | api-example-apps</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">P</div>
+        <div>
+          <p class="eyebrow">BTAA Geospatial API</p>
+          <h1>Provider Bubbles</h1>
+        </div>
+      </div>
+      <nav class="header-actions" aria-label="App links">
+        <a class="header-link" href="../../">Apps</a>
+        <a class="header-link" href="https://lib-geoportal-prd-web-01.oit.umn.edu/api/docs" target="_blank" rel="noreferrer">
+          API Docs
+        </a>
+      </nav>
+    </header>
+
+    <main class="provider-workspace">
+      <aside class="provider-panel" aria-label="Provider counts and details">
+        <div class="panel-heading">
+          <div>
+            <p class="section-label">Geoportal holdings</p>
+            <h2>Provider counts</h2>
+          </div>
+          <div id="apiStatus" class="api-status">Standing by</div>
+        </div>
+
+        <dl class="stats-grid">
+          <div>
+            <dt>Records</dt>
+            <dd id="totalCount">0</dd>
+          </div>
+          <div>
+            <dt>Mapped</dt>
+            <dd id="mappedCount">0</dd>
+          </div>
+          <div>
+            <dt>Largest</dt>
+            <dd id="largestCount">0</dd>
+          </div>
+          <div>
+            <dt>Unmapped</dt>
+            <dd id="unmappedCount">0</dd>
+          </div>
+        </dl>
+
+        <section class="selected-panel" aria-live="polite" aria-label="Selected provider">
+          <p class="section-label">Selected provider</p>
+          <h3 id="selectedName">All providers</h3>
+          <dl>
+            <div>
+              <dt>Records</dt>
+              <dd id="selectedRecords">0</dd>
+            </div>
+            <div>
+              <dt>Share</dt>
+              <dd id="selectedShare">0%</dd>
+            </div>
+            <div>
+              <dt>Campus</dt>
+              <dd id="selectedCampus">United States</dd>
+            </div>
+          </dl>
+          <a id="selectedLink" class="button button-secondary" href="https://lib-geoportal-prd-web-01.oit.umn.edu/search" target="_blank" rel="noreferrer">
+            <i data-lucide="external-link" aria-hidden="true"></i>
+            <span>Open Search</span>
+          </a>
+        </section>
+
+        <section class="facet-panel" aria-label="Resource class counts">
+          <div class="section-row">
+            <p class="section-label">Resource classes</p>
+            <button id="resetSelection" class="icon-button" type="button" aria-label="Reset provider selection" title="Reset provider selection">
+              <i data-lucide="rotate-ccw" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div id="facetList" class="bar-list"></div>
+        </section>
+
+        <section class="ranking-panel" aria-label="Provider ranking">
+          <p class="section-label">Top providers</p>
+          <div id="providerList" class="provider-list"></div>
+        </section>
+
+        <div class="api-chip">
+          <span>Endpoint</span>
+          <code>/api/v1/search/facets/schema_provider_s</code>
+        </div>
+      </aside>
+
+      <section class="map-shell" aria-label="Provider bubble map">
+        <div id="map"></div>
+        <div id="mapMessage" class="map-message" hidden></div>
+      </section>
+    </main>
+  </body>
+</html>

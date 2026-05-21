@@ -8,6 +8,7 @@ The root page is an app gallery. Each demo lives in its own folder under `apps/`
 
 - `apps/nearby-maps/` - searches for map records near a latitude and longitude.
 - `apps/hexagons/` - maps API H3 hexagon aggregates for a viewport.
+- `apps/provider-bubbles/` - maps provider facet counts as campus bubbles and shows resource-class counts.
 
 ## Links
 
@@ -52,3 +53,15 @@ https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/map/h3
 ```
 
 with `bbox` and `resolution` parameters, plus optional search and resource-class filters.
+
+## Provider Bubbles API Queries
+
+The Provider Bubbles app calls:
+
+```text
+https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/search
+https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/search/facets/schema_provider_s
+https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/search/facets/gbl_resourceClass_sm
+```
+
+with `/search` for the overall Geoportal total, the provider facet endpoint for bubble sizes, and the resource-class facet endpoint for the selected provider breakdown.
