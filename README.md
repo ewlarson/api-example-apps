@@ -10,6 +10,7 @@ The root page is an app gallery. Each demo lives in its own folder under `apps/`
 - `apps/hexagons/` - maps API H3 hexagon aggregates for a viewport.
 - `apps/provider-bubbles/` - maps provider facet counts as campus bubbles and shows resource-class counts.
 - `apps/search-fight/` - compares two keyword searches by total matches and indexed-year facet counts.
+- `apps/btaa-road-trip/` - follows the 18 BTAA campuses from Rutgers to the Pacific coast and loads map records for each stop.
 
 ## Links
 
@@ -77,3 +78,13 @@ https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/search/facets/gbl_indexYear_
 ```
 
 with `/search` for each query's total match count and sample records, and the indexed-year facet endpoint for the timeline comparison.
+
+## BTAA Road Trip API Query
+
+The BTAA Road Trip app calls:
+
+```text
+https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/search
+```
+
+with a `gbl_resourceClass_sm[]=Maps` filter plus provider filters where the selected campus has a matching provider value. For newer BTAA members without a provider value in the API, it falls back to institution-name and nearby campus-map searches.
