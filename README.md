@@ -29,7 +29,7 @@ Then open `http://localhost:4173`.
 
 ## GitHub Pages
 
-The published site uses GitHub Pages from the root of the `main` branch.
+The published site uses GitHub Pages via GitHub Actions from the root of the `main` branch.
 
 ## Nearby Maps API Query
 
