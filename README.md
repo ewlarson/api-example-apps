@@ -8,6 +8,11 @@ The root page is an app gallery. Each demo lives in its own folder under `apps/`
 
 - `apps/nearby-maps/` - searches for map records near a latitude and longitude.
 
+## Links
+
+- GitHub: https://github.com/ewlarson/api-example-apps
+- GitHub Pages: https://ewlarson.github.io/api-example-apps/
+
 ## Run
 
 ```bash
@@ -22,20 +27,9 @@ Then open `http://localhost:4173`.
 2. Keep the app self-contained with `index.html`, `styles.css`, and `app.js`.
 3. Add a card for the app to the root `index.html`.
 
-## Publish to GitHub
+## GitHub Pages
 
-After authenticating with GitHub CLI, this project can be published as `api-example-apps`:
-
-```bash
-gh auth login -h github.com
-git add .
-git commit -m "Rename project to api-example-apps"
-gh repo create ewlarson/api-example-apps --public --source=. --remote=origin --push
-```
-
-Use `--private` instead of `--public` if the repository should start private.
-
-For GitHub Pages, open the repository settings, choose Pages, and publish from the `main` branch root.
+The published site uses GitHub Pages from the root of the `main` branch.
 
 ## Nearby Maps API Query
 
