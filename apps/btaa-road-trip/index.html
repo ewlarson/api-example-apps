@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>BTAA Road Trip | api-example-apps</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">R</div>
+        <div>
+          <p class="eyebrow">BTAA Geospatial API</p>
+          <h1>BTAA Road Trip</h1>
+        </div>
+      </div>
+      <nav class="header-actions" aria-label="App links">
+        <a class="header-link" href="../../">Apps</a>
+        <a class="header-link" href="https://lib-geoportal-prd-web-01.oit.umn.edu/api/docs" target="_blank" rel="noreferrer">
+          API Docs
+        </a>
+      </nav>
+    </header>
+
+    <main class="roadtrip-workspace">
+      <section class="trip-shell" aria-label="BTAA campus route">
+        <aside class="trip-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="section-label">East to west</p>
+              <h2 id="campusName">Rutgers University-New Brunswick</h2>
+            </div>
+            <div id="apiStatus" class="api-status">Standing by</div>
+          </div>
+
+          <dl class="trip-stats">
+            <div>
+              <dt>Stop</dt>
+              <dd id="stopCount">1 / 18</dd>
+            </div>
+            <div>
+              <dt>Leg</dt>
+              <dd id="legMiles">0 mi</dd>
+            </div>
+            <div>
+              <dt>Route</dt>
+              <dd id="routeMiles">0 mi</dd>
+            </div>
+          </dl>
+
+          <section class="campus-detail" aria-live="polite">
+            <p id="campusPlace" class="campus-place">New Brunswick, NJ</p>
+            <p id="campusProvider" class="campus-provider">Rutgers University-New Brunswick</p>
+          </section>
+
+          <div class="trip-controls" aria-label="Trip controls">
+            <button id="prevStop" class="button button-secondary" type="button">
+              <i data-lucide="arrow-left" aria-hidden="true"></i>
+              <span>Previous</span>
+            </button>
+            <button id="nextStop" class="button button-primary" type="button">
+              <span>Next Stop</span>
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div id="stopList" class="stop-list" aria-label="Campus stops"></div>
+
+          <div class="api-chip">
+            <span>Endpoint</span>
+            <code>/api/v1/search</code>
+          </div>
+        </aside>
+
+        <section class="map-shell" aria-label="Road trip map">
+          <div id="map"></div>
+          <div class="map-overlay" aria-live="polite">
+            <span id="overlayStop">Rutgers University-New Brunswick</span>
+            <span id="overlayMiles">Atlantic start</span>
+          </div>
+        </section>
+      </section>
+
+      <section class="map-dock" aria-label="Campus map display">
+        <div class="dock-header">
+          <div>
+            <p class="section-label">Campus maps</p>
+            <h2 id="dockTitle">Rutgers University-New Brunswick</h2>
+          </div>
+          <div class="viewer-tools" aria-label="Map image controls">
+            <button id="zoomOut" class="icon-button" type="button" aria-label="Zoom out" title="Zoom out">
+              <i data-lucide="zoom-out" aria-hidden="true"></i>
+            </button>
+            <button id="resetView" class="icon-button" type="button" aria-label="Reset view" title="Reset view">
+              <i data-lucide="scan" aria-hidden="true"></i>
+            </button>
+            <button id="zoomIn" class="icon-button" type="button" aria-label="Zoom in" title="Zoom in">
+              <i data-lucide="zoom-in" aria-hidden="true"></i>
+            </button>
+            <a id="recordLink" class="button button-secondary" href="#" target="_blank" rel="noreferrer">
+              <i data-lucide="book-open" aria-hidden="true"></i>
+              <span>Record</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="dock-body">
+          <div id="viewerStage" class="viewer-stage">
+            <img id="viewerImage" class="viewer-image" alt="">
+            <div id="viewerEmpty" class="viewer-empty">
+              <i data-lucide="map" aria-hidden="true"></i>
+              <p>Loading maps.</p>
+            </div>
+          </div>
+
+          <div class="resource-panel">
+            <div class="resource-summary" aria-live="polite">
+              <h3 id="resourceTitle">Loading maps.</h3>
+              <p id="resourceMeta">Live BTAA Geospatial API search</p>
+            </div>
+            <div id="resourceStrip" class="resource-strip" aria-label="Campus map results"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -11,6 +11,8 @@ The root page is an app gallery. Each demo lives in its own folder under `apps/`
 - `apps/provider-bubbles/` - maps provider facet counts as campus bubbles and shows resource-class counts.
 - `apps/search-fight/` - compares two keyword searches by total matches and indexed-year facet counts.
 - `apps/metadata-scorecard/` - fetches a resource by ID, displays its OGM metadata record, and scores metadata quality from a CSV scoring matrix.
+- `apps/btaa-road-trip/` - follows the 18 BTAA campuses from Rutgers to the Pacific coast and loads map records for each stop.
+
 
 ## Links
 
@@ -88,3 +90,13 @@ https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/resources/{id}
 ```
 
 with the entered resource ID, then loads `apps/metadata-scorecard/scoring-matrix.csv` to score fields in `attributes.ogm`. Present fields earn the matrix `Importance` value, and records missing any field marked `Required?` receive an automatic failing grade.
+
+## BTAA Road Trip API Query
+
+The BTAA Road Trip app calls:
+
+```text
+https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/search
+```
+
+with a `gbl_resourceClass_sm[]=Maps` filter plus provider filters where the selected campus has a matching provider value. For newer BTAA members without a provider value in the API, it falls back to institution-name and nearby campus-map searches.
