@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Metadata Scorecard | api-example-apps</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">S</div>
+        <div>
+          <p class="eyebrow">BTAA Geospatial API</p>
+          <h1>Metadata Scorecard</h1>
+        </div>
+      </div>
+      <nav class="header-actions" aria-label="App links">
+        <a class="header-link" href="../../">Apps</a>
+        <a class="header-link" href="https://lib-geoportal-prd-web-01.oit.umn.edu/api/docs" target="_blank" rel="noreferrer">
+          API Docs
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="control-band" aria-label="Resource controls">
+        <div class="instruction-panel">
+          <div>
+            <p class="section-label">Start scoring</p>
+            <h2>Enter a BTAA resource ID or choose an example.</h2>
+          </div>
+          <p>
+            The scorecard fetches the live metadata record, checks each field in the scoring matrix, and awards weighted points for fields that are present.
+          </p>
+        </div>
+
+        <form id="resourceForm" class="resource-form">
+          <div class="field field-resource">
+            <label for="resourceId">Resource ID</label>
+            <div class="input-with-icon">
+              <i data-lucide="fingerprint" aria-hidden="true"></i>
+              <input id="resourceId" name="resourceId" autocomplete="off" spellcheck="false" value="b1g_EsSvyCYsa0Gc">
+            </div>
+          </div>
+
+          <button class="button button-primary" type="submit">
+            <i data-lucide="gauge" aria-hidden="true"></i>
+            <span>Score</span>
+          </button>
+        </form>
+
+        <div class="preset-row" aria-label="Preset resource IDs">
+          <button type="button" class="preset active" data-resource-id="b1g_EsSvyCYsa0Gc">Dataset</button>
+          <button type="button" class="preset" data-resource-id="VAC3073-M-00682">Map</button>
+          <button type="button" class="preset" data-resource-id="b1g_03d_3506_577287">Imagery</button>
+        </div>
+      </section>
+
+      <section class="summary-band" aria-live="polite">
+        <div>
+          <p id="recordTitle" class="summary-title">Ready</p>
+          <p id="summaryText" class="summary-copy">Enter a resource ID.</p>
+        </div>
+      </section>
+
+      <section class="workspace-shell">
+        <section class="overview-shell">
+          <section class="score-panel" aria-label="Metadata score">
+            <div class="panel-heading">
+              <div>
+                <p class="section-label">Metadata quality</p>
+                <h2 id="scoreHeading">No score yet</h2>
+              </div>
+              <div id="scoreBadge" class="score-badge score-badge-waiting">Loading matrix</div>
+            </div>
+
+            <div class="score-meter" aria-hidden="true">
+              <span id="scoreMeterFill" class="score-meter-fill"></span>
+            </div>
+
+            <dl class="score-stats">
+              <div class="score-stat-large">
+                <dt>Score</dt>
+                <dd id="scorePercent">0%</dd>
+              </div>
+              <div>
+                <dt>Points</dt>
+                <dd><span id="pointsEarned">0</span>/<span id="pointsPossible">0</span></dd>
+              </div>
+              <div>
+                <dt>Fields</dt>
+                <dd><span id="fieldsPresent">0</span>/<span id="fieldsPossible">0</span></dd>
+              </div>
+              <div>
+                <dt>Missing required</dt>
+                <dd id="requiredMissing">0</dd>
+              </div>
+            </dl>
+
+            <section class="group-panel" aria-label="Score by metadata group">
+              <p class="section-label">Group score</p>
+              <div id="groupList" class="group-list"></div>
+            </section>
+          </section>
+
+          <section class="record-panel" aria-label="Metadata record">
+            <div id="emptyState" class="empty-state">
+              <div class="empty-icon" aria-hidden="true">
+                <i data-lucide="braces" aria-hidden="true"></i>
+              </div>
+              <p>Loading metadata.</p>
+            </div>
+
+            <article id="recordCard" class="record-card" hidden>
+              <h2 id="metadataTitle">Untitled resource</h2>
+              <p id="metadataDescription" class="description"></p>
+
+              <dl class="metadata-grid">
+                <div>
+                  <dt>ID</dt>
+                  <dd id="metadataId"></dd>
+                </div>
+                <div>
+                  <dt>Provider</dt>
+                  <dd id="metadataProvider"></dd>
+                </div>
+              </dl>
+
+              <div class="record-actions">
+                <a id="recordLink" class="button button-secondary" target="_blank" rel="noreferrer">
+                  <i data-lucide="book-open" aria-hidden="true"></i>
+                  <span>Record</span>
+                </a>
+                <a id="apiLink" class="button button-secondary" target="_blank" rel="noreferrer">
+                  <i data-lucide="braces" aria-hidden="true"></i>
+                  <span>API JSON</span>
+                </a>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section class="score-detail-shell">
+          <section class="score-fields" aria-label="Field score details">
+            <div class="section-row">
+              <div>
+                <p class="section-label">Field points</p>
+                <h2>Scoring matrix</h2>
+              </div>
+            </div>
+            <div id="scoreList" class="score-list"></div>
+          </section>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

@@ -10,6 +10,7 @@ The root page is an app gallery. Each demo lives in its own folder under `apps/`
 - `apps/hexagons/` - maps API H3 hexagon aggregates for a viewport.
 - `apps/provider-bubbles/` - maps provider facet counts as campus bubbles and shows resource-class counts.
 - `apps/search-fight/` - compares two keyword searches by total matches and indexed-year facet counts.
+- `apps/metadata-scorecard/` - fetches a resource by ID, displays its OGM metadata record, and scores metadata quality from a CSV scoring matrix.
 
 ## Links
 
@@ -77,3 +78,13 @@ https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/search/facets/gbl_indexYear_
 ```
 
 with `/search` for each query's total match count and sample records, and the indexed-year facet endpoint for the timeline comparison.
+
+## Metadata Scorecard API Query
+
+The Metadata Scorecard app calls:
+
+```text
+https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/resources/{id}
+```
+
+with the entered resource ID, then loads `apps/metadata-scorecard/scoring-matrix.csv` to score fields in `attributes.ogm`. Present fields earn the matrix `Importance` value, and records missing any field marked `Required?` receive an automatic failing grade.
