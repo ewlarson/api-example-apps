@@ -1,0 +1,30 @@
+Field Label,Field Name,Group,Required?,Importance,Purpose,Controlled Vocabulary?,Vocabulary List,Field Type,Definition URI
+Title,dct_title_s,Descriptive,TRUE,10,Name of the resource,FALSE,,String,https://opengeometadata.org/ogm-aardvark/#title
+Resource Class,gbl_resourceClass_sm,Categories,TRUE,10,Top-level category,TRUE,https://opengeometadata.org/ogm-aardvark/#resource-class-values,Array of strings,https://opengeometadata.org/ogm-aardvark/#resource-class
+Access Rights,dct_accessRights_s,Permissions,TRUE,10,Whether the resource is openly available or requires authentication,TRUE,Public; Restricted,String,https://opengeometadata.org/ogm-aardvark/#access-rights
+ID,id,Identifiers,TRUE,10,Primary key and resource URL slug,FALSE,,String,https://opengeometadata.org/ogm-aardvark/#id
+Alternative Title,dct_alternative_sm,Descriptive,FALSE,1,Previous or secondary title,FALSE,,Array of strings,https://opengeometadata.org/ogm-aardvark/#alternative-title
+Description,dct_description_sm,Descriptive,FALSE,9,Summary of the resource,FALSE,,Array of strings,https://opengeometadata.org/ogm-aardvark/#description
+Display Note,gbl_displayNote_sm,Descriptive,FALSE,3,User-facing notes such as warnings or usage tips,FALSE,,Array of strings,https://opengeometadata.org/ogm-aardvark/#display-note
+Creator,dct_creator_sm,Credits,FALSE,9,Person or organization that originally authored the resource,FALSE,https://fast.oclc.org/searchfast/,Array of strings,https://opengeometadata.org/ogm-aardvark/#creator
+Publisher,dct_publisher_sm,Credits,FALSE,9,Entity that made the resource available,FALSE,,Array of strings,https://opengeometadata.org/ogm-aardvark/#publisher
+Provider,schema_provider_s,Credits,FALSE,9,Institution hosting the resource in an archival repository,FALSE,,String,https://opengeometadata.org/ogm-aardvark/#provider
+Resource Type,gbl_resourceType_sm,Categories,FALSE,8,Secondary category,TRUE,"Maps: https://opengeometadata.org/ogm-aardvark/#resource-type-values-loc
+Datasets: https://opengeometadata.org/ogm-aardvark/#resource-type-values-ogm
+Websites: from btaa",Array of strings,https://opengeometadata.org/ogm-aardvark/#resource-type
+Subject,dct_subject_sm,Categories,FALSE,6,Controlled vocabulary from the library metadata domain,TRUE,https://fast.oclc.org/searchfast/,Array of strings,https://opengeometadata.org/ogm-aardvark/#subject
+Theme,dcat_theme_sm,Categories,FALSE,6,Controlled vocabulary from the GIS metadata domain,TRUE,https://opengeometadata.org/ogm-aardvark/#theme-values,Array of strings,https://opengeometadata.org/ogm-aardvark/#theme
+Keyword,dcat_keyword_sm,Categories,FALSE,1,Free-text terms to improve search,FALSE,,Array of strings,https://opengeometadata.org/ogm-aardvark/#keyword
+Language,dct_language_sm,Categories,FALSE,6,Language code for the resource,TRUE,https://www.loc.gov/standards/iso639-2/php/code_list.php,Array of strings,https://opengeometadata.org/ogm-aardvark/#language
+Temporal Coverage,dct_temporal_sm,Temporal,FALSE,8,Textual description of the time period depicted,FALSE,,Array of strings,https://opengeometadata.org/ogm-aardvark/#temporal-coverage
+Date Issued,dct_issued_s,Temporal,FALSE,8,Publication date,FALSE,,String,https://opengeometadata.org/ogm-aardvark/#date-issued
+Date Range,gbl_dateRange_drsim,Temporal,FALSE,3,Year range used to power temporal search,FALSE,,Array of date ranges,https://opengeometadata.org/ogm-aardvark/#date-range
+Spatial Coverage,dct_spatial_sm,Spatial,FALSE,9,Searchable and selectable place names,FALSE,,Array of strings,https://opengeometadata.org/ogm-aardvark/#spatial-coverage
+Bounding Box,dcat_bbox,Spatial,FALSE,8,Spatial extent used for search relevance,FALSE,,String,https://opengeometadata.org/ogm-aardvark/#bounding-box
+Geometry,locn_geometry,Spatial,FALSE,9,Spatial extent displayed on the map and used for map search,FALSE,,String,https://opengeometadata.org/ogm-aardvark/#geometry
+File Size,gbl_fileSize_s,Object,FALSE,3,Size of the downloadable file,FALSE,,String,https://opengeometadata.org/ogm-aardvark/#file-size
+Format,dct_format_s,Object,FALSE,8,File format displayed to users,TRUE,,String,https://opengeometadata.org/ogm-aardvark/#format
+Rights,dct_rights_sm,Rights,FALSE,8,"Free-text rights, usage, or copyright information",FALSE,,Array of strings,https://opengeometadata.org/ogm-aardvark/#rights_1
+License,dct_license_sm,Rights,FALSE,8,URI identifying a specific license,FALSE, Recommended sources are [Creative Commons](https://creativecommons.org/) or [Open Data Commons](https://opendatacommons.org/).,Array of strings,https://opengeometadata.org/ogm-aardvark/#license
+Rights Holder,dct_rightsHolder_sm,Rights,FALSE,3,Person or organization that owns or controls rights for this version,FALSE,,Array of strings,https://opengeometadata.org/ogm-aardvark/#rights-holder
+Identifier,dct_identifier_sm,Identifiers,FALSE,6,General-purpose identifier,FALSE,,Array of strings,https://opengeometadata.org/ogm-aardvark/#identifier
