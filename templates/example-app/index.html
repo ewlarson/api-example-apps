@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Example App Template | api-example-apps</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">L</div>
+        <div>
+          <p class="eyebrow">BTAA Geospatial API</p>
+          <h1>Example App Template</h1>
+        </div>
+      </div>
+      <nav class="header-actions" aria-label="App links">
+        <a class="header-link" href="../../">Apps</a>
+        <a class="header-link" href="https://lib-geoportal-prd-web-01.oit.umn.edu/api/docs" target="_blank" rel="noreferrer">
+          API Docs
+        </a>
+      </nav>
+    </header>
+
+    <main class="starter-workspace">
+      <section class="control-band" aria-label="Search controls">
+        <div class="instruction-panel">
+          <div>
+            <p class="section-label">Starter query</p>
+            <h2>Search live BTAA records.</h2>
+          </div>
+          <p>
+            Use this starter as a copyable base for a focused API idea, then reshape the controls and results around your app.
+          </p>
+        </div>
+
+        <form id="searchForm" class="search-form">
+          <div class="field field-query">
+            <label for="query">Search terms</label>
+            <div class="input-with-icon">
+              <i data-lucide="search" aria-hidden="true"></i>
+              <input id="query" name="query" type="search" value="lakes" autocomplete="off" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="resourceClass">Resource class</label>
+            <select id="resourceClass" name="resourceClass">
+              <option value="">Any resource</option>
+              <option value="Maps">Maps</option>
+              <option value="Datasets">Datasets</option>
+              <option value="Imagery">Imagery</option>
+            </select>
+          </div>
+
+          <div class="field field-small">
+            <label for="perPage">Results</label>
+            <select id="perPage" name="perPage">
+              <option value="6">6</option>
+              <option value="9" selected>9</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+
+          <button class="button button-primary" type="submit">
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+            <span>Search</span>
+          </button>
+        </form>
+
+        <div class="preset-row" aria-label="Preset searches">
+          <button class="preset active" type="button" data-query="lakes" data-class="">Lakes</button>
+          <button class="preset" type="button" data-query="railroads" data-class="Maps">Railroad Maps</button>
+          <button class="preset" type="button" data-query="aerial" data-class="Imagery">Aerial Imagery</button>
+        </div>
+      </section>
+
+      <section class="summary-band" aria-live="polite">
+        <div>
+          <p id="summaryTitle" class="summary-title">Ready</p>
+          <p id="summaryText" class="summary-copy">Choose a preset or run a custom search.</p>
+        </div>
+        <a id="endpointLink" class="endpoint-link" href="https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/search?q=lakes&per_page=9" target="_blank" rel="noreferrer">
+          <i data-lucide="braces" aria-hidden="true"></i>
+          <span>API request</span>
+        </a>
+      </section>
+
+      <section class="metric-grid" aria-label="Search summary">
+        <dl class="metric-card">
+          <dt>Total matches</dt>
+          <dd id="totalCount">0</dd>
+        </dl>
+        <dl class="metric-card">
+          <dt>Shown here</dt>
+          <dd id="returnedCount">0</dd>
+        </dl>
+        <dl class="metric-card">
+          <dt>Query time</dt>
+          <dd id="queryTime">-</dd>
+        </dl>
+      </section>
+
+      <section class="results-panel" aria-label="Search results">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Live samples</p>
+            <h2 id="resultsHeading">Results</h2>
+          </div>
+          <div id="apiStatus" class="api-status">Standing by</div>
+        </div>
+
+        <div id="emptyState" class="empty-state">
+          <div class="empty-icon" aria-hidden="true">
+            <i data-lucide="database"></i>
+          </div>
+          <p>Run a search to load API records.</p>
+        </div>
+
+        <div id="resultsList" class="results-list"></div>
+      </section>
+
+      <template id="resultTemplate">
+        <article class="result-card">
+          <div class="result-topline">
+            <span class="resource-class"></span>
+            <span class="provider"></span>
+          </div>
+          <h3></h3>
+          <p class="description"></p>
+          <div class="result-actions">
+            <a class="button button-secondary record-link" target="_blank" rel="noreferrer">
+              <i data-lucide="book-open" aria-hidden="true"></i>
+              <span>Record</span>
+            </a>
+            <a class="button button-secondary api-link" target="_blank" rel="noreferrer">
+              <i data-lucide="braces" aria-hidden="true"></i>
+              <span>API JSON</span>
+            </a>
+          </div>
+        </article>
+      </template>
+    </main>
+  </body>
+</html>

@@ -4,6 +4,11 @@ Small static example apps for people exploring the BTAA Geospatial API.
 
 The root page is an app gallery. Each demo lives in its own folder under `apps/` so the project can grow as a collection of focused examples.
 
+## Start Here
+
+- New contributor guide: `CONTRIBUTING.md`
+- Copyable app starter: `templates/example-app/`
+
 ## Apps
 
 - `apps/nearby-maps/` - searches for map records near a latitude and longitude.
@@ -29,9 +34,11 @@ Then open `http://localhost:4173`.
 
 ## Add an App
 
-1. Create a folder under `apps/`.
-2. Keep the app self-contained with `index.html`, `styles.css`, and `app.js`.
-3. Add a card for the app to the root `index.html`.
+1. Read `CONTRIBUTING.md`.
+2. Copy `templates/example-app/` to `apps/your-app-slug/`.
+3. Keep the app self-contained with `index.html`, `styles.css`, and `app.js`.
+4. Add a card for the app to the root `index.html`.
+5. Add the app and its API query notes to this README.
 
 ## GitHub Pages
 
