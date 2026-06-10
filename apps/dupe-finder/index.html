@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Dupe Finder | api-example-apps</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">D</div>
+        <div>
+          <p class="eyebrow">BTAA Geospatial API</p>
+          <h1>Dupe Finder</h1>
+        </div>
+      </div>
+      <nav class="header-actions" aria-label="App links">
+        <a class="header-link" href="../../">Apps</a>
+        <a class="header-link" href="https://lib-geoportal-prd-web-01.oit.umn.edu/api/docs" target="_blank" rel="noreferrer">
+          API Docs
+        </a>
+      </nav>
+    </header>
+
+    <main class="dupe-workspace">
+      <section class="control-band" aria-label="Search controls">
+        <div class="instruction-panel">
+          <div>
+            <p class="section-label">Similar records</p>
+            <h2>Find possible duplicate records.</h2>
+          </div>
+          <p>
+            Search for seed records, then inspect the API's Elasticsearch similar-record suggestions as duplicate candidates.
+          </p>
+        </div>
+
+        <form id="searchForm" class="search-form">
+          <div class="field field-query">
+            <label for="query">Search terms</label>
+            <div class="input-with-icon">
+              <i data-lucide="search" aria-hidden="true"></i>
+              <input id="query" name="query" type="search" value="Liberia lakes" autocomplete="off" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="resourceClass">Resource class</label>
+            <select id="resourceClass" name="resourceClass">
+              <option value="">Any resource</option>
+              <option value="Maps">Maps</option>
+              <option value="Datasets">Datasets</option>
+              <option value="Imagery">Imagery</option>
+            </select>
+          </div>
+
+          <div class="field field-small">
+            <label for="inspectCount">Inspect</label>
+            <select id="inspectCount" name="inspectCount">
+              <option value="3">3</option>
+              <option value="5" selected>5</option>
+              <option value="8">8</option>
+            </select>
+          </div>
+
+          <button class="button button-primary" type="submit">
+            <i data-lucide="scan-search" aria-hidden="true"></i>
+            <span>Scan</span>
+          </button>
+        </form>
+
+        <div class="preset-row" aria-label="Preset searches">
+          <button class="preset active" type="button" data-query="Liberia lakes" data-class="Datasets">Liberia Lakes</button>
+          <button class="preset" type="button" data-query="railroads" data-class="Maps">Railroad Maps</button>
+          <button class="preset" type="button" data-query="aerial photography" data-class="Imagery">Aerial Imagery</button>
+        </div>
+      </section>
+
+      <section class="summary-band" aria-live="polite">
+        <div>
+          <p id="summaryTitle" class="summary-title">Ready</p>
+          <p id="summaryText" class="summary-copy">Choose a preset or scan a custom query.</p>
+        </div>
+        <a id="endpointLink" class="endpoint-link" href="https://geodev.btaa.org/api/v1/search?q=Liberia+lakes&per_page=5&include_filters%5Bgbl_resourceClass_sm%5D%5B%5D=Datasets" target="_blank" rel="noreferrer">
+          <i data-lucide="braces" aria-hidden="true"></i>
+          <span>Seed search</span>
+        </a>
+      </section>
+
+      <section class="metric-grid" aria-label="Search summary">
+        <dl class="metric-card">
+          <dt>Seeds inspected</dt>
+          <dd id="seedCount">0</dd>
+        </dl>
+        <dl class="metric-card">
+          <dt>Candidates</dt>
+          <dd id="candidateCount">0</dd>
+        </dl>
+        <dl class="metric-card">
+          <dt>Search time</dt>
+          <dd id="queryTime">-</dd>
+        </dl>
+      </section>
+
+      <section class="results-panel" aria-label="Search results">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Elasticsearch similar records</p>
+            <h2 id="resultsHeading">Results</h2>
+          </div>
+          <div id="apiStatus" class="api-status">Standing by</div>
+        </div>
+
+        <div id="emptyState" class="empty-state">
+          <div class="empty-icon" aria-hidden="true">
+            <i data-lucide="scan-search"></i>
+          </div>
+          <p>Run a scan to load possible duplicate groups.</p>
+        </div>
+
+        <div id="resultsList" class="results-list"></div>
+      </section>
+
+      <template id="clusterTemplate">
+        <article class="result-card duplicate-cluster">
+          <div class="result-topline">
+            <span class="resource-class"></span>
+            <span class="provider"></span>
+            <span class="candidate-count"></span>
+          </div>
+          <h3></h3>
+          <p class="description"></p>
+          <div class="result-actions">
+            <a class="button button-secondary record-link" target="_blank" rel="noreferrer">
+              <i data-lucide="book-open" aria-hidden="true"></i>
+              <span>Record</span>
+            </a>
+            <a class="button button-secondary api-link" target="_blank" rel="noreferrer">
+              <i data-lucide="braces" aria-hidden="true"></i>
+              <span>API JSON</span>
+            </a>
+          </div>
+          <div class="candidate-list" aria-label="Similar records"></div>
+        </article>
+      </template>
+
+      <template id="candidateTemplate">
+        <article class="candidate-row">
+          <img class="candidate-thumb" alt="">
+          <div class="candidate-body">
+            <div class="candidate-topline">
+              <span class="candidate-confidence"></span>
+              <span class="candidate-signals"></span>
+            </div>
+            <h4 class="candidate-title"></h4>
+            <p class="candidate-meta"></p>
+            <div class="candidate-actions">
+              <a class="candidate-record-link" target="_blank" rel="noreferrer">
+                <i data-lucide="book-open" aria-hidden="true"></i>
+                <span>Record</span>
+              </a>
+              <a class="candidate-api-link" target="_blank" rel="noreferrer">
+                <i data-lucide="braces" aria-hidden="true"></i>
+                <span>JSON</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </template>
+    </main>
+  </body>
+</html>
