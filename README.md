@@ -96,7 +96,7 @@ The Metadata Scorecard app calls:
 https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1/resources/{id}
 ```
 
-with the entered resource ID, then loads `apps/metadata-scorecard/scoring-matrix.csv` to score fields in `attributes.ogm`. Present fields earn the matrix `Importance` value, and records missing any field marked `Required?` receive an automatic failing grade.
+with the entered resource ID, then loads `apps/metadata-scorecard/scoring-matrix.csv` to score fields in `attributes.ogm`. Present fields earn the matrix `Importance` value, except Resource Type, whose values must all match its controlled vocabulary. Records missing any field marked `Required?` receive an automatic failing grade.
 
 ## BTAA Road Trip API Query
 

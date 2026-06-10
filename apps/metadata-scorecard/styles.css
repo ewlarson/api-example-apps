@@ -657,6 +657,15 @@ a:focus-visible {
   color: var(--accent-rose);
 }
 
+.score-item-invalid {
+  border-color: #e8ca84;
+}
+
+.score-item-invalid .score-icon {
+  background: #fff8e6;
+  color: #9a6700;
+}
+
 .score-item-required {
   box-shadow: inset 4px 0 0 var(--accent-gold);
 }
