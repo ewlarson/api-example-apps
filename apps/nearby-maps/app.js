@@ -1,5 +1,5 @@
 (function () {
-  const API_BASE = "https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1";
+  const API_BASE = "https://geodev.btaa.org/api/v1";
   const FRONTEND_BASE = "https://lib-geoportal-prd-web-01.oit.umn.edu";
   const PER_PAGE = 60;
   const MAX_FETCH_PAGES = 5;

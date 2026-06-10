@@ -1,5 +1,5 @@
 (function () {
-  const API_BASE = "https://lib-geoportal-prd-web-01.oit.umn.edu/api/v1";
+  const API_BASE = "https://geodev.btaa.org/api/v1";
   const DEFAULT_BOUNDS = [[24.5, -125], [49.5, -66.5]];
   const MAX_VISIBLE_HEXES = 1800;
   const TOKEN_WAIT_MESSAGE = "We're out of API tokens. Please wait a minute before continuing.";
