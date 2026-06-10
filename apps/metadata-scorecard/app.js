@@ -3,6 +3,88 @@
   const FRONTEND_BASE = "https://lib-geoportal-prd-web-01.oit.umn.edu";
   const SCORING_MATRIX_URL = "scoring-matrix.csv";
   const TOKEN_WAIT_MESSAGE = "We're out of API tokens. Please wait a minute before continuing.";
+  const RESOURCE_TYPE_FIELD = "gbl_resourceType_sm";
+  const RESOURCE_TYPE_VALUES = new Set(`Aerial photographs
+Aerial views
+Aeronautical charts
+Armillary spheres
+Astronautical charts
+Astronomical models
+Atlases
+Bathymetric maps
+Block diagrams
+Bottle-charts
+Cadastral maps
+Cartographic materials
+Cartographic materials for people with visual disabilities
+Celestial charts
+Celestial globes
+Census data
+Children's atlases
+Children's maps
+Comparative maps
+Composite atlases
+Digital elevation models
+Digital maps
+Early maps
+Ephemerides
+Ethnographic maps
+Fire insurance maps
+Flow maps
+Gazetteers
+Geological cross-sections
+Geological maps
+Globes
+Gores (Maps)
+Gravity anomaly maps
+Index maps
+Linguistic atlases
+Loran charts
+Manuscript maps
+Mappae mundi
+Mental maps
+Meteorological charts
+Military maps
+Mine maps
+Miniature maps
+Nautical charts
+Outline maps
+Photogrammetric maps
+Photomaps
+Physical maps
+Pictorial maps
+Plotting charts
+Portolan charts
+Quadrangle maps
+Relief models
+Remote-sensing maps
+Road maps
+Statistical maps
+Stick charts
+Strip maps
+Thematic maps
+Topographic maps
+Tourist maps
+Upside-down maps
+Wall maps
+World atlases
+World maps
+Worm's-eye views
+Zoning maps
+Annotations
+Basemaps
+LiDAR
+Line data
+Mesh data
+Multi-spectral data
+Oblique photographs
+Point cloud data
+Point data
+Polygon data
+Raster data
+Satellite imagery
+Streetview photographs
+Table data`.split("\n"));
 
   const els = {
     form: document.querySelector("#resourceForm"),
@@ -254,12 +336,16 @@
     const fieldResults = scoringMatrix.map((item) => {
       const value = ogm[item.fieldName];
       const present = isPresent(value);
+      const invalidValues = getInvalidControlledValues(item, value);
+      const valid = present && invalidValues.length === 0;
 
       return {
         ...item,
         present,
+        valid,
+        invalidValues,
         value,
-        earned: present ? item.importance : 0,
+        earned: valid ? item.importance : 0,
       };
     });
     const totalPoints = fieldResults.reduce((sum, item) => sum + item.importance, 0);
@@ -400,6 +486,10 @@
       return left.required ? -1 : 1;
     }
 
+    if (left.valid !== right.valid) {
+      return left.valid ? 1 : -1;
+    }
+
     if (left.present !== right.present) {
       return left.present ? 1 : -1;
     }
@@ -425,6 +515,8 @@
     els.scoreList.replaceChildren(...scoringMatrix.slice(0, 8).map((item) => renderScoreItem({
       ...item,
       present: false,
+      valid: false,
+      invalidValues: [],
       earned: 0,
       value: null,
     })));
@@ -434,16 +526,18 @@
 
   function renderScoreItem(result) {
     const row = document.createElement("div");
-    row.className = result.present ? "score-item score-item-present" : "score-item score-item-missing";
+    row.className = `score-item ${getScoreItemClass(result)}`;
     if (result.required) {
       row.classList.add("score-item-required");
     }
 
     const icon = document.createElement("span");
     icon.className = "score-icon";
-    icon.innerHTML = result.present
+    icon.innerHTML = result.valid
       ? '<i data-lucide="check" aria-hidden="true"></i>'
-      : '<i data-lucide="x" aria-hidden="true"></i>';
+      : result.present
+        ? '<i data-lucide="circle-alert" aria-hidden="true"></i>'
+        : '<i data-lucide="x" aria-hidden="true"></i>';
 
     const body = document.createElement("div");
     body.className = "score-item-body";
@@ -463,13 +557,46 @@
 
     const value = document.createElement("span");
     value.className = "score-item-value";
-    value.textContent = result.present ? truncate(toText(result.value), 120) : result.purpose || "Missing";
+    value.textContent = getScoreItemValue(result);
 
     header.append(label, points);
     body.append(header, meta, value);
     row.append(icon, body);
 
     return row;
+  }
+
+  function getScoreItemClass(result) {
+    if (result.valid) {
+      return "score-item-present";
+    }
+
+    return result.present ? "score-item-invalid" : "score-item-missing";
+  }
+
+  function getScoreItemValue(result) {
+    if (result.fieldName === RESOURCE_TYPE_FIELD) {
+      if (!result.present) {
+        return "Missing; controlled-list conformance cannot be evaluated.";
+      }
+
+      if (result.invalidValues.length) {
+        const invalidLabel = result.invalidValues.length === 1 ? "Invalid value" : "Invalid values";
+        return truncate(`Does not conform to the controlled list. ${invalidLabel}: ${result.invalidValues.join(", ")}`, 160);
+      }
+
+      return truncate(`Conforms to the controlled list. Value: ${toText(result.value)}`, 160);
+    }
+
+    if (!result.present) {
+      return result.purpose || "Missing";
+    }
+
+    if (result.invalidValues.length) {
+      return truncate(`Invalid controlled value: ${result.invalidValues.join(", ")}`, 120);
+    }
+
+    return truncate(toText(result.value), 120);
   }
 
   function renderGroupItem(group) {
@@ -519,6 +646,26 @@
     }
 
     return true;
+  }
+
+  function getInvalidControlledValues(item, value) {
+    if (item.fieldName !== RESOURCE_TYPE_FIELD || !isPresent(value)) {
+      return [];
+    }
+
+    return toValueList(value).filter((entry) => !RESOURCE_TYPE_VALUES.has(entry));
+  }
+
+  function toValueList(value) {
+    if (Array.isArray(value)) {
+      return value.flatMap(toValueList);
+    }
+
+    if (typeof value === "string") {
+      return [value.trim()];
+    }
+
+    return [toText(value)];
   }
 
   function showEmpty(message, title) {
