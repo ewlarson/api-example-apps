@@ -17,7 +17,7 @@ The root page is an app gallery. Each demo lives in its own folder under `apps/`
 - `apps/search-fight/` - compares two keyword searches by total matches and indexed-year facet counts.
 - `apps/metadata-scorecard/` - fetches a resource by ID, displays its OGM metadata record, and scores metadata quality from a CSV scoring matrix.
 - `apps/btaa-road-trip/` - follows the 18 BTAA campuses from Rutgers to the Pacific coast and loads map records for each stop.
-- `apps/map-memory/` - matches pairs of real map thumbnails for 20 U.S. cities.
+- `apps/map-memory/` - matches pairs of real map thumbnails for 26 U.S. cities, including major urban areas in every BTAA state.
 
 ## Links
 

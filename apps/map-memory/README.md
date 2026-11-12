@@ -39,6 +39,37 @@ inspected actual responses:
   `scrolling="no"` suppresses its document scrollbars; the viewer's own controls
   remain usable. Metadata comes from the same live search record.
 
+## Geographic coverage
+
+The picker includes 26 cities, preserving the original choices and representing all
+14 states in the [BTAA university roster](https://btaa.org/about/member-universities)
+and [member-library roster](https://btaa.org/library/who-we-are/member-libraries),
+checked November 12, 2026. Chicago also covers the University of Chicago library.
+
+| BTAA state | Representative urban area |
+| --- | --- |
+| California | Los Angeles (also San Francisco and San Diego) |
+| Illinois | Chicago |
+| Indiana | Indianapolis (alias: Indy) |
+| Iowa | Des Moines |
+| Maryland | Baltimore |
+| Michigan | Detroit |
+| Minnesota | Minneapolis |
+| Nebraska | Omaha |
+| New Jersey | Newark |
+| Ohio | Columbus |
+| Oregon | Portland |
+| Pennsylvania | Philadelphia |
+| Washington | Seattle |
+| Wisconsin | Milwaukee |
+
+A regression test protects this state-to-city coverage. The visible city count is
+derived from the picker data so it stays current as the collection grows.
+Live follow-up checks verified an eight-pair Indianapolis board and the Indy alias.
+City inclusion does not guarantee enough digitized imagery: Des Moines currently
+has fewer than four usable city-map thumbnails and shows the existing retry or
+city-switch state. Des Moines County maps from elsewhere in Iowa remain excluded.
+
 ## Selection and game behavior
 
 `core.mjs` keeps display labels/aliases separate from canonical search terms and
@@ -93,7 +124,7 @@ card pattern remains usable if WebGL, the CDN, or tiles are unavailable.
 
 ## Verification
 
-- 27 repeatable Node tests: deck construction, dedupe/relevance, pair matching,
+- 28 repeatable Node tests: deck construction, dedupe/relevance, pair matching,
   mismatch timing, reset, modal pause/resume, stale city success/error, cancellation
   cleanup, unusable images, 3/4/7/8-map results, fallback queries, Pages assets, and
   one-shot confetti, replay cancellation, and reduced-motion behavior.

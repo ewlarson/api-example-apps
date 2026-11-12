@@ -5,6 +5,7 @@ import { createCelebration } from './celebration.mjs';
 
 const $ = id => document.getElementById(id);
 const input = $('citySearch'), options = $('cityOptions'), board = $('board');
+$('cityCount').textContent = `${CITIES.length} cities`;
 let city = CITIES[0], pendingCity = city, filtered = CITIES, active = -1;
 let result = null, maps = [], buttons = [], loading = false;
 const requests = new LatestRequest();

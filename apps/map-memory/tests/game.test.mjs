@@ -7,8 +7,8 @@ const chicago = CITIES[0];
 const record = (i, overrides = {}) => ({ id: String(i), attributes: { ogm: { dct_title_s: `Chicago map ${i}`, gbl_resourceClass_sm: ['Maps'], dct_spatial_sm: ['Illinois--Chicago'], dcat_bbox: '-87.9,41.6,-87.5,42', ...overrides } }, meta: { ui: { thumbnail_url: `https://geo.btaa.org/api/v1/thumbnails/${i}` } } });
 const controller = () => new AbortController();
 
-test('city picker has 20 canonical choices, aliases, and separate search labels', () => {
-  assert.equal(CITIES.length, 20);
+test('city picker has 26 canonical choices, aliases, and separate search labels', () => {
+  assert.equal(CITIES.length, 26);
   assert.equal(filterCities('NYC')[0].term, 'New York');
   assert.equal(filterCities('dc')[0].label, 'Washington, DC');
   assert.equal(filterCities('california').length, 3);
@@ -159,4 +159,23 @@ test('full viewer and metadata preserve safe record URLs and source fields', () 
   assert.equal(map.creator, 'Cartographer'); assert.equal(map.rights, 'Public domain');
   assert.equal(map.description, 'City street map');
   assert.equal(map.viewerUrl, 'https://geo.btaa.org/api/v1/resources/0/ogm-viewer?embed=true');
+});
+
+test('every BTAA member state has a major urban area in the city picker', () => {
+  // Current university and member-library rosters, checked November 12, 2026:
+  // https://btaa.org/about/member-universities
+  // https://btaa.org/library/who-we-are/member-libraries
+  const representatives = {
+    CA: 'los-angeles', IL: 'chicago', IN: 'indianapolis', IA: 'des-moines',
+    MD: 'baltimore', MI: 'detroit', MN: 'minneapolis', NE: 'omaha', NJ: 'newark',
+    OH: 'columbus', OR: 'portland', PA: 'philadelphia', WA: 'seattle', WI: 'milwaukee',
+  };
+  for (const [state, id] of Object.entries(representatives)) {
+    const city = CITIES.find(city => city.id === id && city.state === state);
+    assert(city, `${state} needs its representative city`);
+    assert(filterCities(city.stateName).some(match => match.id === id));
+    assert.equal(new URL(searchUrl(city, true)).searchParams.get('q'), `"${city.term}" "${city.stateName}" map`);
+  }
+  assert.equal(filterCities('Indy')[0].id, 'indianapolis');
+  assert.equal(new Set(CITIES.map(city => city.id)).size, CITIES.length);
 });
