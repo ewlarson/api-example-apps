@@ -121,6 +121,12 @@ cleanup on replay/city switch. Reduced motion uses the festive static completion
 panel instead. The post-game collection uses 260–360px-tall previews that open the
 same full-map lightbox; title links still lead to the Geoportal.
 
+## Header branding
+
+The header uses the official white [BTAA logo](https://geo.btaa.org/btaa-logo.png)
+from the Geoportal, bundled locally in `assets/btaa-logo.png` with its original
+transparency and aspect ratio. The lockup links back to the example-app gallery.
+
 ## City basemap backs
 
 The original compass/line design overlays a grayscale MapLibre rendering centered
