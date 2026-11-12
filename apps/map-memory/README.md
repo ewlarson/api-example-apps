@@ -70,7 +70,12 @@ and polite match announcements. Mismatches remain visible for 1100ms, blocking a
 third activation. Explore controls appear only on revealed cards and open a native
 modal dialog with full image, dates, institution, creator, place, rights, description,
 and a Geoportal link. The mismatch clock pauses while exploring; Escape/Close returns
-focus to the card and resumes play. Reduced motion disables transitions.
+focus to the card and resumes play. Revealed cards show their titles after a 450ms
+hover dwell, immediately on keyboard focus, and dismiss on Escape; face-down title
+content stays empty. A win fires a local canvas confetti burst once per game, with
+cleanup on replay/city switch. Reduced motion uses the festive static completion
+panel instead. The post-game collection uses 260–360px-tall previews that open the
+same full-map lightbox; title links still lead to the Geoportal.
 
 ## City basemap backs
 
@@ -88,9 +93,10 @@ card pattern remains usable if WebGL, the CDN, or tiles are unavailable.
 
 ## Verification
 
-- 24 repeatable Node tests: deck construction, dedupe/relevance, pair matching,
+- 27 repeatable Node tests: deck construction, dedupe/relevance, pair matching,
   mismatch timing, reset, modal pause/resume, stale city success/error, cancellation
-  cleanup, unusable images, 3/4/7/8-map results, fallback queries, and Pages assets.
+  cleanup, unusable images, 3/4/7/8-map results, fallback queries, Pages assets, and
+  one-shot confetti, replay cancellation, and reduced-motion behavior.
 - Live Chicago, San Francisco, Seattle, and NYC searches each yielded eight usable
   pairs. Completed games by keyboard and visually inspected the revealed images:
   Chicago wards/parks/pictorial streets; SF harbor/tour/geology maps; Seattle city,
@@ -98,6 +104,8 @@ card pattern remains usable if WebGL, the CDN, or tiles are unavailable.
   Visual inspection prompted the cover and world-map exclusions above.
 - Keyboard city filtering and explicit selection, NYC alias, replay, completion
   metadata, focus retention, and responsive two-column cards checked in-browser.
+- Hover title delay, Escape dismissal, no face-down title leakage, a live confetti
+  finish, gallery viewer links/focus return, and a 390px gallery width were checked.
 - Full IIIF viewer opened while playing; zoom, Escape, focus return, and metadata
   verified. Desktop and 390px phone layouts inspected.
 - All existing apps and the starter pass JavaScript syntax checks and static local
@@ -116,3 +124,7 @@ always provides a direct BTAA record link. No offline guarantee is implied.
 ![Full IIIF map and metadata in the lightbox](screenshots/lightbox.jpg)
 
 [Mobile layout](screenshots/mobile.jpg) · [Completed game and map collection](screenshots/completed-game.jpg)
+
+![Celebratory puzzle finish](screenshots/celebration.jpg)
+
+![Large post-game map previews](screenshots/collection.jpg)

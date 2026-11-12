@@ -346,9 +346,9 @@ h2 {
 }
 .completion {
   margin-top:22px;
-  padding:24px;
-  border:1px solid #aabca0;
-  background:#e8eedd;
+  padding:32px 24px;
+  border:1px solid #c7b880;
+  background:radial-gradient(ellipse at top, #fff5cf, #e8eedd 75%);
   text-align:center;
 }
 .completion h2 {
@@ -373,17 +373,44 @@ h2 {
   gap:20px;
 }
 .collection li {
-  display:flex;
-  align-items:center;
-  gap:16px;
-  padding:12px 0;
-  border-top:1px solid var(--line);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdf4;
 }
-.collection img {
-  width:78px;
-  height:78px;
-  object-fit:contain;
-  background:#fffdf4;
+.collection-preview {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: clamp(260px, 31vw, 360px);
+  padding: 16px;
+  border: 0;
+  border-radius: 0;
+  background: #eeeee2;
+}
+.collection-preview:focus-visible {
+  outline-offset: -4px;
+}
+.collection-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.collection-zoom {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: #fffef5ee;
+  color: var(--blue);
+  border: 1px solid #b8c4b3;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+.collection-detail {
+  padding: 18px 20px 22px;
 }
 .collection a {
   font-size:14px;
@@ -649,5 +676,63 @@ footer {
   }
   #mapViewer {
     height: 600px;
+  }
+}
+
+/* Dwell before showing a title; keyboard focus shows it immediately. */
+.card-slot:hover, .card-slot:focus-within {
+  z-index: 2;
+}
+.card-title {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  top: calc(100% - 8px);
+  padding: 12px 14px;
+  background: #163f59;
+  color: #fffef5;
+  box-shadow: 0 5px 16px #17324233;
+  border-radius: 5px;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .12s, visibility 0s;
+}
+.card-slot[data-revealed="true"]:hover:not(.title-dismissed) .card-title {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: .45s;
+}
+.card-slot[data-revealed="true"]:has(:focus-visible):not(.title-dismissed) .card-title {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+#confetti {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+.victory-stars {
+  font-size: 32px;
+  letter-spacing: .2em;
+  color: #b77b20;
+  margin-bottom: 12px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-title {
+    transition: visibility 0s !important;
+  }
+  .card-slot[data-revealed="true"]:hover:not(.title-dismissed) .card-title {
+    transition-delay: .45s !important;
+  }
+  .card-slot[data-revealed="true"]:has(:focus-visible):not(.title-dismissed) .card-title {
+    transition-delay: 0s !important;
   }
 }

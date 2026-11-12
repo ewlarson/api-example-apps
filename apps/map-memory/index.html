@@ -10,6 +10,7 @@
   <script type="module" src="app.js"></script>
 </head>
 <body>
+  <canvas id="confetti" aria-hidden="true" hidden></canvas>
   <header class="app-header">
     <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">M</span><span>BTAA <span class="brand-light">/ Example apps</span></span></a>
     <a href="https://geo.btaa.org/api/docs">API docs ↗</a>
@@ -39,11 +40,11 @@
       <button id="retry" type="button" hidden>Retry this city</button>
       <div id="board" class="board" aria-label="Memory cards" aria-busy="true"></div>
       <p id="announcement" class="sr-only" aria-live="polite" aria-atomic="true"></p>
-      <div id="completion" class="completion" hidden><p class="eyebrow">A city, remembered</p><h2>Every map has its match.</h2><p id="completionText"></p></div>
+      <div id="completion" class="completion" hidden><div class="victory-stars" aria-hidden="true">✦ ✧ ✦</div><p class="eyebrow">A city, remembered</p><h2>You put it all together!</h2><p id="completionText"></p></div>
       <p class="instructions">Flip two cards. Keep a match. Remember a miss.<br>Use ⤢ on a revealed card to explore the full map. <span>No clock, no rush.</span></p>
       <p id="basemapCredit" class="basemap-credit" hidden>Card backs: <a href="https://maplibre.org/">MapLibre</a> · <a href="https://openfreemap.org/">OpenFreeMap</a> · <a href="https://www.openmaptiles.org/">© OpenMapTiles</a> · <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a></p>
     </section>
-    <section id="collection" class="collection" aria-labelledby="collectionTitle" hidden><p class="eyebrow">Keep exploring</p><h2 id="collectionTitle">Maps in this game</h2><p>Follow a map to its BTAA Geoportal record and contributing library.</p><ul id="mapList"></ul></section>
+    <section id="collection" class="collection" aria-labelledby="collectionTitle" hidden><p class="eyebrow">Keep exploring</p><h2 id="collectionTitle">Maps in this game</h2><p>Take a closer look. Select a map to open the full viewer, or follow its title to the contributing library’s Geoportal record.</p><ul id="mapList"></ul></section>
   </main>
   <dialog id="mapDialog" aria-labelledby="mapDialogTitle">
     <div class="dialog-header"><p class="eyebrow">Look a little closer</p><button id="closeMap" type="button" autofocus>Close <span aria-hidden="true">×</span></button></div>

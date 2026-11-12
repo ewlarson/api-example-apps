@@ -1,6 +1,7 @@
 import { CITIES, filterCities, normalize, chooseMaps, MemoryGame, LatestRequest } from './core.mjs';
 import { loadCity } from './api.mjs';
 import { renderCityBasemap } from './basemap.mjs';
+import { createCelebration } from './celebration.mjs';
 
 const $ = id => document.getElementById(id);
 const input = $('citySearch'), options = $('cityOptions'), board = $('board');
@@ -9,6 +10,7 @@ let result = null, maps = [], buttons = [], loading = false;
 const requests = new LatestRequest();
 const basemapRequests = new LatestRequest();
 let dialogOpener = null;
+const celebration = createCelebration($('confetti'));
 const game = new MemoryGame(renderGame);
 
 function closePicker() {
@@ -68,7 +70,11 @@ function renderGame(message) {
     const card = game.deck[index];
     if (!card) return;
     const matched = game.matched.has(card.map.id), revealed = matched || game.open.includes(index);
-    const explore = button.parentElement.querySelector('.explore-map');
+    const slot = button.parentElement;
+    slot.dataset.revealed = String(revealed);
+    const tooltip = slot.querySelector('.card-title');
+    tooltip.textContent = revealed ? card.map.title : '';
+    const explore = slot.querySelector('.explore-map');
     explore.hidden = !revealed;
     if (revealed) explore.setAttribute('aria-label', `Explore map: ${card.map.title}`);
     else explore.removeAttribute('aria-label');
@@ -79,6 +85,7 @@ function renderGame(message) {
   });
   $('announcement').textContent = message;
   $('completion').hidden = !game.complete;
+  celebration.update(game.complete);
   $('collection').hidden = !game.complete;
   if (game.complete) $('status').textContent = `Live BTAA maps · ${maps.length} pairs found · Collection complete.`;
   if (game.complete) $('completionText').textContent = `You found ${maps.length} pairs in ${game.moves} moves. Explore your maps below, or play again.`;
@@ -96,9 +103,19 @@ function deal(nextMaps) {
     const basemap = document.createElement('span'); basemap.className = 'city-basemap';
     back.append(basemap, compass, number); button.append(image, back);
     button.addEventListener('click', () => game.flip(index));
-    const explore = document.createElement('button'); explore.type = 'button'; explore.className = 'explore-map'; explore.textContent = '⤢'; explore.hidden = true; explore.title = 'Explore full map';
+    const explore = document.createElement('button'); explore.type = 'button'; explore.className = 'explore-map'; explore.textContent = '⤢'; explore.hidden = true;
     explore.addEventListener('click', () => openMap(card.map, button));
-    slot.append(button, explore); fragment.append(slot); buttons.push(button);
+    const tooltip = document.createElement('span'); tooltip.className = 'card-title'; tooltip.role = 'tooltip';
+    tooltip.id = `card-title-${index}`;
+    explore.setAttribute('aria-describedby', tooltip.id);
+    slot.addEventListener('keydown', event => {
+      if (event.key === 'Escape') slot.classList.add('title-dismissed');
+    });
+    slot.addEventListener('pointerleave', () => slot.classList.remove('title-dismissed'));
+    slot.addEventListener('focusout', event => {
+      if (!slot.contains(event.relatedTarget)) slot.classList.remove('title-dismissed');
+    });
+    slot.append(button, explore, tooltip); fragment.append(slot); buttons.push(button);
   });
   board.replaceChildren(fragment); board.setAttribute('aria-busy', 'false');
   $('pairTotal').textContent = ` / ${maps.length}`;
@@ -114,10 +131,16 @@ function renderCollection() {
   $('mapList').replaceChildren();
   maps.forEach(map => {
     const li = document.createElement('li'), image = document.createElement('img'), detail = document.createElement('div');
+    const preview = document.createElement('button'); preview.type = 'button'; preview.className = 'collection-preview';
+    preview.setAttribute('aria-label', `Explore map: ${map.title}`);
+    preview.addEventListener('click', () => openMap(map, preview));
     image.src = map.imageUrl; image.alt = '';
+    const hint = document.createElement('span'); hint.className = 'collection-zoom'; hint.textContent = '⤢ Explore full map';
+    preview.append(image, hint);
     const link = document.createElement('a'); link.href = map.recordUrl; link.textContent = map.title;
     const meta = document.createElement('small'); meta.textContent = [map.date || 'Date not supplied', map.institution || 'Institution not supplied'].join(' · ');
-    detail.append(link, meta); li.append(image, detail); $('mapList').append(li);
+    detail.className = 'collection-detail';
+    detail.append(link, meta); li.append(preview, detail); $('mapList').append(li);
   });
 }
 function startCity(selected) {
