@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A memory game made from real historic maps in the BTAA Geoportal. Pick a city, flip a card, and find its match.">
+  <title>Map Memory · BTAA Geospatial API</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">M</span><span>BTAA <span class="brand-light">/ Example apps</span></span></a>
+    <a href="https://geo.btaa.org/api/docs">API docs ↗</a>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <div><p class="eyebrow">A little geography. A little déjà vu.</p><h1 id="title">Map Memory<span aria-hidden="true">.</span></h1>
+      <p class="lede">Real maps. Familiar places. Find the matching pairs.</p></div>
+      <div class="edition" aria-hidden="true"><span>THE CITY COLLECTION</span><strong>01 — 20</strong><span>Explore one pair at a time</span></div>
+    </section>
+    <section class="toolbar" aria-label="Game controls">
+      <form id="cityForm">
+        <label for="citySearch">Choose a city</label>
+        <div class="city-controls"><div class="picker">
+          <input id="citySearch" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="cityOptions" aria-describedby="cityHelp" autocomplete="off" value="Chicago, IL">
+          <ul id="cityOptions" role="listbox" aria-label="Cities" hidden></ul>
+        </div><button class="primary" type="submit">Start game <span aria-hidden="true">→</span></button></div>
+        <p id="cityHelp" class="help">Type to filter. Choose a city, then start.</p>
+      </form>
+      <div class="game-actions"><button id="playAgain" type="button" disabled>Play again</button><button id="newMaps" type="button" disabled>New maps</button></div>
+    </section>
+    <section class="play-area" aria-labelledby="boardTitle">
+      <div class="board-heading"><div><p class="eyebrow">Your map table</p><h2 id="boardTitle">Chicago, IL</h2></div>
+        <dl class="stats"><div><dt>Moves</dt><dd id="moves">0</dd></div><div><dt>Pairs found</dt><dd><span id="pairs">0</span><span class="stat-total" id="pairTotal"> / 8</span></dd></div></dl>
+      </div>
+      <p id="status" class="status" role="status">Finding maps of Chicago…</p>
+      <button id="retry" type="button" hidden>Retry this city</button>
+      <div id="board" class="board" aria-label="Memory cards" aria-busy="true"></div>
+      <p id="announcement" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+      <div id="completion" class="completion" hidden><p class="eyebrow">A city, remembered</p><h2>Every map has its match.</h2><p id="completionText"></p></div>
+      <p class="instructions">Flip two cards. Keep a match. Remember a miss.<br>Use ⤢ on a revealed card to explore the full map. <span>No clock, no rush.</span></p>
+      <p id="basemapCredit" class="basemap-credit" hidden>Card backs: <a href="https://maplibre.org/">MapLibre</a> · <a href="https://openfreemap.org/">OpenFreeMap</a> · <a href="https://www.openmaptiles.org/">© OpenMapTiles</a> · <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a></p>
+    </section>
+    <section id="collection" class="collection" aria-labelledby="collectionTitle" hidden><p class="eyebrow">Keep exploring</p><h2 id="collectionTitle">Maps in this game</h2><p>Follow a map to its BTAA Geoportal record and contributing library.</p><ul id="mapList"></ul></section>
+  </main>
+  <dialog id="mapDialog" aria-labelledby="mapDialogTitle">
+    <div class="dialog-header"><p class="eyebrow">Look a little closer</p><button id="closeMap" type="button" autofocus>Close <span aria-hidden="true">×</span></button></div>
+    <h2 id="mapDialogTitle"></h2>
+    <div class="dialog-layout">
+      <div class="full-map"><iframe id="mapViewer" scrolling="no" title="Full map viewer" allow="fullscreen" referrerpolicy="no-referrer"></iframe><p>Pan and zoom in the library’s full map viewer. If it cannot load, <a id="viewerRecordLink" target="_blank" rel="noreferrer">open the Geoportal record ↗</a>.</p></div>
+      <aside class="map-metadata" aria-label="Map metadata"><dl id="mapMetadata"></dl><p id="mapDescription"></p><a id="mapRecordLink" class="record-action" target="_blank" rel="noreferrer">Explore in the BTAA Geoportal ↗</a><p class="help">Your game is paused while you explore.</p></aside>
+    </div>
+  </dialog>
+  <footer><span>Made with the <a href="https://geo.btaa.org/">BTAA Geoportal</a></span><span>Live maps from library collections · <a href="../../">All example apps</a></span></footer>
+</body>
+</html>
