@@ -125,7 +125,8 @@ same full-map lightbox; title links still lead to the Geoportal.
 The header uses the official white [BTAA logo](https://geo.btaa.org/btaa-logo.png)
 from the Geoportal, bundled locally in `assets/btaa-logo.png` with its original
 transparency and aspect ratio. The logo sits to the left of “Geoportal” above
-“Map Memory”; the lockup links back to the example-app gallery. The footer credits
+“Map Memory”, separated by a pale vertical rule with balanced spacing;
+the lockup links back to the example-app gallery. The footer credits
 the BTAA Geospatial API and links to its documentation.
 
 The title lives in the compact header so the game starts directly beneath it.
