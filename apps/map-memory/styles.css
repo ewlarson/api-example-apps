@@ -69,7 +69,10 @@ button:focus-visible,a:focus-visible,input:focus-visible {
 .app-header a {
   text-decoration:none;
 }
-.header-inner > a:last-child {
+.header-nav {
+  display:flex;
+  align-items:center;
+  gap:20px;
   white-space:nowrap;
 }
 .brand {
@@ -352,8 +355,8 @@ h2 {
   list-style:none;
   padding:0;
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
 }
 .collection li {
   min-width: 0;
@@ -364,10 +367,12 @@ h2 {
 }
 .collection-preview {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: clamp(260px, 31vw, 360px);
-  padding: 16px;
+  height: 180px;
+  padding: 12px;
   border: 0;
   border-radius: 0;
   background: #eeeee2;
@@ -377,23 +382,25 @@ h2 {
 }
 .collection-preview img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 200px);
+  max-height: 156px;
   object-fit: contain;
 }
 .collection-zoom {
   position: absolute;
-  bottom: 12px;
-  right: 12px;
+  bottom: 8px;
+  right: 8px;
   background: #fffef5ee;
   color: var(--blue);
   border: 1px solid #b8c4b3;
   border-radius: 4px;
-  padding: 8px 12px;
-  font-size: 12px;
+  padding: 5px 8px;
+  font-size: 11px;
 }
 .collection-detail {
-  padding: 18px 20px 22px;
+  padding: 12px 14px 16px;
 }
 .collection a {
   font-size:14px;
@@ -440,6 +447,17 @@ footer {
   }
   .header-inner {
     gap:8px;
+  }
+  .header-nav {
+    flex-direction:column;
+    align-items:flex-end;
+    gap:0;
+    font-size:11px;
+  }
+  .header-nav a {
+    display:flex;
+    align-items:center;
+    min-height:24px;
   }
   .toolbar {
     align-items:stretch;

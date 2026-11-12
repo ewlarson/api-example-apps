@@ -117,8 +117,8 @@ focus to the card and resumes play. Revealed cards show their titles after a 450
 hover dwell, immediately on keyboard focus, and dismiss on Escape; face-down title
 content stays empty. A win fires a local canvas confetti burst once per game, with
 cleanup on replay/city switch. Reduced motion uses the festive static completion
-panel instead. The post-game collection uses 260–360px-tall previews that open the
-same full-map lightbox; title links still lead to the Geoportal.
+panel instead. The post-game collection uses a compact grid with thumbnails capped at 200×156px
+and never enlarged beyond their natural dimensions. Previews open the same full-map lightbox; title links still lead to the Geoportal.
 
 ## Header branding
 
@@ -126,7 +126,8 @@ The header uses the official white [BTAA logo](https://geo.btaa.org/btaa-logo.pn
 from the Geoportal, bundled locally in `assets/btaa-logo.png` with its original
 transparency and aspect ratio. The logo sits to the left of “Geoportal” above
 “Map Memory”, separated by a pale vertical rule with balanced spacing;
-the lockup links back to the example-app gallery. The footer credits
+the lockup links back to the example-app gallery. Explicit “Example apps” and
+“API docs” links also appear in the top navigation. The footer credits
 the BTAA Geospatial API and links to its documentation.
 
 The title lives in the compact header so the game starts directly beneath it.
@@ -203,7 +204,7 @@ the 390px picker layout were rechecked.
 
 ![Celebratory puzzle finish](screenshots/celebration.jpg)
 
-![Large post-game map previews](screenshots/collection.jpg)
+![Compact post-game map grid](screenshots/collection.jpg)
 
 ![Picker showing only cities with playable maps](screenshots/cities.jpg)
 
