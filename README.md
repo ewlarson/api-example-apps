@@ -17,7 +17,7 @@ The root page is an app gallery. Each demo lives in its own folder under `apps/`
 - `apps/search-fight/` - compares two keyword searches by total matches and indexed-year facet counts.
 - `apps/metadata-scorecard/` - fetches a resource by ID, displays its OGM metadata record, and scores metadata quality from a CSV scoring matrix.
 - `apps/btaa-road-trip/` - follows the 18 BTAA campuses from Rutgers to the Pacific coast and loads map records for each stop.
-- `apps/map-memory/` - matches pairs of real map thumbnails for 26 U.S. cities, including major urban areas in every BTAA state.
+- `apps/map-memory/` - matches real map thumbnails from 26 U.S. city choices, with dated availability labels and major urban areas in every BTAA state. [Coverage audit](apps/map-memory/COVERAGE.md): 20 currently playable cities.
 
 ## Links
 
@@ -113,15 +113,20 @@ with a `gbl_resourceClass_sm[]=Maps` filter plus provider filters where the sele
 Map Memory uses `https://geo.btaa.org/api/v1/search` with the supported
 `include_filters[gbl_resourceClass_sm][]=Maps` filter and a title-specific `adv_q`.
 It requests up to 100 records, then falls back to a city + state + map query when
-fewer than eight usable thumbnails survive. It checks geographic bounds and
+fewer than eight usable thumbnails survive, followed by a supported 25 km
+centroid-distance query. It checks geographic bounds and
 city subjects to reject publisher-only matches and statewide/national maps.
 
 Thumbnails come from `meta.ui.thumbnail_url` or `/api/v1/resources/{id}/thumbnail`.
 The app fetches and decodes raster images before dealing, rejects SVG fallbacks,
 and deduplicates resource IDs, normalized titles, image URLs, bytes, and near-identical
-pixel samples. It samples up to 48 candidates per query and retains up to 23 usable
+spatial pixel patterns and reviewed duplicate editions. Covers, index masks and
+blank images are rejected; reviewed IIIF map sheets can replace known covers.
+It samples up to 48 candidates per query and retains up to 23 usable
 images for New maps; Play again reshuffles the current deck. Four to seven maps
-produce a smaller board; fewer than four show retry/city-switch instructions.
+produce a smaller board; fewer than four show retry and playable-city suggestions.
+Dated picker labels disclose availability before selection; API failures remain
+distinct from missing imagery.
 
 The public API and thumbnail endpoints allow browser CORS requests from the Pages
 origin. No credentials, backend, static catalog, package install, or build is required.

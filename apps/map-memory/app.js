@@ -1,4 +1,5 @@
 import { CITIES, filterCities, normalize, chooseMaps, MemoryGame, LatestRequest } from './core.mjs';
+import { COVERAGE, COVERAGE_DATE, availabilityLabel, suggestedCities } from './coverage.mjs';
 import { loadCity } from './api.mjs';
 import { renderCityBasemap } from './basemap.mjs';
 import { createCelebration } from './celebration.mjs';
@@ -7,6 +8,7 @@ const $ = id => document.getElementById(id);
 const input = $('citySearch'), options = $('cityOptions'), board = $('board');
 $('cityCount').textContent = `${CITIES.length} cities`;
 let city = CITIES[0], pendingCity = city, filtered = CITIES, active = -1;
+const availability = { ...COVERAGE };
 let result = null, maps = [], buttons = [], loading = false;
 const requests = new LatestRequest();
 const basemapRequests = new LatestRequest();
@@ -22,7 +24,10 @@ function showOptions() {
   options.hidden = false; input.setAttribute('aria-expanded', 'true');
   filtered.forEach((item, index) => {
     const option = document.createElement('li');
-    option.id = `city-${item.id}`; option.role = 'option'; option.textContent = item.label;
+    option.id = `city-${item.id}`; option.role = 'option';
+    const name = document.createElement('span'); name.textContent = item.label;
+    const detail = document.createElement('small'); detail.textContent = availabilityLabel(availability[item.id]);
+    option.append(name, detail);
     option.setAttribute('aria-selected', String(index === active));
     option.addEventListener('mousedown', event => event.preventDefault());
     option.addEventListener('click', () => selectCity(item));
@@ -38,7 +43,7 @@ function showOptions() {
 }
 function selectCity(item) {
   pendingCity = item; input.value = item.label; closePicker();
-  $('cityHelp').textContent = `${item.label} selected. Press Start game to load maps.`;
+  $('cityHelp').textContent = `${item.label}: ${availabilityLabel(availability[item.id])}. Last checked ${COVERAGE_DATE}. Start game checks again.`;
 }
 input.addEventListener('focus', () => { filtered = pendingCity ? CITIES : filterCities(input.value); active = -1; showOptions(); });
 input.addEventListener('input', () => { pendingCity = null; filtered = filterCities(input.value); active = -1; showOptions(); });
@@ -126,6 +131,7 @@ function deal(nextMaps) {
   $('status').textContent = maps.length < 8
     ? `A smaller discovery: ${maps.length} distinct maps with usable thumbnails were available. Match ${maps.length} pairs, or try another city.`
     : `Live BTAA maps · ${maps.length} pairs · Flip a card to begin.`;
+  if (result.warning) $('status').textContent += ` ${result.warning}`;
   renderCollection(); renderGame('New game ready. Choose a card.');
 }
 function renderCollection() {
@@ -153,13 +159,27 @@ function startCity(selected) {
     if (url) { board.style.setProperty('--city-basemap', `url("${url}")`); $('basemapCredit').hidden = false; }
   }, () => { /* The original pattern remains if WebGL or tiles are unavailable. */ });
   $('boardTitle').textContent = city.label; $('pairTotal').textContent = ' / —';
-  $('playAgain').disabled = $('newMaps').disabled = true; $('retry').hidden = true;
+  $('playAgain').disabled = $('newMaps').disabled = true; $('retry').hidden = true; $('unavailable').hidden = true;
   board.setAttribute('aria-busy', 'true'); $('status').textContent = `Finding and checking maps of ${city.name}…`;
   requests.run(signal => loadCity(selected, signal), loaded => {
     result = loaded; loading = false;
+    if (!loaded.diagnostics.failed && !loaded.warning) availability[selected.id] = loaded.pool.length;
     if (loaded.pool.length < 4) {
       board.setAttribute('aria-busy', 'false'); $('retry').hidden = false;
-      $('status').textContent = `Only ${loaded.pool.length} usable maps were available for ${selected.label}. We need at least four. Retry, or choose another city.`;
+      const { candidates, failed, timedOut } = loaded.diagnostics;
+      $('status').textContent = failed
+        ? `Only ${loaded.pool.length} maps could be checked for ${selected.label}; ${failed} image request${failed === 1 ? '' : 's'} failed${timedOut ? ' or timed out' : ''}. Retry to check availability again.`
+        : candidates === 0 ? `No suitable city-map records were found for ${selected.label}.`
+        : `Found ${loaded.pool.length} distinct map${loaded.pool.length === 1 ? '' : 's'} with usable images for ${selected.label}. A game needs at least four.`;
+      $('unavailableTitle').textContent = failed ? 'Some map images could not be checked' : 'Not enough maps for a game yet';
+      $('unavailableReason').textContent = 'Library collections vary. Covers, index masks, duplicate images, and unrelated places do not count as playable maps. You can retry this city or choose another below.';
+      $('suggestions').replaceChildren();
+      for (const alternative of suggestedCities(selected, CITIES, availability)) {
+        const button = document.createElement('button'); button.type = 'button'; button.textContent = `Play ${alternative.label}`;
+        button.addEventListener('click', () => { selectCity(alternative); startCity(alternative); });
+        $('suggestions').append(button);
+      }
+      $('unavailable').hidden = false;
       return;
     }
     deal(chooseMaps(loaded.pool));
@@ -174,7 +194,7 @@ function openMap(map, opener) {
   $('mapDialogTitle').textContent = map.title;
   $('mapDescription').textContent = map.description || '';
   $('mapMetadata').replaceChildren();
-  for (const [label, value] of [['Date', map.date], ['Institution', map.institution], ['Creator', map.creator], ['Place', map.spatial], ['Rights', map.rights]]) {
+  for (const [label, value] of [['Preview', map.previewNote], ['Date', map.date], ['Institution', map.institution], ['Creator', map.creator], ['Place', map.spatial], ['Rights', map.rights]]) {
     if (!value) continue;
     const term = document.createElement('dt'), detail = document.createElement('dd');
     term.textContent = label; detail.textContent = value; $('mapMetadata').append(term, detail);

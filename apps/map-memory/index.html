@@ -28,7 +28,7 @@
           <input id="citySearch" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="cityOptions" aria-describedby="cityHelp" autocomplete="off" value="Chicago, IL">
           <ul id="cityOptions" role="listbox" aria-label="Cities" hidden></ul>
         </div><button class="primary" type="submit">Start game <span aria-hidden="true">→</span></button></div>
-        <p id="cityHelp" class="help">Type to filter. Choose a city, then start.</p>
+        <p id="cityHelp" class="help">Type to filter. Availability checked November 12, 2026; each game checks again.</p>
       </form>
       <div class="game-actions"><button id="playAgain" type="button" disabled>Play again</button><button id="newMaps" type="button" disabled>New maps</button></div>
     </section>
@@ -38,6 +38,7 @@
       </div>
       <p id="status" class="status" role="status">Finding maps of Chicago…</p>
       <button id="retry" type="button" hidden>Retry this city</button>
+      <section id="unavailable" class="unavailable" aria-labelledby="unavailableTitle" hidden><h3 id="unavailableTitle">Not enough maps for a game yet</h3><p id="unavailableReason"></p><div id="suggestions" class="suggestions" aria-label="Other cities with playable maps"></div></section>
       <div id="board" class="board" aria-label="Memory cards" aria-busy="true"></div>
       <p id="announcement" class="sr-only" aria-live="polite" aria-atomic="true"></p>
       <div id="completion" class="completion" hidden><div class="victory-stars" aria-hidden="true">✦ ✧ ✦</div><p class="eyebrow">A city, remembered</p><h2>You put it all together!</h2><p id="completionText"></p></div>

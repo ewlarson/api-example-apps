@@ -1,0 +1,2423 @@
+{
+  "checked": "2026-11-12",
+  "method": "Actual loadCity and browser Image.decode/canvas pipeline using public search/image responses fetched on this date; deterministic sampling random=0.5. Sampled pools, not exhaustive inventories. No credentials or offline decks in the app.",
+  "cities": [
+    {
+      "id": "chicago",
+      "label": "Chicago, IL",
+      "count": 21,
+      "diagnostics": {
+        "candidates": 22,
+        "checked": 22,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "p16022coll205:354",
+          "title": "Chicago motor coach pictorial map of Chicago : Pictorial map of downtown Chicago",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/679a5fc42518e1da88c65bf7bece8bc5b62838061e7489ad8b9c8977ce64faf3",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A354"
+        },
+        {
+          "id": "4affface-107e-4a3e-b08a-b3bae474fefd",
+          "title": "McKinley Park, Chicago, Ill.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/dfa0b1d3a604512f85a9249d4126db609c6965997612b198668f23e8d91e204b",
+          "recordUrl": "https://geo.btaa.org/resources/4affface-107e-4a3e-b08a-b3bae474fefd"
+        },
+        {
+          "id": "21f13d4e-4309-4cc7-bba0-28439001b24c",
+          "title": "Worlds Columbian Exposition, Chicago 1893 : Jackson Park.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/7c02a833795bf4337a6a2a7914257d354fb8e988593f0e4723e444dad76ae2a5",
+          "recordUrl": "https://geo.btaa.org/resources/21f13d4e-4309-4cc7-bba0-28439001b24c"
+        },
+        {
+          "id": "a10a0f50-994e-0134-2096-0050569601ca-c",
+          "title": "Chicago, Ill.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/37eb0703864126833b94c99aeccabca17d9a6e9b6f876f5a5aa245395515a0f8",
+          "recordUrl": "https://geo.btaa.org/resources/a10a0f50-994e-0134-2096-0050569601ca-c"
+        },
+        {
+          "id": "a2e719f0-994e-0134-2096-0050569601ca-4",
+          "title": "Chicago. [cartographic material]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/4fc9157a3b94ea2798b2b9c4050bed1053305224e2918eec3ce32da03bb2b630",
+          "recordUrl": "https://geo.btaa.org/resources/a2e719f0-994e-0134-2096-0050569601ca-4"
+        },
+        {
+          "id": "23b58777-77d9-4ac6-a779-9f7fbd6eade8",
+          "title": "Chicago Tribune's Columbian Souvenir map of ... Chicago and the World's Fair",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/a3f241b2002cab91545bc0c68600d227155d5439c47718f3e3d635dba23b382d",
+          "recordUrl": "https://geo.btaa.org/resources/23b58777-77d9-4ac6-a779-9f7fbd6eade8"
+        },
+        {
+          "id": "p16022coll205:625",
+          "title": "Map of Chicago and suburbs",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll205:625/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A625"
+        },
+        {
+          "id": "3e8f6d39-b434-47b0-87c3-bf87a68e9b8d",
+          "title": "Ward map : city of Chicago",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/4d88dec2903d7d198ca8f01d4f7c6394cd7d26040e45b5e3df5b9ba1eb01be3c",
+          "recordUrl": "https://geo.btaa.org/resources/3e8f6d39-b434-47b0-87c3-bf87a68e9b8d"
+        },
+        {
+          "id": "917bd79a-0dbe-4cc9-8d10-704c9c37a846",
+          "title": "Railway terminal map of Chicago.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ee4a11ded603520aa474fcbcfac5b88e1be24db7a3c39a29df43f956aa2d44f2",
+          "recordUrl": "https://geo.btaa.org/resources/917bd79a-0dbe-4cc9-8d10-704c9c37a846"
+        },
+        {
+          "id": "p16022coll205:620",
+          "title": "Double indexed street map of Chicago",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll205:620/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A620"
+        },
+        {
+          "id": "VAC3073-M-01052",
+          "title": "Peak day traffic (Region of Chicago)",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/4feb643ce08a5de8b5c7c1fd986e07b65e44dd3aab4974910f7d8dc1e990906d",
+          "recordUrl": "https://geo.btaa.org/resources/VAC3073-M-01052"
+        },
+        {
+          "id": "a2ddd960-994e-0134-2096-0050569601ca-5",
+          "title": "Map of the City of Chicago",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/8a702db2c5131611e3946702afc4426f8b4a32834ed8fb7f352fd1ca93781e96",
+          "recordUrl": "https://geo.btaa.org/resources/a2ddd960-994e-0134-2096-0050569601ca-5"
+        },
+        {
+          "id": "3e950481-4414-487d-9170-60ba978545fa",
+          "title": "Principal railway facilities in central Chicago /[Harold M. Mayer]; base map by Chicago Land Use Survey.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/b4f4dde46cc2a54c2d7713e131ee4e677e5aeb3a008b2afab72a826eb7474349",
+          "recordUrl": "https://geo.btaa.org/resources/3e950481-4414-487d-9170-60ba978545fa"
+        },
+        {
+          "id": "942340b0-82d4-0134-1f08-0050569601ca-b",
+          "title": "Illinois, Chicago sheet",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/2a5b05d5f672d608f6ffa8191941579de80d03d9d84b038cb225af1883bb05f3",
+          "recordUrl": "https://geo.btaa.org/resources/942340b0-82d4-0134-1f08-0050569601ca-b"
+        },
+        {
+          "id": "stanford-xw133vb8100",
+          "title": "Chicago and suburbs, street names and street car lines",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/a908ae7a326370b745e3499aa41b0e3cffcb38d6d0d0f3d38904c29d4bb14d2c",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-xw133vb8100"
+        },
+        {
+          "id": "ee0a1796-6e84-47ba-a78c-1ff1bbd3d099",
+          "title": "Ecological base map of the Chicago area",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/5446870b023712ea49d96704632d9e7aea00197faad85f9bebf13c71dbeffdd5",
+          "recordUrl": "https://geo.btaa.org/resources/ee0a1796-6e84-47ba-a78c-1ff1bbd3d099"
+        },
+        {
+          "id": "2817f6a4-d743-4f78-b6ef-d403bcd57281",
+          "title": "Census tracts of Chicago, 1940 Races and nationalities.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/18b84cf6b0516b5e0909ec280e52ded47bb47a62898c1bf88d242cd683898b8a",
+          "recordUrl": "https://geo.btaa.org/resources/2817f6a4-d743-4f78-b6ef-d403bcd57281"
+        },
+        {
+          "id": "75f40435-e9b4-4d15-99a4-3040c71cfa86",
+          "title": "Indexed street map of Chicago and vicinity",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/119308bf3a33f0df999847d6f0f603ea5eac65d147c6bd7fea316649fc1e12f6",
+          "recordUrl": "https://geo.btaa.org/resources/75f40435-e9b4-4d15-99a4-3040c71cfa86"
+        },
+        {
+          "id": "2abd5e39-618c-4833-b622-b3b617d3d62a",
+          "title": "Passenger train movement in Metropolitan Chicago /Harold M. Mayer.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/59569a773a4a8634b9ab3fa85132d88f8aa7aec5016fe785c15d4921c1e72500",
+          "recordUrl": "https://geo.btaa.org/resources/2abd5e39-618c-4833-b622-b3b617d3d62a"
+        },
+        {
+          "id": "a76846c0-994e-0134-2096-0050569601ca-6",
+          "title": "Blanchard's guide map of Chicago. [cartographic material]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/60d4f844c83b82f4d583dcf2753b407e1aac9b3132de2a08c99d8a4b7bf9a14f",
+          "recordUrl": "https://geo.btaa.org/resources/a76846c0-994e-0134-2096-0050569601ca-6"
+        },
+        {
+          "id": "p16022coll205:610",
+          "title": "Rand McNally pocket map of Chicago Loop district",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ef63a299909e6c489c3dc03b457b93c01f7abe7659cb5e8fab09171a63200900",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A610"
+        }
+      ]
+    },
+    {
+      "id": "san-francisco",
+      "label": "San Francisco, CA",
+      "count": 23,
+      "diagnostics": {
+        "candidates": 29,
+        "checked": 24,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "stanford-td054yd2516",
+          "title": "Map of San Francisco Gray Line Tour Routes. From San Francisco Hotel Greeters Guide August 1948",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/a796786dbf01817700aa770d881d9d6324db0fcc502c4db95dac53d9f0716eae",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-td054yd2516"
+        },
+        {
+          "id": "stanford-cm483ht8669",
+          "title": "The harbour of San Francisco, Nueva California",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/fb10d7e41df8d9e03869c8ecf6c9d99139cc5aef33ac9ceee605cdf2ddaa5cda",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-cm483ht8669"
+        },
+        {
+          "id": "stanford-fw024yj6410",
+          "title": "Map of the region adjacent to the Bay of San Francisco. State Geological Survey of California. Julius Bien, lith",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/b8e4366bbc96c951486cdd75047802d63e4904ba4545540d905801d438ff573a",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-fw024yj6410"
+        },
+        {
+          "id": "stanford-dw396qc9061",
+          "title": "Areal geology, California, San Francisco quadrangle",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/faa600b7443750d5749b29c371e3b460f9367b97da74d9a0b5a8ebbfcca62db1",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-dw396qc9061"
+        },
+        {
+          "id": "stanford-mk098gw2229",
+          "title": "Stanford Heights [San Francisco?]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/8c68ef82a82e94a4364e9bf338023b8de343b07179dbaab1d92feb715cb5015b",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-mk098gw2229"
+        },
+        {
+          "id": "stanford-qt108rh6818",
+          "title": "Port de San Francisco",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/57df5cab18e9df1b272ebb8857ab543f5ce6e83d464128bee8f06c205a0db851",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-qt108rh6818"
+        },
+        {
+          "id": "stanford-yh083cy4112",
+          "title": "San Francisco Bay, California",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/3248a0c5bf27ed3e84c9df079e534093a1ec2cb00e457c59cc94d944f684beca",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-yh083cy4112"
+        },
+        {
+          "id": "princeton-0r967540z",
+          "title": "San Francisco and vicinity",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/f38df7a4fb116fc69c6bf23eecb470207a7cd6869797f69082e9f915d5c34588",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-0r967540z"
+        },
+        {
+          "id": "stanford-pw507yn0279",
+          "title": "Official map of San Francisco",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/5d54d66353b7f00e3ac3f7b66618f8d75cf3a81f66d5e7ae0fc2fa0d35a0ff99",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-pw507yn0279"
+        },
+        {
+          "id": "stanford-dk184tx3870",
+          "title": "Automobile route from Los Angeles to San Francisco via coast route. : Part seven, San Jose to San Francisco",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ce188d4ea7ab6e8dd2915d87e267e6a34e589b446e8d77867dd13d79052ebce8",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-dk184tx3870"
+        },
+        {
+          "id": "stanford-dj683by5326",
+          "title": "Welcome to the Presidio of San Francisco",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/5a4187cad368dbb8c4d98cbff84c80219e3c11c2c80dae4f826fc156947a1030",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-dj683by5326"
+        },
+        {
+          "id": "stanford-hz159bv3173",
+          "title": "Official census tracts of San Francisco : 1936",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/de91a532982ec884551ae7e0b6da3ecd273dd928cd41a238eca40d900d63dcd8",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-hz159bv3173"
+        },
+        {
+          "id": "p16022coll230:2567",
+          "title": "Southern part of San Francisco Bay, California",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll230:2567/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll230%3A2567"
+        },
+        {
+          "id": "stanford-zw971gd0220",
+          "title": "Official map of the City of San Francisco : full and complete to the present date",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/f8840c156d7d71c90b5f5d1c7a8b2392b0e1720fb9e22ca7607c8f2bc347b81d",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-zw971gd0220"
+        },
+        {
+          "id": "stanford-zv063wk0933",
+          "title": "Automobile routes from San Francisco - Oakland to Sacramento",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/92b2691667fe6594288fc02bd56753399231d839c7b5d4db44bd4561acdeaddb",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-zv063wk0933"
+        },
+        {
+          "id": "stanford-sz090rq5285",
+          "title": "Map of the subdivision of a portion of the San Miguel Rancho, city and county of San Francisco, property of Hon. Leland Stanford. Suveyed by Shackelford and Barker",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/42631bbd549886ad5c2527708dbc97d78d9b72d2f10743813e2fc3ebf05b9662",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-sz090rq5285"
+        },
+        {
+          "id": "p16022coll205:267",
+          "title": "Bancroft's official guide map of City and County of San Francisco : compiled from official maps in Surveyor's Office.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/5b749eb22dc97ffaa030933049281379e66ccd07ac90bc6167c983204b66553a",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A267"
+        },
+        {
+          "id": "stanford-pz184sd4724",
+          "title": "Map showing forbidden anchorage, Bay of San Francisco, Feb. 1908",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/16ce08e4954e2a0b8388346dd0b2a15c6fa28172d578a83d0de6f38c4864e113",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-pz184sd4724"
+        },
+        {
+          "id": "6af7a7a2-3631-46fc-bf6f-4994d1640752",
+          "title": "Map of San Francisco, Cal. / compiled from the official map and most recent surveys. Published by Nathaniel Gray, 112 Montgomery street. Lith of B.F. Butler.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/9d268aae56b7eb6ef41dad502cb1c12e668ded09d9eda229cecbd05c1100c9a7",
+          "recordUrl": "https://geo.btaa.org/resources/6af7a7a2-3631-46fc-bf6f-4994d1640752"
+        },
+        {
+          "id": "stanford-zt373dy9828",
+          "title": "Index map of the City and County of San Francisco",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/504e74c24426bd6c8c99798b54e79be92dc2da6248fa4f02b35c71faa5403622",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-zt373dy9828"
+        },
+        {
+          "id": "stanford-vx863mc2329",
+          "title": "City and county of San Francisco : compiled from official surveys, and sectionalized in accordance with U.S. surveys",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/stanford-vx863mc2329/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-vx863mc2329"
+        },
+        {
+          "id": "stanford-ch209xn4440",
+          "title": "Automobile road from San Francisco, Cal. to Vancouver, B.C. via Sacramento - Portland - Tacoma - Seattle - etc. : Part one, San Francisco, Cal. to Livermore, Cal",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/e07d19719013b491ee2d9792879ae5fcffecc6bc9c62d3dd196a055a6e808e07",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-ch209xn4440"
+        },
+        {
+          "id": "stanford-df334jk2963",
+          "title": "Port De San Francisco Dans La Haute Californie. No. 16. (with) Entree Du Port De San Francisco et des mouillages del Sausalito et de la Yerba Buena. Publie Par Arthus Bertrand. Grave par S. Jacobs. Voyage de Mr. Duflot de Mofras",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d4c5cf8ef3de922ac558ea5ae3fc1e5751e9eb6fdea9233529e638fbf234dc00",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-df334jk2963"
+        }
+      ]
+    },
+    {
+      "id": "seattle",
+      "label": "Seattle, WA",
+      "count": 8,
+      "diagnostics": {
+        "candidates": 9,
+        "checked": 9,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "stanford-sr294bd4761",
+          "title": "Map of Port of Seattle showing harbor terminals, public and private",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/2a2e55102b85e6f30e0002515d9102e8309e59d476914ee52ee59aa054aab4b7",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-sr294bd4761"
+        },
+        {
+          "id": "b0e6c2d7-6e9f-4df2-b09f-f4f57cdd4273",
+          "title": "Alaska-Yukon-Pacific Exposition, Seattle, Washington, 1909 : plan of grounds and buildings.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/48a7c8d9c955a68579902f17ccb9eb2de42d947f409374861b6c2477e9efd42b",
+          "recordUrl": "https://geo.btaa.org/resources/b0e6c2d7-6e9f-4df2-b09f-f4f57cdd4273"
+        },
+        {
+          "id": "p16022coll205:660",
+          "title": "Guide map of Seattle",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll205:660/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A660"
+        },
+        {
+          "id": "p16022coll205:669",
+          "title": "Route map of Seattle",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll205:669/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A669"
+        },
+        {
+          "id": "stanford-xj665xd0418",
+          "title": "Puget Sound : Seattle to Olympia, Washington",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/447caaf38ab26975c19fc2201a0a754bf013b961b5bf4d05c8d26e3c7c9e89d1",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-xj665xd0418"
+        },
+        {
+          "id": "p16022coll205:240",
+          "title": "Official map of the City of Seattle and vicinity",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll205:240/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A240"
+        },
+        {
+          "id": "p16022coll205:663",
+          "title": "Map of the city of Seattle, King County, Washington Territory",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll205:663/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A663"
+        },
+        {
+          "id": "p16022coll230:4590",
+          "title": "Land classification sheet, Washington, Seattle quadrangle",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/732c487462292b949e05b818444f130aba9c4e1aa50b200f97724e4b40c59beb",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll230%3A4590"
+        }
+      ]
+    },
+    {
+      "id": "new-york",
+      "label": "New York City, NY",
+      "count": 9,
+      "diagnostics": {
+        "candidates": 10,
+        "checked": 10,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "stanford-rh540pr2457",
+          "title": "New York Bay and Harbor : New York",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/52f61c6b6ee5013997bff40467a4a39800edebc0564edc0e5c1b0e5d135b95db",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-rh540pr2457"
+        },
+        {
+          "id": "stanford-mk513gq2430",
+          "title": "United States--east coast, New York--New Jersey, New York Harbor",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/5806662d07eecea979003192196b388a90f089d4b529477d6634befd2cd84743",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-mk513gq2430"
+        },
+        {
+          "id": "princeton-kd17cw29t",
+          "title": "New York ; City of New York, 1843",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/9c4627afd76774972a395a7fa6a15b21cc22d942ac5f48d30ba320418a659fae",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-kd17cw29t"
+        },
+        {
+          "id": "eb5e6ae8-0d84-4e95-991c-ab476886cc57",
+          "title": "Early New York.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/fb1057d910e95e331586964adb6607b3f8ea6766397b330219f9d505e7462efc",
+          "recordUrl": "https://geo.btaa.org/resources/eb5e6ae8-0d84-4e95-991c-ab476886cc57"
+        },
+        {
+          "id": "6ef635af-b15e-4322-8256-30a0d82a8502",
+          "title": "[New York City].",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/08a48635340dc89d5a20b1c42cca8c515000d9d1f0de4485890bdca3298f958f",
+          "recordUrl": "https://geo.btaa.org/resources/6ef635af-b15e-4322-8256-30a0d82a8502"
+        },
+        {
+          "id": "princeton-7d278w45j",
+          "title": "Bay & port of New-York, capital of New-York",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/14d849b0b3620fe9aba450e235e61e310dec3c8fb5d32dabe762243475de9863",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-7d278w45j"
+        },
+        {
+          "id": "princeton-m039k734h",
+          "title": "New York and vicinity",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/5c6916b346128592fe5dff240869e21a0726d44e9243f08638dd0165addcce12",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-m039k734h"
+        },
+        {
+          "id": "8230136e-5482-424f-8a98-42a5f036ec41",
+          "title": "New York Sheet, New York -New Jersey.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/210bd66e1bfb3ecf658c5a105cfb8894f5c84da10f9f398aa49243989fbfbc95",
+          "recordUrl": "https://geo.btaa.org/resources/8230136e-5482-424f-8a98-42a5f036ec41"
+        },
+        {
+          "id": "princeton-h128ng215",
+          "title": "New York: Brooklyn Quadrangle",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/cab9005869f15ae1374bfd4fa16870ec2ffcd3346c4cd658c7bca83b05694fe3",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-h128ng215"
+        }
+      ]
+    },
+    {
+      "id": "los-angeles",
+      "label": "Los Angeles, CA",
+      "count": 19,
+      "diagnostics": {
+        "candidates": 21,
+        "checked": 21,
+        "rejected": 2,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "stanford-ft993vw0176",
+          "title": "Automobile touring route from Los Angeles through San Fernando Valley and return",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/a8aebcc037e56a0768707c94f410d8d3e0725e22d005ba71b9302d41e080ffdd",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-ft993vw0176"
+        },
+        {
+          "id": "stanford-cb002hm8300",
+          "title": "Clason's guide map of the Los Angeles district : including Alhambra Ocean Park Eagle Rock Pasadena Glendale Santa Monica Hollywood Venice Inglewood Vernon",
+          "thumbnailUrl": "https://stacks.stanford.edu/image/iiif/cb002hm8300%2Fcb002hm8300_0002/full/!480,480/0/default.jpg",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-cb002hm8300"
+        },
+        {
+          "id": "stanford-ht948tt2809",
+          "title": "Automobile road map touring Pasadena and vicinity : Showing boulevard system to Los Angeles and adjacent cities together with principal points of interest to the motoring public",
+          "thumbnailUrl": "https://stacks.stanford.edu/image/iiif/ht948tt2809%2Fht948tt2809_00_0002/full/!480,480/0/default.jpg",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-ht948tt2809"
+        },
+        {
+          "id": "stanford-dy560dq4969",
+          "title": "Automobile road Los Angeles too Sierra Madre",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/8b8950682a1521f5d93c10c45b5325201b45c03264edf28ba317aceae7e949ff",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-dy560dq4969"
+        },
+        {
+          "id": "stanford-dc167wp9420",
+          "title": "Automobile road from Los Angeles to San Francisco via coast route. : Part one, Los Angeles to Ventura",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/a16812c2a584cfaa36fb8843b3818d0256e8a495fbc81e8e4a1d796a69f53d95",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-dc167wp9420"
+        },
+        {
+          "id": "stanford-ds207gt5399",
+          "title": "Automobile road from Los Angeles to San Diego via coat route. : Part one, Los Angeles to Santa Ana",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/b760d772231bb777a69c04b6cfdeb87b9fdf8024c1e3ebef18db37b446ae9879",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-ds207gt5399"
+        },
+        {
+          "id": "stanford-yp652xr8037",
+          "title": "Ventura to Los Angeles : Coast route. Map 6",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/6ab5bfda343da36f51b4e00cf62eda8d525a466ec5451be3fd312a2dde109ae8",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-yp652xr8037"
+        },
+        {
+          "id": "stanford-yx403hp9236",
+          "title": "Automobile road from Los Angeles, Cal. to Phoenix, Ariz. via San Bernardino - Brawley - Yuma - Phoenix. : Part one Los Angeles to Claremont",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/45e4b08f925d16e7b0400f9c20d868e11dfa3c0204fd4514597c030863e26a63",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-yx403hp9236"
+        },
+        {
+          "id": "stanford-ct283vf0485",
+          "title": "Automobile boulevards from Los Angeles to Venice and Santa Monica",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/e4aa6ea52cfb3b2e65d7e5a8f13366755393f5c06a3e639d599775c53f916f0d",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-ct283vf0485"
+        },
+        {
+          "id": "stanford-mm499kq7567",
+          "title": "Automobile routes from Los Angeles to Bakersfield via coast route",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/aac4d50f1fe935d822bdc1737564f32aa52105d7cbfb9e7458659df37cdf19ca",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-mm499kq7567"
+        },
+        {
+          "id": "stanford-gm146mk1074",
+          "title": "Automobile Routes Between Los Angeles and San Diego and connecting roads",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/e931d796e384fc3e64306a7669a41f923d30849ec52c70f6446e59e161046af6",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-gm146mk1074"
+        },
+        {
+          "id": "stanford-ht644bh8841",
+          "title": "Automobile routes from Los Angeles to Sunland, La Crescenta, and La Ca\u00f1ada",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/58b6bdcb8d680cddbaeb3823ad7e20dd6ff5326c2bfb8f6ff76a1580920a6407",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-ht644bh8841"
+        },
+        {
+          "id": "stanford-rv807gs3427",
+          "title": "Automobile road map from Los Angeles to Topanga Canon & return [sic]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/dda6ab82d9ccdcde703e12b8238b1f2ab4f512393b6862e1b7c62629ae5f036f",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-rv807gs3427"
+        },
+        {
+          "id": "princeton-xs55md67h",
+          "title": "California (Los Angeles Co.), Los Angeles Quadrangle",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d6514e0a45ac8c6bee2e7661dd54faf2d6d30da07a237ee17c7e570e01e9e0de",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-xs55md67h"
+        },
+        {
+          "id": "stanford-ss608cx2156",
+          "title": "Automobile roads from Los Angeles to Long Beach and San Pedro",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/f7e070278b8e239e735d5a6cf2a9a261a75547d3cf47608e1854c52b5f5cdf61",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-ss608cx2156"
+        },
+        {
+          "id": "stanford-xm151xt6669",
+          "title": "Map showing automobile roads from Los Angeles to Sunland, La Crescenta, & La Canada",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/0ccdda0a39f8f3ec83280ca2e4cbfe5d546f3dcbccc07bb557794c339bb24977",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-xm151xt6669"
+        },
+        {
+          "id": "stanford-xv054jv0648",
+          "title": "Map of territory annexed to the city of Los Angeles California",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/2d067ab17f8b93abeaf2daad00386c8f8c87a42e5e5965123f544b2e78510a06",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-xv054jv0648"
+        },
+        {
+          "id": "stanford-zv649nn3252",
+          "title": "Soil map, California. : Los Angeles sheet",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/348812b3cdaa60d6d163a0337c6fa1d6eceaa889a91d2904344f73759dab5684",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-zv649nn3252"
+        },
+        {
+          "id": "stanford-vb335nz3219",
+          "title": "Automobile roads from Los Angeles to Bakersfield via Tejon and Tehachapi Passes : San Francisco inland route. Part one, Los Angeles to Fairmont and Willow Springs",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/7f30bc0e05ef054968f300b3f4057e32c2563ce3f0e8f03d0fce02a9c3aa89cf",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-vb335nz3219"
+        }
+      ]
+    },
+    {
+      "id": "houston",
+      "label": "Houston, TX",
+      "count": 22,
+      "diagnostics": {
+        "candidates": 81,
+        "checked": 32,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "p16022coll205:1131",
+          "title": "Map of Houston, Texas",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/4df6d925cccd29aee7e0af6bc7a12c202a855501669a3881ae0a03d9c4809766",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A1131"
+        },
+        {
+          "id": "utlmaps:03ffbd99-2ff9-4cd3-9bd0-e40455164794",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1924, Sheet 360]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/64c278c724487ee1d49d942370844dea85751fdd53c04f84ac623c0a1adbc9b8",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A03ffbd99-2ff9-4cd3-9bd0-e40455164794"
+        },
+        {
+          "id": "utlmaps:04b47cb2-6ff0-4e29-a71d-521ff573f77d",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1924, Sheet 240]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/4ee357db340d30b137c7edf019c613223f63be981c4f947e6d8d501f767d665c",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A04b47cb2-6ff0-4e29-a71d-521ff573f77d"
+        },
+        {
+          "id": "utlmaps:06eaeafe-e660-4ffe-8903-f54edecb6020",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1907, Sheet 19]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/acc2bca773e8854cb0df41fddc56ba2d894015dd13131227d33dc51f9b3dafe4",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A06eaeafe-e660-4ffe-8903-f54edecb6020"
+        },
+        {
+          "id": "utlmaps:08e2b1f8-6574-42d0-a7e6-3a8b28d89712",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1907, Sheet 46]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/597dcdf40286db416573f3fb044ef8b07ed7adf8842cb09a726dc9f974075db7",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A08e2b1f8-6574-42d0-a7e6-3a8b28d89712"
+        },
+        {
+          "id": "utlmaps:0a46eafc-a4dd-430c-8691-5c0f92c889a1",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1907, Sheet 30]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ca4adc8cabaf28cfb457929ee5e82ee4674bfe85d476f69f3d3a212316d862dc",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A0a46eafc-a4dd-430c-8691-5c0f92c889a1"
+        },
+        {
+          "id": "utlmaps:0ae813f0-ac01-4685-b2a6-d04315dd69e0",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1907, Sheet 75]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/80359245d1456e8f2b308c358e2ff92f96dfd219f73f244f7d8e98c753a4b11d",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A0ae813f0-ac01-4685-b2a6-d04315dd69e0"
+        },
+        {
+          "id": "utlmaps:0e301d49-566e-431a-bc0c-29b34eba1fcf",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1907, Sheet 85]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/55be6e43a8a962d100a3de8f46f14b51cc753be336d363966bb029e8f66d98df",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A0e301d49-566e-431a-bc0c-29b34eba1fcf"
+        },
+        {
+          "id": "utlmaps:11c24c09-cff6-412a-ba5c-b5cc21622e1a",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1907, Sheet 47]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d61ea7a3b840a0180085f56d45d67604a39548f901a60c420d5643d84cfd38e2",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A11c24c09-cff6-412a-ba5c-b5cc21622e1a"
+        },
+        {
+          "id": "utlmaps:138a8282-9024-4685-ba53-0a8965063c31",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1907, Sheet 2]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/29ae57d8d22556e592fa63c6caf92e858a078529fd3b4cfed003ce7079b2bf79",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A138a8282-9024-4685-ba53-0a8965063c31"
+        },
+        {
+          "id": "utlmaps:56cc9a37-0ec1-472e-9e2c-2380e1ac8ed0",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1917, Sheet 128]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/49cbb3ada95f52cdd53dc8d2a6f9fbb10fe6269ddecf4eb534bb561bab7ea75c",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A56cc9a37-0ec1-472e-9e2c-2380e1ac8ed0"
+        },
+        {
+          "id": "utlmaps:1466ba5c-0016-4d22-b779-e601d574430f",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1907, Sheet 40]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/6c91e0aba5a906a0252635c4da528d798cf3c2182eddaa81d7c54b3168c1e6a2",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A1466ba5c-0016-4d22-b779-e601d574430f"
+        },
+        {
+          "id": "utlmaps:4ccc8e78-2823-4847-845d-3ce6b68d510b",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1924, Sheet 317]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/f21c5a35616c1db853f3c38f947d0d0ad97f92f086376ce6bfe900f3e6c57848",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A4ccc8e78-2823-4847-845d-3ce6b68d510b"
+        },
+        {
+          "id": "utlmaps:14dbe455-f253-4c31-bc66-89b1e0c68f2d",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1924, Sheet 257]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/c70c262bca1dd9b98b4161adc7496f2995890c74d665f855c5ef21687e676e41",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A14dbe455-f253-4c31-bc66-89b1e0c68f2d"
+        },
+        {
+          "id": "utlmaps:6666970e-b215-4df8-8771-53b0203c6d5f",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1907, Sheet 67]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/c18383e46f7dc97a10bb3c9a3d7e60de3cf77a496b9de0b7f7c961732c2a64ca",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A6666970e-b215-4df8-8771-53b0203c6d5f"
+        },
+        {
+          "id": "utlmaps:179351e3-1038-4695-8c20-24440e54eaaf",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1950, Sheet 1615]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/e11d9dfc80886f227720e2bcf945d0abdca81d66e61eb1bbeed143fdf3a0bd14",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A179351e3-1038-4695-8c20-24440e54eaaf"
+        },
+        {
+          "id": "utlmaps:6367d4c7-4071-4a5d-87b7-1d2c8e383170",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1907, Sheet 61]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/49183fcf12188fcac38da7638bd4113056c6989c30e10af4fda29bb7ed614886",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A6367d4c7-4071-4a5d-87b7-1d2c8e383170"
+        },
+        {
+          "id": "utlmaps:18bae669-7e23-43b6-b766-143101540e6f",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1924, Sheet 357]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/68ad920cfe63d2928dec6964ec1ef1d0d8b329bcaa81653e5d425e3c5b8d7c50",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A18bae669-7e23-43b6-b766-143101540e6f"
+        },
+        {
+          "id": "utlmaps:19c4b719-bf3d-4589-b751-0e3f30bf0087",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1907, Sheet 42]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/f5e9d202a18eb6fb3886d86c344b88c715fb037fecf66ec2a2d54c5b20ab8858",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A19c4b719-bf3d-4589-b751-0e3f30bf0087"
+        },
+        {
+          "id": "utlmaps:47c18bbd-b124-4db5-8d36-6e5c4f49f65a",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1907, Sheet 1]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/1d99ef035444d5836143f45585a9113256900b41f7fece42b006c310742f7836",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A47c18bbd-b124-4db5-8d36-6e5c4f49f65a"
+        },
+        {
+          "id": "utlmaps:1ea5477d-90bc-4241-99b1-9630174013e7",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1907, Sheet 49]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d4ab2adbe7a763cccd8221d797f510d1b3893250ba22ebeb63edc233c6ef44cc",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A1ea5477d-90bc-4241-99b1-9630174013e7"
+        },
+        {
+          "id": "utlmaps:4b068e23-0f93-4f91-ba31-22fd8be67a2f",
+          "title": "Sanborn Fire Insurance Maps [Houston, Texas, 1924, Sheet 364]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/9164e745fc8a0a68f0186b3554bcda3d360872387b08b3d6b43fbedc38501c37",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A4b068e23-0f93-4f91-ba31-22fd8be67a2f"
+        }
+      ]
+    },
+    {
+      "id": "philadelphia",
+      "label": "Philadelphia, PA",
+      "count": 18,
+      "diagnostics": {
+        "candidates": 30,
+        "checked": 30,
+        "rejected": 12,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "39731df0-4af8-4a48-acb7-48942ec53486",
+          "title": "Topographical map of Fairmount Park, Philadelphia : excepting Wissahickon Valley.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/c74044f2b8dd95f4261b32220d9132d68b2dc1bc0a82121416a32c4ee08bb3a3",
+          "recordUrl": "https://geo.btaa.org/resources/39731df0-4af8-4a48-acb7-48942ec53486"
+        },
+        {
+          "id": "princeton-z890rw61j",
+          "title": "New and improved map of the City of Philadelphia, showing Fairmount Park with its drives and walks, wards, public squares & cemeteries, &c. &c.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/86f3a9a2148d51752a7a47b43d26873639ed1263c252429e783cf388477df496",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-z890rw61j"
+        },
+        {
+          "id": "princeton-k06989879",
+          "title": "Philadelphia",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/5a85fd2684373809d7a179a25a9fe7df5853668c47ae5a66b743b153d443a988",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-k06989879"
+        },
+        {
+          "id": "princeton-fb494b77x",
+          "title": "Plan of Philadelphia",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/cd7105131260e67f78d4e83f2e86f442e0da948273a2055175e148f607e9abf1",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-fb494b77x"
+        },
+        {
+          "id": "p16022coll205:272",
+          "title": "Map of Philadelphia.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll205:272/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A272"
+        },
+        {
+          "id": "eb2343c3-fd98-4cbe-b656-012fa23828af",
+          "title": "New driving map of Philadelphia.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/6fd370a3948988d94703cc0a17e8c4230a3367d8af4dc0d7f3478f8d23899a86",
+          "recordUrl": "https://geo.btaa.org/resources/eb2343c3-fd98-4cbe-b656-012fa23828af"
+        },
+        {
+          "id": "pst_0039864243",
+          "title": "Important farmlands, Philadelphia County, Pennsylvania",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/9847cf4801e51bd233d1f43920c6c872dd7bc98418c3eac7ece0c236c699c727",
+          "recordUrl": "https://geo.btaa.org/resources/pst_0039864243"
+        },
+        {
+          "id": "princeton-ht24wm852",
+          "title": "Pennsylvania : city of Philadelphia, 1776-1876",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/267487a2fbc9f5cd767abdbf3df993480048d7fd6a6e22484362d28b7bf0324a",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-ht24wm852"
+        },
+        {
+          "id": "princeton-th83m1697",
+          "title": "New map of Philadelphia and vicinity",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ecb2f356ca0f12926fb70814d48014da50c817ef6e596c74e25eab0cff9363d7",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-th83m1697"
+        },
+        {
+          "id": "princeton-8910jw97g",
+          "title": "Philadelphia Quadrangle, Pennsylvania-New Jersey, 7.5 Minute Series (topographic).",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/0afebf2c8a2594648401aba2a2023a54f78989011890a5ba9c4c68ff1199a82e",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-8910jw97g"
+        },
+        {
+          "id": "princeton-9z903240z",
+          "title": "Map of the vicinity of Philadelphia",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/afb26f3030d6377b206732b835e2070a23e3e6ada2e9a6ac8e4b82eaa6ebd157",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-9z903240z"
+        },
+        {
+          "id": "stanford-rq620wy8456",
+          "title": "Philadelphia and vicinity : Pennsylvania--New Jersey and Delaware",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/9bd8ab75092c9796667884a5ca8d2bb5d29c25f388c249519e9eef8ba673f56b",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-rq620wy8456"
+        },
+        {
+          "id": "princeton-v692t8707",
+          "title": "A plan of the city of Philadelphia and environs",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/a4afbb6df16dcdf8670873398e49c09d095c35b133923a6aced08c015926545b",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-v692t8707"
+        },
+        {
+          "id": "princeton-0z708x990",
+          "title": "Pennsylvania-New Jersey: Philadelphia sheet",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/20372b68e11071f8266eb03057ca1e992e43763840a79d336046bdf371973785",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-0z708x990"
+        },
+        {
+          "id": "princeton-xs55mf611",
+          "title": "Map of the vicinity of Philadelphia and Trenton from actual surveys",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/83970e5e0384d967990f2c52060596c31b8e37151d5abeb5c41d04324165784f",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-xs55mf611"
+        },
+        {
+          "id": "stanford-rs297cs2682",
+          "title": "A map of Philadelphia and parts adjacent : with a perspective view of the State-House",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/4fc0e3827fb804683936574ff2d2c44d0d47bb387b2d25829452039864607349",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-rs297cs2682"
+        },
+        {
+          "id": "8c19fdec-0852-49f5-a360-ecf9a8d64bd5",
+          "title": "The London Land Company survey, by Thomas Fairman : copy, 1764 of an island in the river Delaware in Philadelphia County abouve the mouth of the Schuylkill",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/0f6173e8ea3eaeb045b9449b6512db9c8d5ba1ce43ad83abb2887535b9f831d4",
+          "recordUrl": "https://geo.btaa.org/resources/8c19fdec-0852-49f5-a360-ecf9a8d64bd5"
+        },
+        {
+          "id": "stanford-fz752yt3232",
+          "title": "A plan of the city and environs of Philadelphia : with the works and encampments of His Majesty's forces under the command of Lieutenant General Sir William Howe, K.B",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/b6339143ad6026696b6948ba18b84df8824f937e2ccd0024ca0e8612bd902d27",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-fz752yt3232"
+        }
+      ]
+    },
+    {
+      "id": "boston",
+      "label": "Boston, MA",
+      "count": 20,
+      "diagnostics": {
+        "candidates": 44,
+        "checked": 20,
+        "rejected": 0,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "p16022coll230:4061",
+          "title": "Balloon view--Boston Harbor",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d4b833d20f4db92772218a318ce2b3179003554a2a456b82448cb8f512319abb",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll230%3A4061"
+        },
+        {
+          "id": "p16022coll205:244",
+          "title": "City of Boston-Park Department, Marine Park grading plan",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/2fd27b7e42584b627fd3e25cdc15482308027513393e22788a137fb7268fb40b",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A244"
+        },
+        {
+          "id": "p16022coll205:505",
+          "title": "Map of Boston and the country adjacent : showing rural parks",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ee9db67a488ca9a613876298125a648544844309db5a17e64a62e5f57a7ee696",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A505"
+        },
+        {
+          "id": "f2c36c63-fc36-4d0f-8356-0d4a19c9b16c",
+          "title": "A new and accurate plan of the town of Boston in New England ; A new plan of Boston Harbor from an actual survey.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/31aaa5418bc9388b3892483f2dd006d39d9267e72c9789b1d4675224ed01f558",
+          "recordUrl": "https://geo.btaa.org/resources/f2c36c63-fc36-4d0f-8356-0d4a19c9b16c"
+        },
+        {
+          "id": "p16022coll205:497",
+          "title": "Road map of the Boston district showing the metropolitan park system",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/de7d7f65a2fe99b09faec0912dcc5e872c61ec058d2a6d8037c34ac55a56c3a5",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A497"
+        },
+        {
+          "id": "9d97e01e-29f2-42dc-8bd5-61d6511795b5",
+          "title": "Map of Boston [with index to main tourist attractions, hotels, public buildings, etc.].",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/c2f2a666e9265b34e24ad31bb25eb2a2a67bc020ab7dae4ad638ee4a4003d681",
+          "recordUrl": "https://geo.btaa.org/resources/9d97e01e-29f2-42dc-8bd5-61d6511795b5"
+        },
+        {
+          "id": "p16022coll205:563",
+          "title": "New map of Boston : giving all points of interest, with every railway & steamboat terminus, prominent hotels, theatres & public buildings. Map of Boston and suburbs : showing parks and automobile routes",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/1eb18a6af9aeac6671f59ffe8ef7ee3d9f1d946f02f778321330bdf360e111b2",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A563"
+        },
+        {
+          "id": "3f759080-33f4-42b6-a77c-58920748d19b",
+          "title": "Map of the country about Boston : Published by the Appalachian Mountain Club from the proofs of the state map with the permission of the ... Geological Survey and ... the Topographic Survey of Massachusetts.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/1e6284c9f255f4c21f64f4f6b23d01609b31ab0b9f5d7ab4df4615e991e719bf",
+          "recordUrl": "https://geo.btaa.org/resources/3f759080-33f4-42b6-a77c-58920748d19b"
+        },
+        {
+          "id": "p16022coll205:552",
+          "title": "Boston",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/c03abda6bcaf218acf87d43e18b55db737cd00ec270db4f098ef560a563a9932",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A552"
+        },
+        {
+          "id": "p16022coll205:514",
+          "title": "Map of Boston",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/fcbcd04e7199b7271489f3c8e626a9e344aabf60a530a9d95c1d2032b84fd521",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A514"
+        },
+        {
+          "id": "stanford-fk383br7533",
+          "title": "Massachusetts : Boston and vicinity",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/f3fba7948d6744bb04b85f6bd13c68d1766b10140ef7c8f21a06cf0375c0aa68",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-fk383br7533"
+        },
+        {
+          "id": "p16022coll205:301",
+          "title": "Map of Boston for 1887 published expressly for the Boston directory.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/f9331477c81c1f8b2561ace27bace78de3cc39bca2687335450c63e3fe353983",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A301"
+        },
+        {
+          "id": "stanford-vx139zq9677",
+          "title": "Boston Bay and approaches : Massachusetts",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/3d8e3e455f223e4a4233162ad4efbbbc90efcfeea55cee6a7c2a74f6a3dac685",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-vx139zq9677"
+        },
+        {
+          "id": "9b54ac56-81e4-4fc6-a6d6-7bd757b1b0b4",
+          "title": "Tentative zoning plan for the city of Boston",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/71b3040f371328108e6714c6c8ba0b7d8a71359eb6e749fce4e637bd6c0cbf9e",
+          "recordUrl": "https://geo.btaa.org/resources/9b54ac56-81e4-4fc6-a6d6-7bd757b1b0b4"
+        },
+        {
+          "id": "p16022coll205:255",
+          "title": "Map of Boston and vicinity",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/f968435bd4a59f44457793997eb23b8b46c7ca273cd36ffb5fadb5f15cc00eb7",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A255"
+        },
+        {
+          "id": "p16022coll205:520",
+          "title": "Map of Boston : Cambridge, Somerville, Everett, Chelsea, Winthrop, Revere, Malden, Melrose, Medford, Belmont, Brookline, Winchester, Arlington, Watertown",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/e05560a1b36b38f0714fee4edd335e357347e57a459f8756bf1922a6976a0ba5",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A520"
+        },
+        {
+          "id": "0eaa2d57-12c5-463e-bd5a-79f0b588dde4",
+          "title": "Map of Boston for 1880.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/6b96ade7ee23cad222341254233cc546be565cd9f2a9a308bad22717aae04696",
+          "recordUrl": "https://geo.btaa.org/resources/0eaa2d57-12c5-463e-bd5a-79f0b588dde4"
+        },
+        {
+          "id": "p16022coll205:282",
+          "title": "Map of Boston showing health districts and undrained and filled land.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ede92431c66deeedc77acaa4218322210ee1f08046214de4d57ee96b474d6c6c",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A282"
+        },
+        {
+          "id": "p16022coll230:1336",
+          "title": "Balloon view, Provincetown to Boston",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/72c182f8da3264ae51f66a2479b730475a339a84f73e0e08ffef012ed1162311",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll230%3A1336"
+        },
+        {
+          "id": "p16022coll205:1159",
+          "title": "A plan of Boston in New England with its environs: including Milton, Dorchester, Roxbury, Brooklin, Cambridge, Medford, Charlestown, parts of Malden and Chelsea with the military works constructed in those places in the years 1775 and 1776",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/b5f02e84a4f81d8f1ca3699d6b2ab747317b145556991e981dd47a45f4119710",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A1159"
+        }
+      ]
+    },
+    {
+      "id": "washington",
+      "label": "Washington, DC",
+      "count": 17,
+      "diagnostics": {
+        "candidates": 18,
+        "checked": 18,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "p16022coll230:1643",
+          "title": "Washington and vicinity",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/75888d233f9ef134464a5111b612327f5c140a24e2264e76ef87129895bf2006",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll230%3A1643"
+        },
+        {
+          "id": "p16022coll230:1551",
+          "title": "The nation's capital : [Washington D.C.]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/0a1c33c61e53721c25b51c7c1768cc05aa28fb2229d7de8289aed74aac3d3a27",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll230%3A1551"
+        },
+        {
+          "id": "p16022coll205:341",
+          "title": "The \"Standard guide\" ready reference map of Washington : to accompany the \"Washington standard guide\"",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/a56a391f48fce023cf7b887db463e8e0f459ea5b300a5b9f3dbed0baef48d536",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A341"
+        },
+        {
+          "id": "princeton-vd66w526h",
+          "title": "Aerial photographic mosaic, Washington, D.C. 1918",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/9e351533c018b892b757d37e346785cd39a95030ee7c3fab723082923102c85d",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-vd66w526h"
+        },
+        {
+          "id": "stanford-gj277vt1733",
+          "title": "Plan of the city of Washington",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/5938d6aded1fdd955c1240742dd03cd4b274c9a04e41607bdb935dbe603bca13",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-gj277vt1733"
+        },
+        {
+          "id": "princeton-7d279039n",
+          "title": "Washington, D.C. area satellite image map",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/e01ea2330f06e6082f4bbd60fe63ed9ec56febd24e002189da8051e01d45b082",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-7d279039n"
+        },
+        {
+          "id": "p16022coll230:1512",
+          "title": "Washington and vicinity, Maryland-District of Columbia-Virginia",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/1ff21d4ded1a08907d9b348816cb828d3439b2ed32d2fa614a85f86d8f2cc17a",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll230%3A1512"
+        },
+        {
+          "id": "p16022coll205:253",
+          "title": "Map of the city of Washington : established as the permanent seat of the government of the United States of America",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/85255414c790f04fedeb2dc4e84b507febdc1197154fdd520233c9fa1b92645a",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A253"
+        },
+        {
+          "id": "p16022coll205:281",
+          "title": "The \"Standard guide\" up-to-date ready reference map of Washington : to accompany the \"Washington standard guide\"",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d7529240fcc9c1c07b1d51ecb812f4e6992cafa65a5d8ae41e226c2597e9b459",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A281"
+        },
+        {
+          "id": "3dca9eac-5dac-4fff-aef9-f71a95f7706b",
+          "title": "Georgetown and the city of Washington, the capital of the USA",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/62b3e505bbe5847ef655eaa2e464610913948a4dfc765058a309818775c74e9e",
+          "recordUrl": "https://geo.btaa.org/resources/3dca9eac-5dac-4fff-aef9-f71a95f7706b"
+        },
+        {
+          "id": "b2efc47f-70b9-4462-a6a4-86a49e43697e",
+          "title": "Washington and vicinity, Maryland-District of Columbia-Virginia H.M. Wilson, geographer in charge topography by J.D. Hoffman [and others] and U.S. Coast and Geodetic Survey.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ebcb6b26c30c52fa5f175e7e567cedc04116f31867e93a47d8664babb870837c",
+          "recordUrl": "https://geo.btaa.org/resources/b2efc47f-70b9-4462-a6a4-86a49e43697e"
+        },
+        {
+          "id": "ark-85335-m5zp3w07s",
+          "title": "Map of the city of Washington showing location of fatal cases of consumption for the year ended June 30, 1901",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d8140a07e4e774b876e093cd2876a1cdb85d38f6e4e8da1467410229ababb730",
+          "recordUrl": "https://geo.btaa.org/resources/ark-85335-m5zp3w07s"
+        },
+        {
+          "id": "a19bae50-883c-4e2d-bfb5-5ad124aa6bc9",
+          "title": "District of Columbia",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/e4586adcaa2ef67780ae9f7160efbf85f2a45f3100e942036196c2454aa6d6f3",
+          "recordUrl": "https://geo.btaa.org/resources/a19bae50-883c-4e2d-bfb5-5ad124aa6bc9"
+        },
+        {
+          "id": "ark-85335-m55d8nf29",
+          "title": "Map of the District of Columbia",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/b875ae65d432f5b5c35a63b15504ae13369d55d74b3f15e70468ba135938576e",
+          "recordUrl": "https://geo.btaa.org/resources/ark-85335-m55d8nf29"
+        },
+        {
+          "id": "ark-85335-m57659f70",
+          "title": "Map of the District of Columbia showing location of schools",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/0bd2dbf2dab45ae11c3bb51764eb4c831609c6c5404825367c04acbcb54f3117",
+          "recordUrl": "https://geo.btaa.org/resources/ark-85335-m57659f70"
+        },
+        {
+          "id": "p16022coll230:4592",
+          "title": "Map of the District of Columbia : 1901",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/649e8bff715b3dcf939a2a553abcd9dc55dad43f512deabbcca1e06bd67bc5f0",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll230%3A4592"
+        },
+        {
+          "id": "stanford-tq468bw1282",
+          "title": "Map of the permanent system of highways, District of Columbia",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/6884985ff2a8870cb9cf26ed6dc61d3ba641bc893ba5e9cd4754e8491424aa29",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-tq468bw1282"
+        }
+      ]
+    },
+    {
+      "id": "atlanta",
+      "label": "Atlanta, GA",
+      "count": 3,
+      "diagnostics": {
+        "candidates": 4,
+        "checked": 4,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "princeton-fq977x20c",
+          "title": "Map illustrating the military operations of the Atlanta campaign",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/7d2bdfb1c39255b808e34e7227f3f90d8b48355099032e9fdbde384d1ad2da3d",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-fq977x20c"
+        },
+        {
+          "id": "princeton-3r074x393",
+          "title": "Map illustrating the military operations in front of Atlanta, Ga. : from the passage of Peach Tree Creek, July 19th 1864, to the commencement of the movement upon the enemy's lines of communication, South of Atlanta, August 26th 1864, Maj. Gen'l W.T. Sherman, commanding U.S. forces, Gen'l J.B. Hood, commanding Conf'd'te forces",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/3b78575e0aeea6878390ec070af51f545f57badc225649c414d1ebef9af68ae1",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-3r074x393"
+        },
+        {
+          "id": "p16022coll205:591",
+          "title": "Camp Gordon and vicinity",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/8f18f211398a55e59182733c6e8ea59ce085cf5f61745f3335786e15b38144b4",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A591"
+        }
+      ]
+    },
+    {
+      "id": "austin",
+      "label": "Austin, TX",
+      "count": 22,
+      "diagnostics": {
+        "candidates": 59,
+        "checked": 24,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "utaustin_121223",
+          "title": "The University of Texas at Austin Campus 1920",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d10ed0e618c95faf27da0d6fd223fdfc8f8f4f5f3b2534fc6c4fdd2565481a8e",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121223"
+        },
+        {
+          "id": "utaustin_121142",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1885; Sheet 6]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/dd1d75a244e078b07015d070db0844eb88f8925521dc53805b783af85a216f45",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121142"
+        },
+        {
+          "id": "utaustin_121143",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1885; Sheet 7]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d9000df14f0e2070b2cf89b7883355e2643a34c8b3d0cf9fb5f97f72a0ac4950",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121143"
+        },
+        {
+          "id": "utaustin_121144",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1885; Sheet 8]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/f57043bd26cad4c064b90fab5da554896e514dfb5d59d19c47bf25ce6fc16273",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121144"
+        },
+        {
+          "id": "utaustin_121145",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1889; Sheet 10]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/00e2811ebcdbd24a2cdd6bfb6fb7e0345d035dfa7de8f873c628eec13a98f98d",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121145"
+        },
+        {
+          "id": "utaustin_121146",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1889; Sheet 11]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/8d61cd3a33a4b5acf4a301b914f6ec99ce734638febe60893bbfa90826ec05f7",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121146"
+        },
+        {
+          "id": "utaustin_121147",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1889; Sheet 12]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/413f0a4dab60036e60677a0c27e9c891a7b2e41d912a28aeeef5232fb399e5d2",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121147"
+        },
+        {
+          "id": "utaustin_121148",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1889; Sheet 13]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/632a6688c1ac947dd82975a70c989e448d8e6cb1587adc1066133ce91b099b84",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121148"
+        },
+        {
+          "id": "utaustin_121149",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1889; Sheet 14]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/bf51c26045c6d01e9544204cc71d57637ff0f1bb280387ff40b3b860b0d521ad",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121149"
+        },
+        {
+          "id": "utaustin_121150",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1889; Sheet 15]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/61a51eeb6cfd0867c61f7810bdca85feb2c2830ccab416f11b067959a4718120",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121150"
+        },
+        {
+          "id": "utaustin_121151",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1889; Sheet 7]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/426e9dfdd4db83ba4d21fefac0909ab3123fc3e793367cf60df13617390fef7a",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121151"
+        },
+        {
+          "id": "utaustin_121152",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1889; Sheet 8]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/5ae025ef6cbc8b49d4369a275e91ba4df82c0eeb9d3770b8b0b22c3d78ded78e",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121152"
+        },
+        {
+          "id": "utaustin_121186",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1921; Sheet 86]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/utaustin_121186/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121186"
+        },
+        {
+          "id": "utaustin_121153",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1889; Sheet 9]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/94c42c3cc777f599a4de211e7b8dbeeaf72c2b5ec7dcb709285bb25c465e6146",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121153"
+        },
+        {
+          "id": "utaustin_121178",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1921; Sheet 76]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/utaustin_121178/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121178"
+        },
+        {
+          "id": "utaustin_121154",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1894; Sheet 10]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ca59ca71e25f6f5138cc8743de3d1424f6b351fc89ad97511e603aa5e4b04d64",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121154"
+        },
+        {
+          "id": "utaustin_121155",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1894; Sheet 12]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/94e2460758b383580870105a405969b2bb941701e82ce546d56aca763a9e5ab3",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121155"
+        },
+        {
+          "id": "utaustin_121182",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1921; Sheet 82]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/utaustin_121182/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121182"
+        },
+        {
+          "id": "utaustin_121156",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1894; Sheet 13]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ecc4044a29b0e27adc429efc45d2c84f17a91dacc1dc1b8e1ba5e7a73512633b",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121156"
+        },
+        {
+          "id": "utaustin_121190",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1921; Sheet 90]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/utaustin_121190/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121190"
+        },
+        {
+          "id": "utaustin_121157",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1894; Sheet 14]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d0faa0328b06ca52dffb7ee039113e492248b148a2b08cd6aff72f949508f920",
+          "recordUrl": "https://geo.btaa.org/resources/utaustin_121157"
+        },
+        {
+          "id": "utlmaps:c38076fa-be47-4386-b6f5-9bd1945d6d93",
+          "title": "Sanborn Fire Insurance Maps [Austin, Texas, 1921, Sheet 59]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/30b05c4fe94ec2ceb376d2b549f9e1c0d0628cc21841ba300d90b774a1a72814",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3Ac38076fa-be47-4386-b6f5-9bd1945d6d93"
+        }
+      ]
+    },
+    {
+      "id": "baltimore",
+      "label": "Baltimore, MD",
+      "count": 18,
+      "diagnostics": {
+        "candidates": 19,
+        "checked": 19,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "stanford-tf731tr9674",
+          "title": "Baltimore Harbor, Maryland",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/c4efaf44811244c7f9bb9fd8223269d5724a38a81e1dfcc2d74a5a19bd73ef52",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-tf731tr9674"
+        },
+        {
+          "id": "d8c4bebc-a8e7-4652-bcea-0b011e31a1c2",
+          "title": "Approaches to Baltimore Harbor, Maryland, 1905",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/adab98b88fd68c46c627c9474d6cd3b5b223561975b1e2a93033742765cae3fe",
+          "recordUrl": "https://geo.btaa.org/resources/d8c4bebc-a8e7-4652-bcea-0b011e31a1c2"
+        },
+        {
+          "id": "p16022coll205:600",
+          "title": "Map and directory of Camp Patterson Park [Baltimore, Maryland] One Hundred and Tenth Regiment of New York Volunteers. Col. D.C. Littlejohn, commanding",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/3a723695df617766cca5f1e2901b3b87d8cba22ac3cad6cc85529f229ed3ca8f",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A600"
+        },
+        {
+          "id": "princeton-hh63t225d",
+          "title": "Baltimore",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/bff368c2c1d32869fe7ddf00293a6c065f450f9fe3283da8586f7db6d8e8d3d4",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-hh63t225d"
+        },
+        {
+          "id": "b62ec150-7a5c-4551-8565-610a1500fa25",
+          "title": "Baltimore, 1838",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/3140be2cd719f0d20b7c7be6796c0eb1738ec5a7e48cac394fd4d88bef8bf90b",
+          "recordUrl": "https://geo.btaa.org/resources/b62ec150-7a5c-4551-8565-610a1500fa25"
+        },
+        {
+          "id": "princeton-7p88cp02c",
+          "title": "Baltimore and vicinity (route through Baltimore for Washington and Camp Meade).",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/4fa800408c3febb494a12a7f1369f6f392b4a7e11da011cbae888891362f468e",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-7p88cp02c"
+        },
+        {
+          "id": "7bf98cf1-758b-4146-8a88-a98a41ec2573",
+          "title": "Map of Baltimore, circa 1885",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/b11a6362962e31694afbb47eb5f215f87e24ea7126ef17dbe77d2a8be2b3bf74",
+          "recordUrl": "https://geo.btaa.org/resources/7bf98cf1-758b-4146-8a88-a98a41ec2573"
+        },
+        {
+          "id": "6daaafcc-dca3-4e1d-b1e3-bda4c6ffffd8",
+          "title": "Flamm's new map of Baltimore, 1894",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/b1600c8adcd334ce9dc64ffc7a01edb319b7f3eb6456550a6af37939c8689ba1",
+          "recordUrl": "https://geo.btaa.org/resources/6daaafcc-dca3-4e1d-b1e3-bda4c6ffffd8"
+        },
+        {
+          "id": "52cf8dcb-ca00-4f58-9a58-9869f74307b4",
+          "title": "Baltimore Showing the District Boundaries, undated",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/29bad89e829f096b6830828a80d8b264da5b8f253abe986684f6c65d1fac0f7a",
+          "recordUrl": "https://geo.btaa.org/resources/52cf8dcb-ca00-4f58-9a58-9869f74307b4"
+        },
+        {
+          "id": "cb1d7899-05bc-4d18-ae96-ed3a0fcca395",
+          "title": "Map b of Baltimore and Harford counties",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/0e50cfcac15f5b76522832d2bb6bd1ad17b487dca16390ee25bd63de61efed95",
+          "recordUrl": "https://geo.btaa.org/resources/cb1d7899-05bc-4d18-ae96-ed3a0fcca395"
+        },
+        {
+          "id": "786a7dc8-35f1-4050-b0bf-f575a3610b8e",
+          "title": "F. Klemm\u2019s Map of Baltimore and Suburbs, 1873",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/77e6431aeddbf4f783806fd5ab075f0c2d59cc32c6d19c759b28ae725addf952",
+          "recordUrl": "https://geo.btaa.org/resources/786a7dc8-35f1-4050-b0bf-f575a3610b8e"
+        },
+        {
+          "id": "2a59d40c-967e-4055-a7ca-3d5ba1f5a876",
+          "title": "Plan of the City and Environs of Baltimore, 1801",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/e510da2dce4d194c16adca79eec83c931f1c86734348cdf92ef53c85b9cf3816",
+          "recordUrl": "https://geo.btaa.org/resources/2a59d40c-967e-4055-a7ca-3d5ba1f5a876"
+        },
+        {
+          "id": "princeton-tb09jc018",
+          "title": "Baltimore Sheet, Maryland",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/1a09fb975565aabfe0111ad6e6fcfe553bcc444254e7e0ebdf0f9d24dbc6376f",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-tb09jc018"
+        },
+        {
+          "id": "d8fa41ae-d30d-4180-b0df-656d92b9b2c5",
+          "title": "Map of the City and Suburbs of Baltimore, 1853",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/dc60e3339a7b81b5d9419ca532d295bd7aa0e77ab0d06a48e7fd3ab5a0f7a569",
+          "recordUrl": "https://geo.btaa.org/resources/d8fa41ae-d30d-4180-b0df-656d92b9b2c5"
+        },
+        {
+          "id": "princeton-fq977w21f",
+          "title": "Maryland: Baltimore Quadrangle",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/312122dbdee7ae0942b170830d4be7ee2b4cbe7da89598330a16822768177762",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-fq977w21f"
+        },
+        {
+          "id": "ee9cc7f4-f3cc-451c-8dd4-845910d213e1",
+          "title": "First Records of Baltimore Town and Jones Town, 1729-1797 (1905)",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/a02fd20708d4adce124ffc12cf0eacaeef9e55330aa101ae5f82f70722096814",
+          "recordUrl": "https://geo.btaa.org/resources/ee9cc7f4-f3cc-451c-8dd4-845910d213e1"
+        },
+        {
+          "id": "f6b569bd-56ea-4688-9800-bdab09f5c319",
+          "title": "Maryland: Baltimore Quadrangle, 1892",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/24dfa621bcefb3fd8d19997dc5d6dc3f9d150d1dc6f4e4a4e00e423ea9100309",
+          "recordUrl": "https://geo.btaa.org/resources/f6b569bd-56ea-4688-9800-bdab09f5c319"
+        },
+        {
+          "id": "8542d744-d4ee-4b80-aad6-2d44a0a193f0",
+          "title": "Baltimore and its neighborhood : an excursion map / compiled for the Johns Hopkins University based upon the triangulation of the U.S. Coast and Geodetic Survey and published maps of local surveys edited by Albert L. Webster drawn by Louis Nell.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/8542d744-d4ee-4b80-aad6-2d44a0a193f0/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/8542d744-d4ee-4b80-aad6-2d44a0a193f0"
+        }
+      ]
+    },
+    {
+      "id": "columbus",
+      "label": "Columbus, OH",
+      "count": 4,
+      "diagnostics": {
+        "candidates": 5,
+        "checked": 5,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "osu-dz0114110",
+          "title": "Quaternary geology of Ohio, Columbus quadrangle",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/osu-dz0114110/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/osu-dz0114110"
+        },
+        {
+          "id": "osu-6m3121526",
+          "title": "Tentative zoning map, city of Columbus, Ohio",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/482e8e3a110b63c4ef174fea2e567b4095e68d9066a25a696b6473a625d255e2",
+          "recordUrl": "https://geo.btaa.org/resources/osu-6m3121526"
+        },
+        {
+          "id": "osu-7d279472v",
+          "title": "Map showing existing property now owned by the Ohio State University, Columbus, Ohio",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/9053a19ab811cddb558f60c8ab7ad966339e70f09997673fc5062a649f960324",
+          "recordUrl": "https://geo.btaa.org/resources/osu-7d279472v"
+        },
+        {
+          "id": "osu-8k71nx137",
+          "title": "Guide to the geology along U.S. Route 23 between Columbus and Portsmouth",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/da5657dee8f07ddf0f0c978b73d108b3c45a942ef7a9f016d19fe42f098f971d",
+          "recordUrl": "https://geo.btaa.org/resources/osu-8k71nx137"
+        }
+      ]
+    },
+    {
+      "id": "dallas",
+      "label": "Dallas, TX",
+      "count": 21,
+      "diagnostics": {
+        "candidates": 94,
+        "checked": 40,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "utlmaps:010d9195-69ff-4e53-ad40-783a03204995",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1922, Sheet 548]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/1d560c25dcdbd243912527c77ab3c881b14bada1d9d9574ae488f470eb1b72f6",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A010d9195-69ff-4e53-ad40-783a03204995"
+        },
+        {
+          "id": "utlmaps:021770b5-b55d-4865-8dc0-22676c4300bc",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1905, Sheet 23]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/29c742c8fec0305c897241e64b63915c3ca0fe83c0e37f18fce90bb5b2a27eac",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A021770b5-b55d-4865-8dc0-22676c4300bc"
+        },
+        {
+          "id": "utlmaps:05f5fdf1-ebd7-4dcb-985a-4a490ed52e62",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1922, Sheet 370]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/6484f45719576734a22c46b908f021244b3a03ab199c2952a49a026eecc3261e",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A05f5fdf1-ebd7-4dcb-985a-4a490ed52e62"
+        },
+        {
+          "id": "utlmaps:066e211c-3ad8-4168-937a-213b37c3fd20",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1905, Sheet 27]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/af88be336c710bf592165efdf7acec660646d0266e87d0ccaf97bce56503214b",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A066e211c-3ad8-4168-937a-213b37c3fd20"
+        },
+        {
+          "id": "utlmaps:0a944144-6563-4da7-9666-9e45a59452cd",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1905, Sheet 41]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/9a62c9da57cce387d1ed19e6d7de421c2534a392920a08c8b699f0b85c927b2f",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A0a944144-6563-4da7-9666-9e45a59452cd"
+        },
+        {
+          "id": "utlmaps:0d58ab14-8430-495c-8fa1-d562a074b8b7",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1922, Sheet 363]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/aab2dae628dcd638f3938b79dda6efb5f543645e6cd7116f8adbaded900daddd",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A0d58ab14-8430-495c-8fa1-d562a074b8b7"
+        },
+        {
+          "id": "utlmaps:102caa57-1b39-4cdc-aba6-c97accd8cd1f",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1922, Sheet 388]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d48496882473d733979d69ad292c18c0d1121b7daaa63679884cbf913fb76345",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A102caa57-1b39-4cdc-aba6-c97accd8cd1f"
+        },
+        {
+          "id": "utlmaps:7f98ad00-a06b-4c64-bfb6-e61f32458d14",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1921, Sheet 286]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d262a8c67a5395a356ba403e0375759bf162b02ef69b246c6facd47715631668",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A7f98ad00-a06b-4c64-bfb6-e61f32458d14"
+        },
+        {
+          "id": "utlmaps:ce12d085-2b88-471f-b936-0e5e2619cb99",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1922, Sheet 541]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/e6bf4e7b3a930c99f882f4af8202a4010b0e10ca7dd5f1f240201bda6811920f",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3Ace12d085-2b88-471f-b936-0e5e2619cb99"
+        },
+        {
+          "id": "utlmaps:1e378375-8ad3-4c34-8bb7-8cd974df718d",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1922, Sheet 564]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/eda196003e1415be407fdd765f4b9e52be43a5306f04601a86401ff1ee560e36",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A1e378375-8ad3-4c34-8bb7-8cd974df718d"
+        },
+        {
+          "id": "utlmaps:b76f0b8c-2283-4ad3-abc1-23442ce0a6b7",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1921, Sheet 252]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/8915efcce06ae8e3cbf0ca3f9ccb7903344d1077a4053a14e5df3811625c1a37",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3Ab76f0b8c-2283-4ad3-abc1-23442ce0a6b7"
+        },
+        {
+          "id": "utlmaps:24536bea-d6d9-4dac-8540-1459da1216cb",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1921, Sheet 265]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/699450a97b06ed7d0e4d66fe1f0b816af3c478502ca43ad4b7e7e3927f4298b6",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A24536bea-d6d9-4dac-8540-1459da1216cb"
+        },
+        {
+          "id": "utlmaps:770142b2-4d54-4d20-a637-86569ad5d739",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1921, Sheet 30]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/18bac6507d7323b72507baf8bff86b5e5a58e3593f1b6c7673b5a80ea3196ec6",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A770142b2-4d54-4d20-a637-86569ad5d739"
+        },
+        {
+          "id": "utlmaps:249387d0-9cb4-4362-8a0d-c3b68432f615",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1922, Sheet 561]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/4d4bf368362c9c564d41e9cad09f72995437e35758e12e8d3c6789254f4eddfe",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A249387d0-9cb4-4362-8a0d-c3b68432f615"
+        },
+        {
+          "id": "utlmaps:25809ba4-484e-4279-900c-27c33efcde64",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1905, Sheet 131]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/7766b862719ea591a70ab41b009736521b19a7329de357913fec65789f979188",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A25809ba4-484e-4279-900c-27c33efcde64"
+        },
+        {
+          "id": "utlmaps:aadce782-cb2c-44da-aa3a-63292a9f1f05",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1922, Sheet 506]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/922c751c36d090025d4eb7244f0a65df0c8bc8b8e9f4d42f1cb53630319d2ab9",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3Aaadce782-cb2c-44da-aa3a-63292a9f1f05"
+        },
+        {
+          "id": "utlmaps:2c676fb8-3ab7-482e-88ff-8742bf923cb6",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1892, Sheet 30]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/71735a11fd07bc371ff77c059a94e0c4247dab538cf58a40f9da0d3db18df3ed",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A2c676fb8-3ab7-482e-88ff-8742bf923cb6"
+        },
+        {
+          "id": "utlmaps:2cd87ceb-0d50-4ab9-ba23-52a7d6ff4df6",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1905, Sheet 104]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/de50cbe2f6981edb76d0e4b05af559599e7e02c17f167073df315e39eba0a55f",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A2cd87ceb-0d50-4ab9-ba23-52a7d6ff4df6"
+        },
+        {
+          "id": "utlmaps:744e50ea-04ab-4510-939d-741854a6d2b5",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1922, Sheet 365]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/4f97caa7e554f0da2593ef904e9548acb143b660b276c08a016c384cae2d5782",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A744e50ea-04ab-4510-939d-741854a6d2b5"
+        },
+        {
+          "id": "utlmaps:31123f18-383c-42f6-b49a-d0fd1c01567b",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1922, Sheet 375]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/fa074f6598ce16bb72d736c5ae833ca3da41bc40059cfdff64382b8940112cea",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A31123f18-383c-42f6-b49a-d0fd1c01567b"
+        },
+        {
+          "id": "utlmaps:86437339-d5f0-45fd-ac13-ef26aa18b2b6",
+          "title": "Sanborn Fire Insurance Maps [Dallas, Texas, 1922, Sheet 535]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ed71f58671bd1c05d8adadb840eb62008140aea9460ad91b44d9dfee38851af9",
+          "recordUrl": "https://geo.btaa.org/resources/utlmaps%3A86437339-d5f0-45fd-ac13-ef26aa18b2b6"
+        }
+      ]
+    },
+    {
+      "id": "denver",
+      "label": "Denver, CO",
+      "count": 2,
+      "diagnostics": {
+        "candidates": 3,
+        "checked": 3,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "p16022coll230:2490",
+          "title": "Denver Mountain Parks, Colo",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/51fef5431cafc63aaf78c7c5fdf70ef9cc41a69f8fa22de083a7abc6071d4e09",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll230%3A2490"
+        },
+        {
+          "id": "p16022coll205:672",
+          "title": "Colorado, Denver quadrangle",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll205:672/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A672"
+        }
+      ]
+    },
+    {
+      "id": "des-moines",
+      "label": "Des Moines, IA",
+      "count": 1,
+      "diagnostics": {
+        "candidates": 4,
+        "checked": 4,
+        "rejected": 3,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "p16022coll205:646",
+          "title": "Camp Dodge",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/70e201c0a7f3171712943d9df2fee3a868804499b6d2c3fea7444fc45625037d",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A646"
+        }
+      ]
+    },
+    {
+      "id": "detroit",
+      "label": "Detroit, MI",
+      "count": 22,
+      "diagnostics": {
+        "candidates": 73,
+        "checked": 24,
+        "rejected": 2,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "bf84bc30-043e-4a92-a038-9c47a2976455",
+          "title": "Keystone street guide of Detroit, Highland Park, Hamtramck, Dearborn, River Touge, Grosse Pointe and Grosse Pointe Park.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/f0d7c79f89092e253a5f6efedc06413b7d7deb42e039c03195d934894975408b",
+          "recordUrl": "https://geo.btaa.org/resources/bf84bc30-043e-4a92-a038-9c47a2976455"
+        },
+        {
+          "id": "91aa101f-0bc8-4976-95aa-230aad53f43f",
+          "title": "Detroit Michigan",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/e9a308cb9d104b589938679bc4f3eaf3fe323eb7ca4ec51adc5db9b897bf6830",
+          "recordUrl": "https://geo.btaa.org/resources/91aa101f-0bc8-4976-95aa-230aad53f43f"
+        },
+        {
+          "id": "fa2253a4-67ce-4662-8034-5c0a739bf256",
+          "title": "Plan of Detroit",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/cd81cdb1af2e33ea7b9e946eda1b62060954c0f87fd26c47fa2af817208ed210",
+          "recordUrl": "https://geo.btaa.org/resources/fa2253a4-67ce-4662-8034-5c0a739bf256"
+        },
+        {
+          "id": "6a1c31c9-d82f-4314-82d6-0704157e5a4b",
+          "title": "Detroit and Vicinity.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/a6beec0c7e087ba3d356e3cbcbaf113910f099b9fc47720f8553f21272439492",
+          "recordUrl": "https://geo.btaa.org/resources/6a1c31c9-d82f-4314-82d6-0704157e5a4b"
+        },
+        {
+          "id": "2b18fabd-aa1b-42a7-82bd-d955f28334ff",
+          "title": "Map of Detroit.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/82dde6a81cd098416c30c0d78123b198db9b0898cb7c01e1c8dd71acc5f66ae3",
+          "recordUrl": "https://geo.btaa.org/resources/2b18fabd-aa1b-42a7-82bd-d955f28334ff"
+        },
+        {
+          "id": "p16022coll205:286",
+          "title": "[Map of Detroit and environs.].",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/651d6d2496f7a20efeefe34df6414c0cbe10f66baddd72732b2072e5533e8078",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A286"
+        },
+        {
+          "id": "b485e47e-25f7-487c-9456-dfe75752b7cc",
+          "title": "[Detroit City Center plat map].",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/45555d53b754ce27f5b69915814b55f890d09f2ab4e082dbfee1e2428e0904d3",
+          "recordUrl": "https://geo.btaa.org/resources/b485e47e-25f7-487c-9456-dfe75752b7cc"
+        },
+        {
+          "id": "5cdc4e30-19e7-4dce-b1a8-3d3b9905adcc",
+          "title": "Pocket map of greater Detroit.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/b444205ec75b4eb6271363e88301b3a205ac7128e270bea2827ebcf92a143b5f",
+          "recordUrl": "https://geo.btaa.org/resources/5cdc4e30-19e7-4dce-b1a8-3d3b9905adcc"
+        },
+        {
+          "id": "ark-85335-m5nc5sc5c",
+          "title": "Federal map of Detroit and environs",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/ark-85335-m5nc5sc5c/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/ark-85335-m5nc5sc5c"
+        },
+        {
+          "id": "3c8050c9-397c-49bb-be4d-4472ddceb07e",
+          "title": "Plan of Detroit Woodward,Augustus Brevoort.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/28e8a8fb2c82a9d1a6582608ad454a1d1c09899daf2f2dca8faf329c9a2a775d",
+          "recordUrl": "https://geo.btaa.org/resources/3c8050c9-397c-49bb-be4d-4472ddceb07e"
+        },
+        {
+          "id": "226d1876-1fbc-43ea-8097-ff9a248f47dd",
+          "title": "Plan of the city of Detroit",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/1546edee9d820a091859135d5a4822717eb134e58a3df39d9d6aae010cf93449",
+          "recordUrl": "https://geo.btaa.org/resources/226d1876-1fbc-43ea-8097-ff9a248f47dd"
+        },
+        {
+          "id": "5d0f0202-218c-40e1-b5e5-5744ff87f8cd",
+          "title": "Guide map of the city of Detroit / drawn by Eugene Robinson, city surveyor.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/620d949896b5171941d64c82aa9f25650e49d476307b7dd35c5f11357ac1d100",
+          "recordUrl": "https://geo.btaa.org/resources/5d0f0202-218c-40e1-b5e5-5744ff87f8cd"
+        },
+        {
+          "id": "p16022coll205:344",
+          "title": "Map of the city of Detroit, Michigan",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/9755cf38c2e2c09a779e01581c72c8899f89955e2cac983ab3d7712a2372834d",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A344"
+        },
+        {
+          "id": "dd1673d9-b5da-4337-835f-188a80881e23",
+          "title": "Map and manual of the city of Detroit : issued from the publishing house of Silas Farmer.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/6a2ad4228a840e86fa2ca2bb901025ad785385a347e09ecf2e9d4feb3331b99c",
+          "recordUrl": "https://geo.btaa.org/resources/dd1673d9-b5da-4337-835f-188a80881e23"
+        },
+        {
+          "id": "bd36e680-ce09-4b8a-987d-5fa484074d56",
+          "title": "Plan of Detroit, 1830 by John Mullett.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d3ebc3c55f98d708a23ef1e0fbbe8350af7078d9ba6b592c34cdb847459c398c",
+          "recordUrl": "https://geo.btaa.org/resources/bd36e680-ce09-4b8a-987d-5fa484074d56"
+        },
+        {
+          "id": "da106057-5e84-4bdb-b57d-75fb7e9f6f35",
+          "title": "02S 10E - Survey Map of Dearborn Township and Detroit Township, Wayne County, page 2 [Michigan]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d185ebbb4c870104373bc062de991aa2693b2fd896e08e09f045152d129d4ff0",
+          "recordUrl": "https://geo.btaa.org/resources/da106057-5e84-4bdb-b57d-75fb7e9f6f35"
+        },
+        {
+          "id": "374c87c2-46a6-459f-b698-6d5238fd17dc",
+          "title": "Plan of the fort at Detroit, 1760.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/209a78a1cd3993a63e5d32ee4e9496507adb3d033677c72f54d23928193be3af",
+          "recordUrl": "https://geo.btaa.org/resources/374c87c2-46a6-459f-b698-6d5238fd17dc"
+        },
+        {
+          "id": "2e21d78d-b189-4bbe-bddf-c3ee6b07f676",
+          "title": "Map of the city of Detroit Michigan : showing steam and electric railways and the location of the principal manufactories, etc. / drawn and published by Wm. Sauer.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/c4d9f349cc1ee810cc2591c7969894221d927a003c18c87f41cda8780e614c14",
+          "recordUrl": "https://geo.btaa.org/resources/2e21d78d-b189-4bbe-bddf-c3ee6b07f676"
+        },
+        {
+          "id": "5727b046-d706-4630-8c79-7a363f0f26fc",
+          "title": "Federal map of Detroit Federal Lithograph Co.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/5727b046-d706-4630-8c79-7a363f0f26fc/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/5727b046-d706-4630-8c79-7a363f0f26fc"
+        },
+        {
+          "id": "9aa9fdbe-6743-49df-9951-4b395675afcb",
+          "title": "03S 11E - Survey Map of Southgate Township and Detroit Township, Wayne County, page 2 [Michigan]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/2871f27306b181c0c8bdd9cb4ea1819ec208a7e11a6777e57f70f42665d36117",
+          "recordUrl": "https://geo.btaa.org/resources/9aa9fdbe-6743-49df-9951-4b395675afcb"
+        },
+        {
+          "id": "um_2xPJ59srWHSj",
+          "title": "New National authentic map of Detroit and environs.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d6f5a3d54921305a9f908dd2dccf15a9c6ea6e6020f8d8195014e558594fa77b",
+          "recordUrl": "https://geo.btaa.org/resources/um_2xPJ59srWHSj"
+        },
+        {
+          "id": "5c812fe2-5b20-4f8c-8215-7a40c3e98f0c",
+          "title": "02S 11E - Survey Map of Dearborn Township and Detroit Township, Wayne County, page 5 [Michigan]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/083a23954ee5c2f6c635f3ae081b6512e8853e4f9b60d9b03fcc9ea95c09d32e",
+          "recordUrl": "https://geo.btaa.org/resources/5c812fe2-5b20-4f8c-8215-7a40c3e98f0c"
+        }
+      ]
+    },
+    {
+      "id": "indianapolis",
+      "label": "Indianapolis, IN",
+      "count": 23,
+      "diagnostics": {
+        "candidates": 37,
+        "checked": 24,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "VAC3073-M-00843",
+          "title": "Indianapolis",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/76b1e4ec8494c25bcd6c47823872b9a493d092ae6cb0dc03ba27505b96c87257",
+          "recordUrl": "https://geo.btaa.org/resources/VAC3073-M-00843"
+        },
+        {
+          "id": "VAC3073-M-00810",
+          "title": "Indianapolis, Indiana",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/b3a4cada97ae93c52f9672450403897a1f2bf5d925793ce5c455d1f19cf701ce",
+          "recordUrl": "https://geo.btaa.org/resources/VAC3073-M-00810"
+        },
+        {
+          "id": "stanford-hv180fz2781",
+          "title": "Indianapolis and environs",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/8506a558fba72a031d35be6109c567fe260566a54c2ec64bd67dc038a4712795",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-hv180fz2781"
+        },
+        {
+          "id": "VAC3073-M-00790",
+          "title": "[Indianapolis region, Indiana]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/67f3294812b723548f57631a1f5de410149e914a894a90ae27b4f40d0c61f8d3",
+          "recordUrl": "https://geo.btaa.org/resources/VAC3073-M-00790"
+        },
+        {
+          "id": "VAC3073-M-00275",
+          "title": "View of Indianapolis",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/2a4f9712d6facd4a0914e2e3120c2d564abab94ee872511a1729591edcfb21e6",
+          "recordUrl": "https://geo.btaa.org/resources/VAC3073-M-00275"
+        },
+        {
+          "id": "VAC3073-M-00327",
+          "title": "Map of Indianapolis",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/690417564ed569fde2314503e29555bf175cf3ada6734e047b68556685baf888",
+          "recordUrl": "https://geo.btaa.org/resources/VAC3073-M-00327"
+        },
+        {
+          "id": "VAC3073-M-00407",
+          "title": "Mile square--Indianapolis",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/VAC3073-M-00407/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/VAC3073-M-00407"
+        },
+        {
+          "id": "VAC3073-M-00864",
+          "title": "Indianapolis Metro Area map",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/37d899342c8dd4ddced7647fe8edcf640b6bf4a39147b4f506f83d3790d0bd50",
+          "recordUrl": "https://geo.btaa.org/resources/VAC3073-M-00864"
+        },
+        {
+          "id": "VAC3073-M-00040",
+          "title": "Stout Field, Indianapolis, Ind.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/VAC3073-M-00040/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/VAC3073-M-00040"
+        },
+        {
+          "id": "VAC3073-M-00085",
+          "title": "[Indianapolis and Marion County]",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/1deabdf210e7ce8e85bb479a3092ba743554af58fd95ea3e7c82c346e40b1c20",
+          "recordUrl": "https://geo.btaa.org/resources/VAC3073-M-00085"
+        },
+        {
+          "id": "VAC3073-M-01430",
+          "title": "Indiana 1:25,000, Indianapolis East",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/9089943d92466ef20f62d4c3db5bc44a61cfb14b74c7ee8023e50082a5443881",
+          "recordUrl": "https://geo.btaa.org/resources/VAC3073-M-01430"
+        },
+        {
+          "id": "VAC3073-M-01431",
+          "title": "Indianapolis West : Indiana 1:25,000",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/9eaeeb9ab500523f26dfe229622f26be8022330b6ce59be2c58f956bed00420b",
+          "recordUrl": "https://geo.btaa.org/resources/VAC3073-M-01431"
+        },
+        {
+          "id": "VAC3073-M-00939",
+          "title": "Bicycle & driving map of Indianapolis",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/e03d9c34c166b2979427a3d472e28bb221d59bee15f0582ecfcd3af0a34e8df0",
+          "recordUrl": "https://geo.btaa.org/resources/VAC3073-M-00939"
+        },
+        {
+          "id": "02371_02_1887-0079_fj2362289",
+          "title": "Sanborn Map [Indiana--Indianapolis] {1887} sheet 79",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/0d22220124c47b45465c3077a5fe675c3fdc947df8d3ed4b3742f65f738dd5c1",
+          "recordUrl": "https://geo.btaa.org/resources/02371_02_1887-0079_fj2362289"
+        },
+        {
+          "id": "VAC3073-M-00969",
+          "title": "Downtown Business District Indianapolis 1927",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/b5921ecdd29b8bf8d8ed3e2092232c174b74f48314ad606a6b0129a053797f78",
+          "recordUrl": "https://geo.btaa.org/resources/VAC3073-M-00969"
+        },
+        {
+          "id": "02371_02_1887-0075a_7m01bk898",
+          "title": "Sanborn Map [Indiana--Indianapolis] {1887} sheet 0075a",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/5aebc6c1246f04511009345aa421440501a38767c94bfcf1625f13811e0fb691",
+          "recordUrl": "https://geo.btaa.org/resources/02371_02_1887-0075a_7m01bk898"
+        },
+        {
+          "id": "02371_02_1914-0101_kw52j836z",
+          "title": "Sanborn Map [Indiana--Indianapolis] {1914} sheet 101",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d08ac2aa9f35d2f69473e5b4140e5c7e1504662cd2cbc6f81ce99c04ca08d075",
+          "recordUrl": "https://geo.btaa.org/resources/02371_02_1914-0101_kw52j836z"
+        },
+        {
+          "id": "237118980001_8049g5745",
+          "title": "Sanborn Map [Indiana--Indianapolis] {1898} sheet",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/267d13d4c1c95c87ce7b5e2943d8f7e968b000c5573e1dbc29f16db6f15fa76b",
+          "recordUrl": "https://geo.btaa.org/resources/237118980001_8049g5745"
+        },
+        {
+          "id": "02371_02_1887-0077_8w32r588m",
+          "title": "Sanborn Map [Indiana--Indianapolis] {1887} sheet 77",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/275646ad08e42a4ca94e0cbd0653e972c56363722af98a806d642c81408948f1",
+          "recordUrl": "https://geo.btaa.org/resources/02371_02_1887-0077_8w32r588m"
+        },
+        {
+          "id": "02371_02_1887-0066_t722h905m",
+          "title": "Sanborn Map [Indiana--Indianapolis] {1887} sheet 66",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/9f335755be1a0049250fcfe07725407d1a11af799900ef2b0a0aa0cc64483ac2",
+          "recordUrl": "https://geo.btaa.org/resources/02371_02_1887-0066_t722h905m"
+        },
+        {
+          "id": "02371_02_1887-0081_fb494858j",
+          "title": "Sanborn Map [Indiana--Indianapolis] {1887} sheet 81",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/35a7c6a9d5e25cdd19fa430c05f7f98a00c9901af685584c113318e039b59662",
+          "recordUrl": "https://geo.btaa.org/resources/02371_02_1887-0081_fb494858j"
+        },
+        {
+          "id": "02371_02_1887-0067_f7623c85x",
+          "title": "Sanborn Map [Indiana--Indianapolis] {1887} sheet 67",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/3a52400f7e81072a65c8035481b377ebe1dcf48f07026808699252891afeb1f2",
+          "recordUrl": "https://geo.btaa.org/resources/02371_02_1887-0067_f7623c85x"
+        },
+        {
+          "id": "02371_02_1914-0103_05741r93b",
+          "title": "Sanborn Map [Indiana--Indianapolis] {1914} sheet 103",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/6173fb871d4f784e14c6ad44fb4f1653d632ef5e8f8da62f566d1cac1b396e9f",
+          "recordUrl": "https://geo.btaa.org/resources/02371_02_1914-0103_05741r93b"
+        }
+      ]
+    },
+    {
+      "id": "miami",
+      "label": "Miami, FL",
+      "count": 0,
+      "diagnostics": {
+        "candidates": 1,
+        "checked": 1,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": []
+    },
+    {
+      "id": "milwaukee",
+      "label": "Milwaukee, WI",
+      "count": 3,
+      "diagnostics": {
+        "candidates": 25,
+        "checked": 25,
+        "rejected": 22,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "p16022coll230:1872",
+          "title": "Map of Milwaukee County showing system of prospective state highways",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/54dcc633df2350fb76cef23ad461ca32b4187b73d85ab729ce510c1335a18f92",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll230%3A1872"
+        },
+        {
+          "id": "UYDWJY7IA7KWS9E",
+          "title": "Original Public Land Survey System Map: Wisconsin Township 05 North, Range 21 East",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/711c01abdfe423fd2fb95956e9584c5fa5fcb09507ebe8eb2b12e28b98563d24",
+          "recordUrl": "https://geo.btaa.org/resources/UYDWJY7IA7KWS9E"
+        },
+        {
+          "id": "ZHNLFX5RZHYBN9A",
+          "title": "Original Public Land Survey System Map: Wisconsin Township 08 North, Range 21 East - Resurvey",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ea317488b7b7dfa557b5e57c193a8e26e06bd1972d49368e5eb2e4421033d58d",
+          "recordUrl": "https://geo.btaa.org/resources/ZHNLFX5RZHYBN9A"
+        }
+      ]
+    },
+    {
+      "id": "minneapolis",
+      "label": "Minneapolis, MN",
+      "count": 20,
+      "diagnostics": {
+        "candidates": 70,
+        "checked": 20,
+        "rejected": 0,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "mdl-1r7izL5rFAhi",
+          "title": "Minneapolis Park System, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/bdbc5aa2f59926f0f612574a70368afe2e6f4e6a2dd01df06dfa1090ce05188f",
+          "recordUrl": "https://geo.btaa.org/resources/mdl-1r7izL5rFAhi"
+        },
+        {
+          "id": "p16022coll55-id-1725",
+          "title": "Sumner Field Assessment Plan, Minneapolis Park Board, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/944613f6ef892dc54d3f0e0b8c55dc33882ffb9dce9616130d1e76b3a34b5430",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-1725"
+        },
+        {
+          "id": "p16022coll55-id-1727",
+          "title": "Nicollet Field Assessment Plan, Minneapolis Park Board, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/4d987ed77837290834d65a90979c0d6372e3fbf659a49990038e2ff5cb4ab908",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-1727"
+        },
+        {
+          "id": "p16022coll55-id-1735",
+          "title": "Camden Park General Plan, Minneapolis Park Board, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/bf2deda09d03d81ebd8a5cf74db6ee9d763a45d87e31e664c7e38c9278757a2e",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-1735"
+        },
+        {
+          "id": "p16022coll55-id-1738",
+          "title": "Riverside Park Improvement Plan, Minneapolis Park Board, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ca67182fd73f494a34f2d5719f838845728005133ca50ae571158c462a89791d",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-1738"
+        },
+        {
+          "id": "p16022coll55-id-1739",
+          "title": "Armory Garden General Plan, Minneapolis Park Board, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/520ceef5e0088dec3317353e22a2c9580938ff24bff5100804a81f1f873a6fde",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-1739"
+        },
+        {
+          "id": "p16022coll55-id-1749",
+          "title": "Audubon Park Improvement Plan, Minneapolis Park Board, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/c32b8040e461a4cdbb3708b4130176ea0b3ddc87ff6ecf1a407ab45d6b4b9869",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-1749"
+        },
+        {
+          "id": "p16022coll55-id-1751",
+          "title": "Nicollet Field Improvement Plan, Minneapolis Park Board, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/d78067f43947124084c92a1f260d5cea4286b64fc8369a6f4f6a0e8a104ea5db",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-1751"
+        },
+        {
+          "id": "p16022coll55-id-1755",
+          "title": "Folwell Park Improvement Plan, Minneapolis Park Board, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/7ca6db01f912eba53abdcc7fb02c6bb8a976bd012b691dc7faee233ce70ca953",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-1755"
+        },
+        {
+          "id": "p16022coll55-id-1726",
+          "title": "Franklin Avenue Bridge Suggested Approaches, Minneapolis Park Board, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/fa4729b499c266c1f5866d61d741c398cb10878da0d53b98ecdc5d316e53bbb8",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-1726"
+        },
+        {
+          "id": "p16022coll55-id-1731",
+          "title": "Powderhorn Park General Improvement Plan, Minneapolis Park Board, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll55-id-1731/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-1731"
+        },
+        {
+          "id": "p16022coll55-id-1734",
+          "title": "Van Cleve Park General Plan, Minneapolis Park Board, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/aac9363cb1e31baf3a6ddfe3ee374c424de6f3e7e69fe8e91906d7c668a24487",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-1734"
+        },
+        {
+          "id": "p16022coll55-id-1740",
+          "title": "Victory Memorial Drive, North End, Minneapolis Park Board, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/5674f6036ae0ab933c6cf9a9559a682c0926e783aa92bbd1fe982b9f7af7bce5",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-1740"
+        },
+        {
+          "id": "p16022coll245:876",
+          "title": "City of Minneapolis, 1913",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/0240b7fc0655135c55cbef876d92428d3f5b7666df6c61a9eff3038a0fc4b587",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll245%3A876"
+        },
+        {
+          "id": "p16022coll55-id-1752",
+          "title": "Rice Lake, Suggested Improvement Plan, Minneapolis Park Board, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll55-id-1752/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-1752"
+        },
+        {
+          "id": "p16022coll245:963",
+          "title": "Tribune's aerial map of Minneapolis",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll245:963/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll245%3A963"
+        },
+        {
+          "id": "p16022coll55-id-58",
+          "title": "Farwell Park, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/1ed1b35d9ec16073d926ceac9dc8b38647865570513a3ac014da2b57e6e19546",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-58"
+        },
+        {
+          "id": "9d13d071-1cf9-44cb-a123-e17aabfa0d0e",
+          "title": "Minneapolis Black Population 1910",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ccf1b16d7853d09adb7281d9273cd6ef9583d4a1861586144aae2aa0ad82c8c4",
+          "recordUrl": "https://geo.btaa.org/resources/9d13d071-1cf9-44cb-a123-e17aabfa0d0e"
+        },
+        {
+          "id": "p16022coll55-id-1723",
+          "title": "Sumner Field Proposed Arrangement and Equipment, Minneapolis Park Board, Minneapolis, Minnesota",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/5da0c6a64d468a6d099fc37691cf28c3369b88f7618e7ee35d02c4f640486907",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll55-id-1723"
+        },
+        {
+          "id": "p16022coll583:2430",
+          "title": "Minneapolis, Minnesota use district map",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/620f3b766b591d6f6e58663f346cf77b21af228a5f667af450f4c5cdb255b70d",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll583%3A2430"
+        }
+      ]
+    },
+    {
+      "id": "new-orleans",
+      "label": "New Orleans, LA",
+      "count": 3,
+      "diagnostics": {
+        "candidates": 4,
+        "checked": 4,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "p16022coll205:605",
+          "title": "Exposition map of the city of New Orleans",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll205:605/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A605"
+        },
+        {
+          "id": "f9a532d1-81fc-41eb-ba5f-4d744a78e92d",
+          "title": "Map of the city of New Orleans showing location of exposition grounds and all approaches thereto by land & water.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/bd41fbb9acf56dfe9a1bdd3a4f45e199798f3f486265b56aceac200658d7c9da",
+          "recordUrl": "https://geo.btaa.org/resources/f9a532d1-81fc-41eb-ba5f-4d744a78e92d"
+        },
+        {
+          "id": "p16022coll205:332",
+          "title": "Plan of New Orleans",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/e0262ee65b6f91ce72731ee68f5e78a4f800718de4ab6d80c3d6b6e903a9d02a",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A332"
+        }
+      ]
+    },
+    {
+      "id": "newark",
+      "label": "Newark, NJ",
+      "count": 20,
+      "diagnostics": {
+        "candidates": 51,
+        "checked": 36,
+        "rejected": 16,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "princeton-rr1721126",
+          "title": "Harrison & E. Newark",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/b9abac6d1ed6a6878e1699db58591636bb4d0bd03f78f6e599252fabed40c744",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-rr1721126"
+        },
+        {
+          "id": "princeton-9z903279n",
+          "title": "Newark, N. J.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/5af2d73648682a30f193044ec5e1f62964c59047b3d242da5ab1381e090b90de",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-9z903279n"
+        },
+        {
+          "id": "rutgers-lib:15899",
+          "title": "Newark map 1904",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/6ed1e3c30979aa2cdfd384224d4e7f2d9d552efb40a6997338b696d151821316",
+          "recordUrl": "https://geo.btaa.org/resources/rutgers-lib%3A15899"
+        },
+        {
+          "id": "rutgers-lib:15900",
+          "title": "Newark map 1915",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/rutgers-lib:15900/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/rutgers-lib%3A15900"
+        },
+        {
+          "id": "rutgers-lib:18154",
+          "title": "Newark, New Jersey 1881",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/7ee58c758d7b89a512c34215c0f28eea6889d13d930ead17b621cb1bac19f471",
+          "recordUrl": "https://geo.btaa.org/resources/rutgers-lib%3A18154"
+        },
+        {
+          "id": "rutgers-lib:18166",
+          "title": "Newark, New Jersey 1885",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/56c47fd13a0fa5b52829909c5d39f3a3e8c77c7138e9dfc5bd64e6314a73e1c6",
+          "recordUrl": "https://geo.btaa.org/resources/rutgers-lib%3A18166"
+        },
+        {
+          "id": "rutgers-lib:18167",
+          "title": "Newark, New Jersey 1890",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/de8b3bc900511889831b87a60f98fd90ec8356b6217e6fb7fee8e64b14011396",
+          "recordUrl": "https://geo.btaa.org/resources/rutgers-lib%3A18167"
+        },
+        {
+          "id": "rutgers-lib:20444",
+          "title": "Newark, New Jersey 1958",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/60e207057a3b6d7240603ae40aaea7d6362b4832d81125221375340f60cff017",
+          "recordUrl": "https://geo.btaa.org/resources/rutgers-lib%3A20444"
+        },
+        {
+          "id": "rutgers-lib:15901",
+          "title": "Newark burying ground map 1892",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/rutgers-lib:15901/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/rutgers-lib%3A15901"
+        },
+        {
+          "id": "princeton-4b29b8903",
+          "title": "Insurance maps of Harrison, East Newark and Kearny, Hudson County, New Jersey",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/304da286e8e6b3a88f497309c079360ec2c448b56046b27bdffff2cf32e26df9",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-4b29b8903"
+        },
+        {
+          "id": "rutgers-lib:16352",
+          "title": "Newark, New Jersey historical map",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/025b67352d3c5319a0a276fa3a52c6e9169cc13e51acd859a382e11e360d085b",
+          "recordUrl": "https://geo.btaa.org/resources/rutgers-lib%3A16352"
+        },
+        {
+          "id": "rutgers-lib:33685",
+          "title": "Map of Newark Bay: Portion of exterior lines on the easterly shore",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ed55e196d43509d69e3741e94747f528508b110a4fa5bd5106e083318d4265a0",
+          "recordUrl": "https://geo.btaa.org/resources/rutgers-lib%3A33685"
+        },
+        {
+          "id": "princeton-05741v19z",
+          "title": "Map of the City of Newark",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/41b5ea70aa61d3d61bfd94e55061f85663d31149739fb1d26899f94409e8393b",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-05741v19z"
+        },
+        {
+          "id": "princeton-8049g798w",
+          "title": "Central business district of Newark, New Jersey",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/921063f6bd2f51fbd4e5cf635095f94139e1ef3cef50d5e0fd472f4338893ef0",
+          "recordUrl": "https://geo.btaa.org/resources/princeton-8049g798w"
+        },
+        {
+          "id": "rutgers-lib:41591",
+          "title": "Asssessment map for the opening of Thirtieth Street from Avenue E to Newark Bay",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/95308bc5045ce20f0b5a71a3b239f987ebba6f4528c17ad64d81711bef6758e7",
+          "recordUrl": "https://geo.btaa.org/resources/rutgers-lib%3A41591"
+        },
+        {
+          "id": "rutgers-lib:33694",
+          "title": "Sketch showing dredging lines along Newark Bay",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/07000e11391dba956e6677735077101ac71ae1491dc52eb5d79ba7133303c9eb",
+          "recordUrl": "https://geo.btaa.org/resources/rutgers-lib%3A33694"
+        },
+        {
+          "id": "p16022coll230:1348",
+          "title": "Newark sheet",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/c1a98b81e488d0947a0b8444ebdc9e6fbbaf4bf2f1625044efc804b4c875628f",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll230%3A1348"
+        },
+        {
+          "id": "rutgers-lib:20351",
+          "title": "Rutgers University, Newark Campus, New Jersey 1977",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/e5740bd706c8b2f17556f911e081d280c8d77a9c5b85102e3b9879515e18310e",
+          "recordUrl": "https://geo.btaa.org/resources/rutgers-lib%3A20351"
+        },
+        {
+          "id": "rutgers-lib:20369",
+          "title": "Newark Colleges of Rutgers University, New Jersey",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/4b780f6a3e7acf591609d68e9ef1e915badfd91dba1f18921ee1e0cfe06d9ce9",
+          "recordUrl": "https://geo.btaa.org/resources/rutgers-lib%3A20369"
+        },
+        {
+          "id": "rutgers-lib:20370",
+          "title": "Rutgers University, Newark, New Jersey campus undated",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/7aa5ab4e2acb333b0fc54cd4ba3ba06fba3e27a06b4a95a9f55ea2c69687ff57",
+          "recordUrl": "https://geo.btaa.org/resources/rutgers-lib%3A20370"
+        }
+      ]
+    },
+    {
+      "id": "omaha",
+      "label": "Omaha, NE",
+      "count": 8,
+      "diagnostics": {
+        "candidates": 9,
+        "checked": 9,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "p16022coll205:642",
+          "title": "Megeath Stationery Co's Trans-Mississippi and International Exposition guide map of Omaha, May 1st 1898",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/2e90a381b5ea1b9ec391950e78ad2bc96bb0a4cd044cca50e0843da0bd2a7942",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A642"
+        },
+        {
+          "id": "RUMSEY_8_1_29076_1130181",
+          "title": "Omaha City, Nebraska North.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/68aa2753e969e38bafd3a75688612b61176982e18500f27e94ef9710c86d1c4e",
+          "recordUrl": "https://geo.btaa.org/resources/RUMSEY_8_1_29076_1130181"
+        },
+        {
+          "id": "RUMSEY_8_1_29077_1130182",
+          "title": "Omaha City, Nebraska Central.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/8da4d7da9ef9abed6129fefe4d727e63326106274a2432a419761babc373a943",
+          "recordUrl": "https://geo.btaa.org/resources/RUMSEY_8_1_29077_1130182"
+        },
+        {
+          "id": "RUMSEY_8_1_29078_1130183",
+          "title": "Omaha City, Nebraska SE.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/4607abc310d314e866e258a5dc63452967cbf48b530b38f964f1c2e2e411ad5c",
+          "recordUrl": "https://geo.btaa.org/resources/RUMSEY_8_1_29078_1130183"
+        },
+        {
+          "id": "RUMSEY_8_1_29079_1130184",
+          "title": "Omaha City, Nebraska SW.",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/48af6aac5b87353f0ef25f64f920b0626181e0fa06b0d128baaf0cb551bfc6bb",
+          "recordUrl": "https://geo.btaa.org/resources/RUMSEY_8_1_29079_1130184"
+        },
+        {
+          "id": "RUMSEY_8_1_290385_90062026",
+          "title": "Omaha, Nebraska. Dimension Map Inc., 1980",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/c19845108097c7a1eed589c57a31007484af17cdd279b4d7241a44dc2aacf043",
+          "recordUrl": "https://geo.btaa.org/resources/RUMSEY_8_1_290385_90062026"
+        },
+        {
+          "id": "RUMSEY_8_1_314989_90083884",
+          "title": "Offutt Air Force Base : Omaha Nebraska : Vicinity map",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/8b30eac5d5c9496f6895b02ada2d407aae20e2497cfe887742728238cdb0c674",
+          "recordUrl": "https://geo.btaa.org/resources/RUMSEY_8_1_314989_90083884"
+        },
+        {
+          "id": "RUMSEY_8_1_314988_90083885",
+          "title": "Offutt Air Force Base : Omaha Nebraska : Preliminary master plan",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/cd4cd0dbdca3503e301538eb2de99f16d6ed2501c6b0df5b0189bbd698ba1d38",
+          "recordUrl": "https://geo.btaa.org/resources/RUMSEY_8_1_314988_90083885"
+        }
+      ]
+    },
+    {
+      "id": "portland",
+      "label": "Portland, OR",
+      "count": 4,
+      "diagnostics": {
+        "candidates": 5,
+        "checked": 5,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "p16022coll205:1134",
+          "title": "Pittmon's authentic map of Portland",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/ba9b247c3775f8743a75f307496eb70b5a6eefa55dc1a0dac7dbe942273163c3",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A1134"
+        },
+        {
+          "id": "p16022coll205:655",
+          "title": "Whitney's map of Portland and environs",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll205:655/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A655"
+        },
+        {
+          "id": "p16022coll205:657",
+          "title": "Portland, Oregon and vicinity of 25 miles radius",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/resources/p16022coll205:657/thumbnail",
+          "recordUrl": "https://geo.btaa.org/resources/p16022coll205%3A657"
+        },
+        {
+          "id": "stanford-wj269ny4077",
+          "title": "Columbia River. : Sheet No. 6, Fales Landing to Portland",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/9e3d1d94eb2e3735834f8624dfec96fd7c022bc1b2e6a46f9bd28fcd00352c13",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-wj269ny4077"
+        }
+      ]
+    },
+    {
+      "id": "san-diego",
+      "label": "San Diego, CA",
+      "count": 7,
+      "diagnostics": {
+        "candidates": 8,
+        "checked": 8,
+        "rejected": 1,
+        "failed": 0,
+        "timedOut": 0
+      },
+      "warning": "",
+      "maps": [
+        {
+          "id": "stanford-kq516ks6538",
+          "title": "Automobile road map touring San Diego county California",
+          "thumbnailUrl": "https://stacks.stanford.edu/image/iiif/kq516ks6538%2Fkq516ks6538_00_0002/full/!480,480/0/default.jpg",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-kq516ks6538"
+        },
+        {
+          "id": "stanford-tt877sf0369",
+          "title": "Automobile road from San Diego to Imperial Valley. : Part ~ 1, San Diego to Campo",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/df1311ce29a440e884b7e1bf89c2aedde1d667218b0caa24e75ca2dd91156666",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-tt877sf0369"
+        },
+        {
+          "id": "stanford-ph085jq0580",
+          "title": "Automobile road from Los Angeles to San Diego via coast route. : Part three, Oceanside to San Diego",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/4a0b91ba98f4484903d5c1b6110423f521167959f68836499a05cedb704ae6db",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-ph085jq0580"
+        },
+        {
+          "id": "stanford-mq100vp1778",
+          "title": "Automobile road from Los Angeles to San Diego via Riverside Elsinore Fallbrook and Escondido : Inland Route. Part four, Fallbrook to San Diego",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/1c7a83c0591875a4bbe8c83172aa8f876cdd06ef907f8755641f2a7254d0c730",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-mq100vp1778"
+        },
+        {
+          "id": "stanford-zn128qg5660",
+          "title": "Principal automobile routes in and out of San Diego California",
+          "thumbnailUrl": "https://stacks.stanford.edu/image/iiif/zn128qg5660%2Fzn128qg5660_00_0002/full/!480,480/0/default.jpg",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-zn128qg5660"
+        },
+        {
+          "id": "stanford-gm146mk1074",
+          "title": "Automobile Routes Between Los Angeles and San Diego and connecting roads",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/e931d796e384fc3e64306a7669a41f923d30849ec52c70f6446e59e161046af6",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-gm146mk1074"
+        },
+        {
+          "id": "stanford-fv476rv8011",
+          "title": "Battle map[s] : Southern California sector",
+          "thumbnailUrl": "https://geo.btaa.org/api/v1/thumbnails/6898251c7286ed03343a949c160d40924466ed69ffa33558bfc92b9b8ce5d1ba",
+          "recordUrl": "https://geo.btaa.org/resources/stanford-fv476rv8011"
+        }
+      ]
+    }
+  ]
+}

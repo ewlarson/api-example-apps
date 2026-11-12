@@ -736,3 +736,11 @@ footer {
     transition-delay: 0s !important;
   }
 }
+
+#cityOptions [role="option"] { display: flex; flex-direction: column; gap: .2rem; }
+#cityOptions [aria-selected="true"] small { color: inherit; }
+#cityOptions small { font-size: .76rem; font-weight: 400; color: var(--muted, #5c625e); }
+.unavailable { padding: 1.4rem; margin: 1rem 0; border: 1px solid #d8c8aa; border-radius: 12px; background: #f7f0df; }
+.unavailable h3 { margin: 0 0 .6rem; }
+.unavailable p { max-width: 62ch; line-height: 1.6; }
+.suggestions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1rem; }

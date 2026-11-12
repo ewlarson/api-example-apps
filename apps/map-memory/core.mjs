@@ -1,4 +1,5 @@
 // Pure game and selection logic; also used by the dependency-free Node tests.
+import { REVIEWED_BOUNDS, REVIEWED_PLACES, REJECTED_PREVIEWS, reviewedThumbnail, visualGroup } from './quality.mjs';
 export const CITIES = [
   ['chicago', 'Chicago', 'IL', 'Illinois', 41.88, -87.63],
   ['san-francisco', 'San Francisco', 'CA', 'California', 37.77, -122.42, ['SF']],
@@ -40,32 +41,40 @@ export function filterCities(query) {
 
 export function normalizeCandidates(payload, city) {
   return (payload.data || []).flatMap(record => {
-    if (NON_MAP_THUMBNAILS.has(record.id)) return [];
+    const reviewedImage = reviewedThumbnail(record);
+    if (NON_MAP_THUMBNAILS.has(record.id) || REJECTED_PREVIEWS.has(record.id) && !reviewedImage) return [];
+    if (/(?:^|[_-])(?:cov(?:er)?|ind(?:ex)?\d*)(?:[_-]|$)/i.test(record.id)) return [];
     const ogm = record.attributes?.ogm || {};
     const title = text(ogm.dct_title_s);
     const spatial = text(ogm.dct_spatial_sm);
     // Multi-sheet atlas/insurance volumes often thumbnail the binding, not a map.
-    if (/\b(volume|vol|atlas|brochure)\b/i.test(title)) return [];
+    if (/\b(volume|vol|atlas|brochure|cover|title page)\b|maps? index/i.test(title)) return [];
+    // Whole insurance volumes frequently preview a binding, even with a city-only title.
+    if (!/\bsheet\s*\d/i.test(title) && /\bvol(?:ume)?s?\.?\s*\d|\d+\s+vols?\b/i.test(text(ogm.dct_description_sm))) return [];
     const cityTerm = normalize(city.term);
+    const segment = title.match(/\bpart\s*[~:]?\s*(?:one|two|three|four|five|six|seven|eight|nine|ten|\d+)\b[,:.]?\s*(.+)$/i)?.[1];
+    if (segment && !(` ${normalize(segment)} `).includes(` ${cityTerm} `)) return [];
     if (city.id === 'new-york' && /\bwest new york\b/i.test(title)) return [];
     // Never use publisher/provider/description mentions as evidence of place.
     const hasCity = (` ${normalize(title)} `).includes(` ${cityTerm} `);
     const placeCity = (` ${normalize(spatial)} `).includes(` ${cityTerm} `);
-    if (!record.id || !title || !ogm.gbl_resourceClass_sm?.includes('Maps') || !(hasCity || placeCity)) return [];
+    if (!record.id || !title || !ogm.gbl_resourceClass_sm?.includes('Maps') || !(hasCity || placeCity || REVIEWED_PLACES[record.id] === city.id)) return [];
     const bbox = text(ogm.dcat_bbox).split(',').map(Number);
     const validBox = bbox.length === 4 && bbox.every(Number.isFinite) && bbox[2] > bbox[0] && bbox[3] > bbox[1];
-    if (validBox) {
+    const reviewedBounds = REVIEWED_BOUNDS[record.id] === city.id;
+    if (!hasCity && normalize(title).startsWith(`${normalize(city.stateName)} `)) return [];
+    if (validBox && !reviewedBounds) {
       const [west, south, east, north] = bbox;
       // Exclude state/national maps and maps of distant places with city-name railways.
       if (east - west > 2 || north - south > 2 || city.lon < west - .2 || city.lon > east + .2 || city.lat < south - .2 || city.lat > north + .2) return [];
-    } else if (!hasCity || !placeCity) return [];
-    const thumbnailUrl = record.meta?.ui?.thumbnail_url || `https://geo.btaa.org/api/v1/resources/${encodeURIComponent(record.id)}/thumbnail`;
+    } else if (!validBox && !reviewedBounds && (!hasCity || !placeCity)) return [];
+    const thumbnailUrl = reviewedImage || record.meta?.ui?.thumbnail_url || `https://geo.btaa.org/api/v1/resources/${encodeURIComponent(record.id)}/thumbnail`;
     if (/placeholder|static.map|\.svg(?:\?|$)/i.test(thumbnailUrl)) return [];
     // Cached thumbnails only from the public API; never execute metadata URLs.
-    if (!/^https:\/\/geo\.btaa\.org\/api\/v1\/(thumbnails\/|resources\/[^/]+\/thumbnail)/.test(thumbnailUrl)) return [];
+    if (!reviewedImage && !/^https:\/\/geo\.btaa\.org\/api\/v1\/(thumbnails\/|resources\/[^/]+\/thumbnail)/.test(thumbnailUrl)) return [];
     const score = (hasCity ? 10 : 0) + (/pictorial|bird.s.eye|tour|park|geolog|exposition|harbo[u]?r/i.test(title) ? 5 : 0)
       - (/insurance|volume|sheet|quadrangle/i.test(title) ? 3 : 0);
-    return [{ id: String(record.id), title, thumbnailUrl, score,
+    return [{ id: String(record.id), title, thumbnailUrl, score, previewNote: reviewedImage ? 'Preview: map sheet on page 2 of the library viewer.' : '', visualGroup: visualGroup(record.id, title),
       description: text(ogm.dct_description_sm), creator: text(ogm.dct_creator_sm),
       rights: text(ogm.dct_rights_sm), spatial,
       viewerUrl: `https://geo.btaa.org/api/v1/resources/${encodeURIComponent(record.id)}/ogm-viewer?embed=true`,
@@ -76,11 +85,12 @@ export function normalizeCandidates(payload, city) {
 }
 
 export function deduplicate(resources) {
-  const ids = new Set(), titles = new Set(), urls = new Set();
+  const ids = new Set(), titles = new Set(), urls = new Set(), groups = new Set();
   return resources.filter(resource => {
     const title = normalize(resource.title).replace(/\b(cartographic material|volume \w+|vol \w+)\b/g, '').trim();
-    if (ids.has(resource.id) || titles.has(title) || urls.has(resource.thumbnailUrl)) return false;
+    if (ids.has(resource.id) || titles.has(title) || urls.has(resource.thumbnailUrl) || resource.visualGroup && groups.has(resource.visualGroup)) return false;
     ids.add(resource.id); titles.add(title); urls.add(resource.thumbnailUrl);
+    if (resource.visualGroup) groups.add(resource.visualGroup);
     return true;
   });
 }

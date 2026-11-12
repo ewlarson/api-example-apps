@@ -104,7 +104,7 @@ for (const count of [3, 4, 7, 8]) {
       preload: async map => Number(map.id) < count ? { ...map, hash: map.id } : null,
       random: () => .5,
     });
-    assert.equal(result.pool.length, count); assert.equal(urls.length, count < 8 ? 2 : 1);
+    assert.equal(result.pool.length, count); assert.equal(urls.length, count < 8 ? 3 : 1);
     if (count < 4) assert.throws(() => createDeck(result.pool));
     else assert.equal(createDeck(result.pool).length, count * 2);
   });

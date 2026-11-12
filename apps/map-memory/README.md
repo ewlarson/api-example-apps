@@ -25,7 +25,9 @@ inspected actual responses:
   `meta.totalCount`; `per_page` accepts 1–100. `adv_q` accepts JSON clauses such as
   `[{"op":"AND","f":"dct_title_s","q":"\"Chicago\""}]`.
 - `include_filters[gbl_resourceClass_sm][]=Maps` returns Maps records. The fallback
-  uses a quoted city + state + map query, with the same local relevance checks.
+  uses a quoted city + state + map query, then a supported 25 km centroid-distance
+  query (`include_filters[geo][type]=distance`, field `dcat_centroid`, city center,
+  distance `25km`). All stages retain local relevance checks.
 - `meta.ui.thumbnail_url` points to cached `/api/v1/thumbnails/{hash}` images or
   `/api/v1/resources/{id}/thumbnail`. The resource endpoint can redirect to a cached
   raster **or return a generic SVG fallback with HTTP 200**. SVGs are not playable.
@@ -65,29 +67,36 @@ checked November 12, 2026. Chicago also covers the University of Chicago library
 
 A regression test protects this state-to-city coverage. The visible city count is
 derived from the picker data so it stays current as the collection grows.
-Live follow-up checks verified an eight-pair Indianapolis board and the Indy alias.
-City inclusion does not guarantee enough digitized imagery: Des Moines currently
-has fewer than four usable city-map thumbnails and shows the existing retry or
-city-switch state. Des Moines County maps from elsewhere in Iowa remain excluded.
+The [dated coverage audit](COVERAGE.md) records all 26 cities and accepted resource
+IDs. The revised pipeline finds 20 playable cities: 17 full boards, plus Columbus
+and Portland with four pairs and San Diego with seven. Atlanta, Denver, Des Moines,
+Miami, Milwaukee and New Orleans still fall below four maps. The picker displays
+availability before selection; insufficient results offer retry and three verified
+playable alternatives. Each game checks live availability again.
 
 ## Selection and game behavior
 
 `core.mjs` keeps display labels/aliases separate from canonical search terms and
 coordinates. Searches require city evidence in the title or geographic subject;
 publisher, institution, and description mentions never establish relevance.
-Bounds reject distant, statewide, and national maps. West New York, NJ is excluded
-from NYC. Atlas volumes and brochures are excluded because they often thumbnail
-covers. Two specifically inspected SF records are also excluded: a folded-map
-cover (`stanford-hm701yz9300`) and a world map incorrectly bounded to the city
-(`eacef6c9-3b5a-41e0-83ee-098d84947ad9`).
+Bounds reject distant, statewide, and national maps. Narrow, individually reviewed
+exceptions in `quality.mjs` recover city sheets with coarse catalog bounds and
+local camp/survey maps. West New York, NJ and unrelated route-series segments are
+excluded. Atlas/insurance volumes, cover/index identifiers, Maps Index masks and
+known non-map previews are excluded. Four records with cover thumbnails use a
+reviewed page-2 map image from their API-linked IIIF manifests; an exact manifest
+match is required and the lightbox identifies the preview page.
 
 `api.mjs` requests up to 100 records per query and inspects at most 48 candidates,
 four thumbnails at a time. Distinctive subjects are prioritized, with a randomized
 remaining sample. Up to 23 usable images are retained in memory. Dedupe covers IDs,
-normalized titles, thumbnail URLs, SHA-256 image bytes, and near-identical 12×12 RGB
-samples. Tiny or excessively narrow images are rejected. Accepted images are fully
-decoded into local blob URLs before play; URLs are released on city change/cancel.
-Visual similarity is a heuristic, and source images/metadata can change.
+normalized titles, thumbnail URLs, SHA-256 image bytes, spatially similar 12×12 RGB
+samples, and reviewed groups of visually repeated editions. Similar paper color
+alone does not reject a map. Tiny/narrow images, blank sheets and black/white raster
+masks fail image validation. Accepted images are decoded into local blob URLs
+before play; URLs are released on city change/cancel. HTTP errors, rate limits and
+timeouts are reported separately from rejected imagery. See [coverage notes](COVERAGE.md)
+for the exact audit, quality rules and remaining collection gaps.
 
 Eight maps produce 16 shuffled cards. Four to seven produce a smaller board with
 an explanation; fewer than four expose retry and city-switch guidance. Play again
@@ -124,10 +133,13 @@ card pattern remains usable if WebGL, the CDN, or tiles are unavailable.
 
 ## Verification
 
-- 28 repeatable Node tests: deck construction, dedupe/relevance, pair matching,
+- 43 repeatable Node tests: deck construction, dedupe/relevance, pair matching,
   mismatch timing, reset, modal pause/resume, stale city success/error, cancellation
   cleanup, unusable images, 3/4/7/8-map results, fallback queries, Pages assets, and
-  one-shot confetti, replay cancellation, and reduced-motion behavior.
+  one-shot confetti, replay cancellation, and reduced-motion behavior. Added quality
+  regressions cover masks, covers/indexes, coarse bounds, exact IIIF references,
+  duplicate editions, similar paper colors, route segments and error diagnostics.
+- All 26 cities passed the browser decoding audit; see [coverage evidence](COVERAGE.md).
 - Live Chicago, San Francisco, Seattle, and NYC searches each yielded eight usable
   pairs. Completed games by keyboard and visually inspected the revealed images:
   Chicago wards/parks/pictorial streets; SF harbor/tour/geology maps; Seattle city,
@@ -148,6 +160,14 @@ Live availability and thumbnail resolution vary by contributing library. The
 library-hosted IIIF viewer can fail independently of the preloaded game; the modal
 always provides a direct BTAA record link. No offline guarantee is implied.
 
+Live follow-up for issue #8 also loaded Omaha (eight pairs), San Diego (seven)
+and Portland (four) without browser credentials, and completed Portland by
+keyboard. Recorded-response UI checks verified Des Moines/Milwaukee counts,
+keyboard selection, playable alternative buttons, and the 390px fallback layout.
+One live Milwaukee attempt encountered a fetch failure; it showed an API error
+rather than claiming zero maps. The successful recorded-response audit is the
+basis for its three-map availability count.
+
 ## Screenshots
 
 ![Map Memory with city basemap card backs](screenshots/desktop.jpg)
@@ -159,3 +179,5 @@ always provides a direct BTAA record link. No offline guarantee is implied.
 ![Celebratory puzzle finish](screenshots/celebration.jpg)
 
 ![Large post-game map previews](screenshots/collection.jpg)
+
+![City availability and playable alternatives](screenshots/availability.jpg)
