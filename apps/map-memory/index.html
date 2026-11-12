@@ -12,28 +12,23 @@
 <body>
   <canvas id="confetti" aria-hidden="true" hidden></canvas>
   <header class="app-header">
-    <a class="brand" href="../../"><img class="brand-logo" src="assets/btaa-logo.png" alt="Big Ten Academic Alliance" width="651" height="383"><span class="brand-wordmark">Geoportal<span class="brand-caption">Example apps</span></span></a>
+    <a class="brand" href="../../"><img class="brand-logo" src="assets/btaa-logo.png" alt="Big Ten Academic Alliance" width="651" height="383"><div class="brand-wordmark"><span class="brand-caption">Geoportal</span><h1 id="title">Map Memory</h1></div></a>
     <a href="https://geo.btaa.org/api/docs">API docs ↗</a>
   </header>
   <main>
-    <section class="intro" aria-labelledby="title">
-      <div><p class="eyebrow">A little geography. A little déjà vu.</p><h1 id="title">Map Memory<span aria-hidden="true">.</span></h1>
-      <p class="lede">Real maps. Familiar places. Find the matching pairs.</p></div>
-      <div class="edition" aria-hidden="true"><span>THE CITY COLLECTION</span><strong id="cityCount">20 cities</strong><span>Explore one pair at a time</span></div>
-    </section>
     <section class="toolbar" aria-label="Game controls">
       <form id="cityForm">
-        <label for="citySearch">Choose a city</label>
+        <label class="sr-only" for="citySearch">Choose a city</label>
         <div class="city-controls"><div class="picker">
           <input id="citySearch" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="cityOptions" aria-describedby="cityHelp" autocomplete="off" value="Chicago, IL">
           <ul id="cityOptions" role="listbox" aria-label="Cities" hidden></ul>
         </div><button class="primary" type="submit">Start game <span aria-hidden="true">→</span></button></div>
-        <p id="cityHelp" class="help">Choose a city with playable maps. Availability checked November 12, 2026; each game checks again.</p>
+        <p id="cityHelp" class="help">Choose a city, then Start game.</p>
       </form>
       <div class="game-actions"><button id="playAgain" type="button" disabled>Play again</button><button id="newMaps" type="button" disabled>New maps</button></div>
     </section>
     <section class="play-area" aria-labelledby="boardTitle">
-      <div class="board-heading"><div><p class="eyebrow">Your map table</p><h2 id="boardTitle">Chicago, IL</h2></div>
+      <div class="board-heading"><h2 id="boardTitle">Chicago, IL</h2>
         <dl class="stats"><div><dt>Moves</dt><dd id="moves">0</dd></div><div><dt>Pairs found</dt><dd><span id="pairs">0</span><span class="stat-total" id="pairTotal"> / 8</span></dd></div></dl>
       </div>
       <p id="status" class="status" role="status">Finding maps of Chicago…</p>
@@ -55,6 +50,6 @@
       <aside class="map-metadata" aria-label="Map metadata"><dl id="mapMetadata"></dl><p id="mapDescription"></p><a id="mapRecordLink" class="record-action" target="_blank" rel="noreferrer">Explore in the BTAA Geoportal ↗</a><p class="help">Your game is paused while you explore.</p></aside>
     </div>
   </dialog>
-  <footer><span>Made with the <a href="https://geo.btaa.org/">BTAA Geoportal</a></span><span>Live maps from library collections · <a href="../../">All example apps</a></span></footer>
+  <footer><span>Powered by the <a href="https://geo.btaa.org/api/docs">BTAA Geospatial API</a></span><span>Live maps from library collections · <a href="../../">All example apps</a></span></footer>
 </body>
 </html>

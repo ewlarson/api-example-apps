@@ -1,5 +1,5 @@
 import { CITIES, filterCities, normalize, chooseMaps, MemoryGame, LatestRequest } from './core.mjs';
-import { COVERAGE, COVERAGE_DATE, availabilityLabel, suggestedCities, playableCities } from './coverage.mjs';
+import { COVERAGE, availabilityLabel, suggestedCities, playableCities } from './coverage.mjs';
 import { loadCity } from './api.mjs';
 import { renderCityBasemap } from './basemap.mjs';
 import { createCelebration } from './celebration.mjs';
@@ -8,7 +8,6 @@ const $ = id => document.getElementById(id);
 const input = $('citySearch'), options = $('cityOptions'), board = $('board');
 const availability = { ...COVERAGE };
 const cityChoices = () => playableCities(CITIES, availability);
-$('cityCount').textContent = `${cityChoices().length} cities`;
 let city = CITIES[0], pendingCity = city, filtered = cityChoices(), active = -1;
 let result = null, maps = [], buttons = [], loading = false;
 const requests = new LatestRequest();
@@ -44,7 +43,7 @@ function showOptions() {
 }
 function selectCity(item) {
   pendingCity = item; input.value = item.label; closePicker();
-  $('cityHelp').textContent = `${item.label}: ${availabilityLabel(availability[item.id])}. Last checked ${COVERAGE_DATE}. Start game checks again.`;
+  $('cityHelp').textContent = `${availabilityLabel(availability[item.id])}.`;
 }
 input.addEventListener('focus', () => { filtered = pendingCity ? cityChoices() : filterCities(input.value, cityChoices()); active = -1; showOptions(); });
 input.addEventListener('input', () => { pendingCity = null; filtered = filterCities(input.value, cityChoices()); active = -1; showOptions(); });
@@ -106,9 +105,8 @@ function deal(nextMaps) {
     const image = document.createElement('img'); image.src = card.map.imageUrl; image.alt = ''; image.draggable = false; image.setAttribute('aria-hidden', 'true');
     const back = document.createElement('span'); back.className = 'card-back'; back.setAttribute('aria-hidden', 'true');
     const compass = document.createElement('span'); compass.className = 'compass'; compass.textContent = '✧';
-    const number = document.createElement('span'); number.className = 'card-number'; number.textContent = String(index + 1).padStart(2, '0');
     const basemap = document.createElement('span'); basemap.className = 'city-basemap';
-    back.append(basemap, compass, number); button.append(image, back);
+    back.append(basemap, compass); button.append(image, back);
     button.addEventListener('click', () => game.flip(index));
     const explore = document.createElement('button'); explore.type = 'button'; explore.className = 'explore-map'; explore.textContent = '⤢'; explore.hidden = true;
     explore.addEventListener('click', () => openMap(card.map, button));
@@ -134,7 +132,25 @@ function deal(nextMaps) {
     : `Live BTAA maps · ${maps.length} pairs · Flip a card to begin.`;
   if (result.warning) $('status').textContent += ` ${result.warning}`;
   renderCollection(); renderGame('New game ready. Choose a card.');
+  requestAnimationFrame(fitBoard);
 }
+// Fit a complete board beneath the controls while keeping cards touch-friendly.
+// Use document position so scrolling cannot change card sizes or move focused cards.
+function fitBoard() {
+  if (!game.deck.length) return;
+  const compact = window.innerWidth <= 700;
+  const gap = parseFloat(getComputedStyle(board).gap);
+  const rows = Math.ceil(game.deck.length / 4);
+  const top = board.getBoundingClientRect().top + window.scrollY;
+  const available = window.innerHeight - top - 20 - gap * (rows - 1);
+  const height = Math.max(compact ? 72 : 96, Math.min(compact ? 120 : 180, Math.floor(available / rows)));
+  board.style.setProperty('--card-height', `${height}px`);
+  board.style.setProperty('--board-width', compact ? '100%' : `${height * 1.45 * 4 + gap * 3}px`);
+}
+const layoutObserver = new ResizeObserver(() => requestAnimationFrame(fitBoard));
+for (const element of [document.querySelector('.app-header'), document.querySelector('.toolbar'), document.querySelector('.board-heading'), $('status')]) layoutObserver.observe(element);
+window.addEventListener('resize', fitBoard, { passive: true });
+
 function renderCollection() {
   $('mapList').replaceChildren();
   maps.forEach(map => {
@@ -166,7 +182,6 @@ function startCity(selected) {
     result = loaded; loading = false;
     if (!loaded.diagnostics.failed && !loaded.warning) {
       availability[selected.id] = loaded.pool.length;
-      $('cityCount').textContent = `${cityChoices().length} cities`;
       if (!options.hidden) {
         filtered = pendingCity ? cityChoices() : filterCities(input.value, cityChoices());
         active = -1; showOptions();

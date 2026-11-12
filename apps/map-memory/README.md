@@ -66,9 +66,8 @@ checked November 12, 2026. Chicago also covers the University of Chicago library
 | Wisconsin | Milwaukee |
 
 A regression test protects the audit catalog’s state-to-city coverage. The picker
-only includes cities with at least four verified maps; its visible count follows
-that filtered list. Iowa and Wisconsin remain in the audit catalog for restoration
-when enough map imagery becomes available.
+only includes cities with at least four verified maps. Iowa and Wisconsin remain
+in the audit catalog for restoration when enough map imagery becomes available.
 The [dated coverage audit](COVERAGE.md) records all 26 cities and accepted resource
 IDs. The revised pipeline finds 20 playable cities: 17 full boards, plus Columbus
 and Portland with four pairs and San Diego with seven. Atlanta, Denver, Des Moines,
@@ -125,7 +124,15 @@ same full-map lightbox; title links still lead to the Geoportal.
 
 The header uses the official white [BTAA logo](https://geo.btaa.org/btaa-logo.png)
 from the Geoportal, bundled locally in `assets/btaa-logo.png` with its original
-transparency and aspect ratio. The lockup links back to the example-app gallery.
+transparency and aspect ratio. The logo sits to the left of “Geoportal” above
+“Map Memory”; the lockup links back to the example-app gallery. The footer credits
+the BTAA Geospatial API and links to its documentation.
+
+The title lives in the compact header so the game starts directly beneath it.
+The four-column board adapts card height to the viewport, keeping all 16 cards
+visible at the verified desktop and phone sizes. Cards have no decorative numbers;
+accessible position labels remain. A minimum card height preserves usable targets
+on very short screens, where scrolling may still be necessary.
 
 ## City basemap backs
 
@@ -156,7 +163,8 @@ card pattern remains usable if WebGL, the CDN, or tiles are unavailable.
   transit, harbor, and exposition maps; NYC streets, bay, and harbor maps.
   Visual inspection prompted the cover and world-map exclusions above.
 - Keyboard city filtering and explicit selection, NYC alias, replay, completion
-  metadata, focus retention, and responsive two-column cards checked in-browser.
+  metadata, focus retention, and responsive four-column cards checked in-browser.
+  The complete board fits at 1280×800, 390×844, and 320×740 without horizontal overflow.
 - Hover title delay, Escape dismissal, no face-down title leakage, a live confetti
   finish, gallery viewer links/focus return, and a 390px gallery width were checked.
 - Full IIIF viewer opened while playing; zoom, Escape, focus return, and metadata
