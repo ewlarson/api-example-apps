@@ -1,47 +1,48 @@
 # City coverage — November 12, 2026
 
-The revised loader produced **20 playable cities: 17 eight-pair boards and three
-smaller boards**. Only those 20 cities appear in the picker. The six cities with
-fewer than four maps are hidden, and remain in this audit catalog for a future
-coverage refresh. If a selectable city later loses enough imagery, the game explains
-the result, offers retry/alternatives, and removes it from the picker for that session.
-Network failures do not remove cities from the list.
+The visual review supports **19 playable cities: 17 eight-pair boards and two
+smaller boards**. Only those cities appear in the picker. Columbus now has three
+suitable images after removing a text-heavy geology guide; it joins the six
+previously hidden cities until better imagery is reviewed.
 
-Update `coverage.mjs` to restore a hidden city after verifying at least four maps.
-No city-specific UI change is needed.
+Every playable thumbnail must now match a visually approved city/resource ID and
+its exact SHA-256 image digest. A plausible Maps label, title, or geographic subject
+is insufficient. Unknown records and changed image bytes are excluded, including
+on random selections and “New maps.” Searches, metadata and images remain live;
+the approval manifest contains no offline image deck or credentials.
 
-These are dated, sampled loader pools, not exhaustive collection totals or promises
-of future availability. The game always searches and validates live images again.
-Counts above eight provide a pool for “New maps.”
+Counts below are sampled loader pools, not exhaustive collection totals. The
+approved inventory can be larger; a live game retains at most 23 decoded maps.
+Network failures still do not erase coverage counts or masquerade as missing maps.
 
-| City | Usable maps in sampled pool | Board | Notes |
-| --- | ---: | --- | --- |
-| Chicago, IL | 21 | 8 pairs |  |
-| San Francisco, CA | 23 | 8 pairs |  |
-| Seattle, WA | 8 | 8 pairs |  |
-| New York City, NY | 9 | 8 pairs |  |
-| Los Angeles, CA | 19 | 8 pairs |  |
-| Houston, TX | 22 | 8 pairs |  |
-| Philadelphia, PA | 18 | 8 pairs |  |
-| Boston, MA | 20 | 8 pairs |  |
-| Washington, DC | 17 | 8 pairs |  |
-| Atlanta, GA | 3 | Hidden (fewer than 4) | Three usable local maps, including Camp Gordon. |
-| Austin, TX | 22 | 8 pairs |  |
-| Baltimore, MD | 18 | 8 pairs |  |
-| Columbus, OH | 4 | 4 pairs | Four distinct maps, including a reviewed Columbus geological quadrangle. |
-| Dallas, TX | 21 | 8 pairs |  |
-| Denver, CO | 2 | Hidden (fewer than 4) | Two usable maps; remaining candidate has no playable raster. |
-| Des Moines, IA | 1 | Hidden (fewer than 4) | Camp Dodge recovered. City atlas/other candidates lack usable images; distant Des Moines County excluded. |
-| Detroit, MI | 22 | 8 pairs |  |
-| Indianapolis, IN | 23 | 8 pairs |  |
-| Miami, FL | 0 | Hidden (fewer than 4) | No usable raster thumbnails in the checked local candidates. |
-| Milwaukee, WI | 3 | Hidden (fewer than 4) | Highway map and two local survey plats. Most other records have no usable image; blank survey back rejected. |
-| Minneapolis, MN | 20 | 8 pairs |  |
-| New Orleans, LA | 3 | Hidden (fewer than 4) | Near-duplicate exposition scans count once; three distinct maps remain. |
-| Newark, NJ | 20 | 8 pairs |  |
-| Omaha, NE | 8 | 8 pairs | Recovered reviewed city maps with coarse statewide catalog bounds. |
-| Portland, OR | 4 | 4 pairs | Four distinct maps; similar paper colors no longer collapse different images. |
-| San Diego, CA | 7 | 7 pairs | Seven distinct maps, including two reviewed IIIF map sheets instead of covers. |
+| City | Usable maps in sampled pool | Board |
+| --- | ---: | --- |
+| Chicago, IL | 20 | 8 pairs |
+| San Francisco, CA | 20 | 8 pairs |
+| Seattle, WA | 8 | 8 pairs |
+| New York City, NY | 9 | 8 pairs |
+| Los Angeles, CA | 19 | 8 pairs |
+| Houston, TX | 22 | 8 pairs |
+| Philadelphia, PA | 16 | 8 pairs |
+| Boston, MA | 20 | 8 pairs |
+| Washington, DC | 16 | 8 pairs |
+| Atlanta, GA | 3 | Hidden (fewer than 4) |
+| Austin, TX | 23 | 8 pairs |
+| Baltimore, MD | 18 | 8 pairs |
+| Columbus, OH | 3 | Hidden (fewer than 4) |
+| Dallas, TX | 20 | 8 pairs |
+| Denver, CO | 2 | Hidden (fewer than 4) |
+| Des Moines, IA | 1 | Hidden (fewer than 4) |
+| Detroit, MI | 19 | 8 pairs |
+| Indianapolis, IN | 20 | 8 pairs |
+| Miami, FL | 0 | Hidden (fewer than 4) |
+| Milwaukee, WI | 3 | Hidden (fewer than 4) |
+| Minneapolis, MN | 20 | 8 pairs |
+| New Orleans, LA | 3 | Hidden (fewer than 4) |
+| Newark, NJ | 20 | 8 pairs |
+| Omaha, NE | 8 | 8 pairs |
+| Portland, OR | 4 | 4 pairs |
+| San Diego, CA | 7 | 7 pairs |
 
 ## What changed
 
@@ -66,27 +67,49 @@ Counts above eight provide a pool for “New maps.”
   A partial playable pool can survive a later request failure with a warning.
   Failed requests do not overwrite the dated picker availability.
 
-## Evidence and limits
+## Visual evidence and review boundary
 
-[Machine-readable browser audit](coverage-audit.json) records every accepted ID,
-title, thumbnail URL, record link and per-city diagnostics. Public responses were
-fetched from the live API on the date above, with the private affiliate credential
-used only in the local audit process. No credential went to the browser or these
-files. A temporary local harness replayed those same public bytes through the
-actual `loadCity`, `Image.decode` and canvas code in Chromium. The final pass had
-**zero request failures across all 26 cities**. This separates image availability
-from the anonymous browser quota while still checking browser decoding.
+[Visual decisions](visual-review.json) record **477 inspected images**: all 338
+previously accepted pool images, 132 additional collected candidate rasters, and
+seven Philadelphia companion pages freshly fetched from the public API. Review
+covered every city in the 26-city audit catalog (Miami had no usable raster).
+This is a complete review of these collected candidate images, not a claim to have
+inspected every record in the entire BTAA catalog. Unreviewed records are blocked.
 
-All accepted sampled pools were reviewed on contact sheets at roughly card size;
-additional covers, plain-text indexes, unrelated route segments, and similar
-editions were removed during review. Filters are heuristics, and a randomized
-future selection can expose a new catalog or image-quality problem. The audit is
-not a guarantee about every record in the API. Do not raise coverage counts by
-counting placeholders, covers, duplicates or unrelated places.
+The Philadelphia companion pages include six text-only descriptions/tables despite
+map-like titles. Their earlier responses were non-raster fallbacks; later generated
+thumbnails exposed the text pages. The parent map remains eligible. Additional
+exclusions include skyline illustrations, text-dominated sheets, mostly blank or
+faded plans, a corrupted scan, and an atlas key sheet. Each exclusion has a reason.
+Duplicate title/image/reviewed edition groups are removed before compilation.
 
-For a refresh, run the three queries from `searchUrl` for each canonical `CITIES`
-entry, use `loadCity` with deterministic sampling (`random: () => .5`), decode in a
-browser, and inspect accepted images. Keep credentials in a server/CLI audit
-process if needed, never in a browser harness. Update this table, the audit JSON,
-and `coverage.mjs` together only after successful requests. Recheck the narrow
-exceptions against their source images if those records change.
+[Runtime approvals](reviewed-maps.mjs) contain **423 reviewed image digests**.
+Every one decoded successfully through `preloadThumbnail` in Chromium, including
+hash verification, raster dimensions, mask checks and canvas sampling. The actual
+`loadCity` pipeline then ran for all 26 cities with deterministic sampling and zero
+request failures; [browser audit results](coverage-audit.json) record accepted IDs,
+URLs, digests and diagnostics. Public API responses recorded on this date were
+replayed locally so anonymous request quotas did not distort the all-city audit.
+No credential was sent to that browser harness or committed in these files.
+
+Approval is deliberately strict: even a harmless thumbnail re-encoding needs a
+fresh review if its bytes change. The app may consequently show fewer maps until
+review catches up. It never substitutes a new image based only on matching metadata.
+
+## Refreshing the review
+
+1. Collect the three supported `searchUrl` queries for each canonical city and
+   normalize candidates. Save the actual image bytes; inspect the whole proposed
+   inventory at card size, including companion pages, not just eight dealt maps.
+2. Record the ID, city, title, source URL, dimensions, SHA-256 digest, decision and
+   reason in `visual-review.json`. Approve actual legible maps and spatial plans;
+   reject text pages, bindings, covers, index sheets, placeholders and panoramas.
+   Review changed bytes again; never update a digest just to make a test pass.
+3. Run `node apps/map-memory/scripts/compile-review.mjs`. This validates and compiles
+   manual decisions; it does not approve images. It retains the existing duplicate
+   title, image and edition-group protections.
+4. Decode every compiled image with the real browser pipeline, then run `loadCity`
+   for all cities. Update `coverage-audit.json`, this table and `coverage.mjs` only
+   after successful requests. Cities need four distinct reviewed maps to reappear.
+5. Run `node --test apps/map-memory/tests/*.test.mjs` and smoke-test live play.
+   Keep any audit credentials in the CLI/server process, never in browser assets.

@@ -1,4 +1,5 @@
 import test from 'node:test';
+const reviewed = { chicago: Object.fromEntries(Array.from({ length: 4 }, (_, i) => [String(i), 'a'.repeat(64)])) };
 import assert from 'node:assert/strict';
 import { CITIES, normalizeCandidates, deduplicate, filterCities } from '../core.mjs';
 import { isBlankOrMask, REVIEWED_IMAGES } from '../quality.mjs';
@@ -80,6 +81,7 @@ test('an already playable pool survives a later search rate limit with a warning
   let calls = 0;
   const data = Array.from({ length: 4 }, (_, i) => record(String(i), `Chicago map ${i}`, '-87.9,41.6,-87.5,42'));
   const result = await loadCity(city('chicago'), new AbortController().signal, {
+    reviewed,
     fetcher: async () => calls++ === 0 ? Response.json({ data }) : new Response('', { status: 429 }),
     preload: async map => ({ ...map, hash: map.id }),
   });
@@ -120,12 +122,12 @@ test('reviewed Columbus quadrangle is local while unreviewed statewide bounds st
 
 test('picker only offers audited cities with at least four playable maps', () => {
   const choices = playableCities(CITIES, COVERAGE);
-  assert.equal(choices.length, 20);
-  for (const id of ['atlanta', 'denver', 'des-moines', 'miami', 'milwaukee', 'new-orleans']) {
+  assert.equal(choices.length, 19);
+  for (const id of ['atlanta', 'columbus', 'denver', 'des-moines', 'miami', 'milwaukee', 'new-orleans']) {
     assert(!choices.some(city => city.id === id));
     assert.equal(filterCities(city(id).name, choices).length, 0);
   }
-  assert(choices.some(city => city.id === 'columbus'));
+  assert(choices.some(city => city.id === 'portland'));
   assert.deepEqual(playableCities(CITIES, { chicago: 3, milwaukee: 4 }).map(city => city.id), ['milwaukee']);
   assert.deepEqual(playableCities(CITIES, {}).map(city => city.id), []);
 });

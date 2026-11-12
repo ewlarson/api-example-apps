@@ -1,5 +1,6 @@
 import { normalizeCandidates, deduplicate, shuffle } from './core.mjs';
 import { isBlankOrMask } from './quality.mjs';
+import { REVIEWED_MAPS } from './reviewed-maps.mjs';
 export const API_BASE = 'https://geo.btaa.org/api/v1';
 export function searchUrl(city, fallback = false, page = 1) {
   const params = new URLSearchParams({ per_page: '100', page: String(page), sort: 'relevance' });
@@ -50,12 +51,23 @@ export function imagesSimilar(a, b) {
   return vx > 0 && vy > 0 && covariance / Math.sqrt(vx * vy) > .97;
 }
 
+// A record's map label is not proof that its thumbnail depicts a map.
+// Only reviewed city/resource pairs enter sampling; changed image bytes fail closed.
+export function reviewCandidates(candidates, cityId, reviewed = REVIEWED_MAPS) {
+  return candidates.flatMap(map => {
+    const reviewedHash = reviewed[cityId]?.[map.id];
+    return /^[a-f0-9]{64}$/.test(reviewedHash || '') ? [{ ...map, reviewedHash }] : [];
+  });
+}
+
 // Read the response, not just <img>.onload: the API's SVG fallback also loads successfully.
 export async function preloadThumbnail(resource, signal, fetcher = fetch) {
+  if (!/^[a-f0-9]{64}$/.test(resource.reviewedHash || '')) return null;
   const response = await fetchResponse(resource.thumbnailUrl, signal, fetcher);
   if (!/^image\/(jpeg|png|webp|avif)(?:;|$)/i.test(response.headers.get('content-type') || '') || /placeholder/i.test(response.url)) return null;
   const blob = await response.blob();
   const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', await blob.arrayBuffer())), byte => byte.toString(16).padStart(2, '0')).join('');
+  if (hash !== resource.reviewedHash) return null;
   const imageUrl = URL.createObjectURL(blob);
   try {
     const image = new Image();
@@ -115,7 +127,7 @@ export async function collectUsable(candidates, signal, preload = preloadThumbna
   }
 }
 
-export async function loadCity(city, signal, { fetcher = fetch, preload = preloadThumbnail, random = Math.random } = {}) {
+export async function loadCity(city, signal, { fetcher = fetch, preload = preloadThumbnail, random = Math.random, reviewed = REVIEWED_MAPS } = {}) {
   let pool = [], seen = new Set();
   const diagnostics = { candidates: 0, checked: 0, rejected: 0, failed: 0, timedOut: 0 };
   const result = (warning = '') => ({ pool, diagnostics, warning, dispose: () => pool.forEach(map => map.dispose?.()) });
@@ -123,7 +135,7 @@ export async function loadCity(city, signal, { fetcher = fetch, preload = preloa
     for (const fallback of [false, true, 'nearby']) {
       const response = await fetchResponse(searchUrl(city, fallback), signal, fetcher);
       const payload = await response.json();
-      const candidates = deduplicate([...pool, ...normalizeCandidates(payload, city)]).filter(map => !seen.has(`${map.id}:${map.thumbnailUrl}`));
+      const candidates = deduplicate([...pool, ...reviewCandidates(normalizeCandidates(payload, city), city.id, reviewed)]).filter(map => !seen.has(`${map.id}:${map.thumbnailUrl}`));
       candidates.forEach(map => seen.add(`${map.id}:${map.thumbnailUrl}`));
       diagnostics.candidates += candidates.length;
       // Keep top-ranked distinctive maps, plus a rotating sample for fresh games.

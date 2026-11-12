@@ -6,6 +6,7 @@ const maps = Array.from({ length: 8 }, (_, i) => ({ id: String(i), title: `Map $
 const chicago = CITIES[0];
 const record = (i, overrides = {}) => ({ id: String(i), attributes: { ogm: { dct_title_s: `Chicago map ${i}`, gbl_resourceClass_sm: ['Maps'], dct_spatial_sm: ['Illinois--Chicago'], dcat_bbox: '-87.9,41.6,-87.5,42', ...overrides } }, meta: { ui: { thumbnail_url: `https://geo.btaa.org/api/v1/thumbnails/${i}` } } });
 const controller = () => new AbortController();
+const reviewed = { chicago: Object.fromEntries(Array.from({ length: 100 }, (_, i) => [String(i), 'a'.repeat(64)])) };
 
 test('city catalog has 26 canonical choices, aliases, and separate search labels', () => {
   assert.equal(CITIES.length, 26);
@@ -93,13 +94,14 @@ test('unloadable and duplicate images are excluded; insufficient pools stay smal
   assert.equal(pool.length, 5); assert.equal(disposed, 1);
 });
 test('SVG placeholders are rejected before image decoding', async () => {
-  const result = await preloadThumbnail(maps[0], controller().signal, async () => new Response('<svg/>', { headers: { 'Content-Type': 'image/svg+xml' } }));
+  const result = await preloadThumbnail({ ...maps[0], reviewedHash: 'a'.repeat(64) }, controller().signal, async () => new Response('<svg/>', { headers: { 'Content-Type': 'image/svg+xml' } }));
   assert.equal(result, null);
 });
 for (const count of [3, 4, 7, 8]) {
   test(`mock API with ${count} usable thumbnails ${count < 8 ? 'tries fallback' : 'finishes primary search'}`, async () => {
     const urls = [];
     const result = await loadCity(chicago, controller().signal, {
+      reviewed,
       fetcher: async url => { urls.push(url); return new Response(JSON.stringify({ data: Array.from({ length: 12 }, (_, i) => record(i)) })); },
       preload: async map => Number(map.id) < count ? { ...map, hash: map.id } : null,
       random: () => .5,
@@ -121,6 +123,7 @@ test('atlas covers and brochures do not become playable map thumbnails', () => {
 test('fallback contributes new maps without reintroducing duplicate titles', async () => {
   let calls = 0;
   const result = await loadCity(chicago, controller().signal, {
+      reviewed,
     fetcher: async () => {
       const data = calls++ === 0 ? [record(0), record(1), record(2)] : [record(99, { dct_title_s: 'Chicago map 0' }), ...Array.from({ length: 8 }, (_, i) => record(i))];
       return new Response(JSON.stringify({ data }));

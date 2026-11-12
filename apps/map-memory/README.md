@@ -69,10 +69,11 @@ A regression test protects the audit catalog’s state-to-city coverage. The pic
 only includes cities with at least four verified maps. Iowa and Wisconsin remain
 in the audit catalog for restoration when enough map imagery becomes available.
 The [dated coverage audit](COVERAGE.md) records all 26 cities and accepted resource
-IDs. The revised pipeline finds 20 playable cities: 17 full boards, plus Columbus
-and Portland with four pairs and San Diego with seven. Atlanta, Denver, Des Moines,
-Miami, Milwaukee and New Orleans still fall below four maps and are hidden from
-the picker. The 20 selectable cities show their board size before selection.
+IDs. The reviewed pipeline finds 19 playable cities: 17 full boards, plus Portland
+with four pairs and San Diego with seven. Columbus now has only three suitable
+maps after visual review. Atlanta, Denver, Des Moines,
+Miami, Milwaukee and New Orleans also fall below four maps and are hidden from
+the picker. The 19 selectable cities show their board size before selection.
 Each game checks live availability again; if a previously playable city falls below
 four, it is removed from the picker for the session and offers retry/alternatives.
 API failures do not remove a city. A future coverage refresh can restore hidden cities.
@@ -89,6 +90,13 @@ excluded. Atlas/insurance volumes, cover/index identifiers, Maps Index masks and
 known non-map previews are excluded. Four records with cover thumbnails use a
 reviewed page-2 map image from their API-linked IIIF manifests; an exact manifest
 match is required and the lightbox identifies the preview page.
+
+Every candidate must appear in the visually reviewed city/resource inventory in
+`reviewed-maps.mjs`; its downloaded bytes must match the approved SHA-256 digest
+before decoding. This prevents text-only companion sheets and other non-map images
+from slipping into random selections. Unknown records and changed images wait for
+review. See [all 477 visual decisions](visual-review.json) and the refresh workflow
+in [coverage notes](COVERAGE.md). All 423 compiled images passed browser decoding.
 
 `api.mjs` requests up to 100 records per query and inspects at most 48 candidates,
 four thumbnails at a time. Distinctive subjects are prioritized, with a randomized
@@ -117,15 +125,17 @@ focus to the card and resumes play. Revealed cards show their titles after a 450
 hover dwell, immediately on keyboard focus, and dismiss on Escape; face-down title
 content stays empty. A win fires a local canvas confetti burst once per game, with
 cleanup on replay/city switch. Reduced motion uses the festive static completion
-panel instead. The post-game collection uses a compact grid with thumbnails capped at 200×156px
-and never enlarged beyond their natural dimensions. Previews open the same full-map lightbox; title links still lead to the Geoportal.
+panel instead. The post-game collection uses a compact grid with thumbnails capped
+at 200×156px and never enlarged beyond their natural dimensions. Previews open the
+same full-map lightbox; title links still lead to the Geoportal.
 
 ## Header branding
 
 The header uses the official white [BTAA logo](https://geo.btaa.org/btaa-logo.png)
 from the Geoportal, bundled locally in `assets/btaa-logo.png` with its original
-transparency and aspect ratio. The logo sits to the left of “Geoportal” above
-“Map Memory”, separated by a pale vertical rule with balanced spacing;
+transparency and aspect ratio. The logo, a pale vertical divider, “Geoportal”, and “Map Memory” share one
+horizontal line, with matching type sizes and a shared baseline. Weight separates
+“Geoportal” from “Map Memory”. Navigation links move beneath the lockup on narrow screens;
 the lockup links back to the example-app gallery. Explicit “Example apps” and
 “API docs” links also appear in the top navigation. The footer credits
 the BTAA Geospatial API and links to its documentation.
@@ -154,10 +164,12 @@ card pattern remains usable if WebGL, the CDN, or tiles are unavailable.
 
 ## Verification
 
-- 44 repeatable Node tests: deck construction, dedupe/relevance, pair matching,
+- 49 repeatable Node tests: deck construction, dedupe/relevance, pair matching,
   mismatch timing, reset, modal pause/resume, stale city success/error, cancellation
   cleanup, unusable images, 3/4/7/8-map results, fallback queries, Pages assets, and
-  one-shot confetti, replay cancellation, and reduced-motion behavior. Added quality
+  one-shot confetti, replay cancellation, and reduced-motion behavior. Visual-review
+  regressions cover Philadelphia text pages, city-specific approval, changed image
+  bytes, unknown candidates, and insufficient reviewed maps. Added quality
   regressions cover masks, covers/indexes, coarse bounds, exact IIIF references,
   duplicate editions, similar paper colors, route segments and error diagnostics.
 - All 26 cities passed the browser decoding audit; see [coverage evidence](COVERAGE.md).
@@ -190,7 +202,12 @@ One live Milwaukee attempt encountered a fetch failure; it showed an API error
 rather than claiming zero maps. The successful recorded-response audit is the
 basis for its three-map availability count.
 
-The final picker was checked in the browser with exactly 20 options. Hidden cities
+The final visual-review pass decoded all 423 approved images and ran all 26 city
+loaders without request failures. Two live Philadelphia decks were completed by
+keyboard; “New maps” replaced all eight maps, with no text pages. Live San Francisco,
+Seattle and New York City still produced full decks after enabling digest checks.
+
+The picker now contains exactly 19 reviewed, playable options. Hidden cities
 are excluded from both filtering and typed form submission; keyboard selection and
 the 390px picker layout were rechecked.
 
@@ -209,3 +226,5 @@ the 390px picker layout were rechecked.
 ![Picker showing only cities with playable maps](screenshots/cities.jpg)
 
 [Mobile city picker](screenshots/cities-mobile.jpg)
+
+![Reviewed Philadelphia map deck](screenshots/philadelphia-reviewed.jpg)
