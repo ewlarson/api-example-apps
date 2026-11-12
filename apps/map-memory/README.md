@@ -130,6 +130,8 @@ the lockup links back to the example-app gallery. The footer credits
 the BTAA Geospatial API and links to its documentation.
 
 The title lives in the compact header so the game starts directly beneath it.
+Header contents, controls, board, collection, and footer share one centered width
+and responsive side gutters; the board fills that width without another inset.
 The four-column board adapts card height to the viewport, keeping all 16 cards
 visible at the verified desktop and phone sizes. Cards have no decorative numbers;
 accessible position labels remain. A minimum card height preserves usable targets

@@ -145,7 +145,6 @@ function fitBoard() {
   const available = window.innerHeight - top - 20 - gap * (rows - 1);
   const height = Math.max(compact ? 72 : 96, Math.min(compact ? 120 : 180, Math.floor(available / rows)));
   board.style.setProperty('--card-height', `${height}px`);
-  board.style.setProperty('--board-width', compact ? '100%' : `${height * 1.45 * 4 + gap * 3}px`);
 }
 const layoutObserver = new ResizeObserver(() => requestAnimationFrame(fitBoard));
 for (const element of [document.querySelector('.app-header'), document.querySelector('.toolbar'), document.querySelector('.board-heading'), $('status')]) layoutObserver.observe(element);

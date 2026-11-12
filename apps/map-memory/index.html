@@ -12,10 +12,12 @@
 <body>
   <canvas id="confetti" aria-hidden="true" hidden></canvas>
   <header class="app-header">
-    <a class="brand" href="../../"><img class="brand-logo" src="assets/btaa-logo.png" alt="Big Ten Academic Alliance" width="651" height="383"><div class="brand-wordmark"><span class="brand-caption">Geoportal</span><h1 id="title">Map Memory</h1></div></a>
-    <a href="https://geo.btaa.org/api/docs">API docs ↗</a>
+    <div class="header-inner page-width">
+      <a class="brand" href="../../"><img class="brand-logo" src="assets/btaa-logo.png" alt="Big Ten Academic Alliance" width="651" height="383"><div class="brand-wordmark"><span class="brand-caption">Geoportal</span><h1 id="title">Map Memory</h1></div></a>
+      <a href="https://geo.btaa.org/api/docs">API docs ↗</a>
+    </div>
   </header>
-  <main>
+  <main class="page-width">
     <section class="toolbar" aria-label="Game controls">
       <form id="cityForm">
         <label class="sr-only" for="citySearch">Choose a city</label>
@@ -50,6 +52,6 @@
       <aside class="map-metadata" aria-label="Map metadata"><dl id="mapMetadata"></dl><p id="mapDescription"></p><a id="mapRecordLink" class="record-action" target="_blank" rel="noreferrer">Explore in the BTAA Geoportal ↗</a><p class="help">Your game is paused while you explore.</p></aside>
     </div>
   </dialog>
-  <footer><span>Powered by the <a href="https://geo.btaa.org/api/docs">BTAA Geospatial API</a></span><span>Live maps from library collections · <a href="../../">All example apps</a></span></footer>
+  <footer class="page-width"><span>Powered by the <a href="https://geo.btaa.org/api/docs">BTAA Geospatial API</a></span><span>Live maps from library collections · <a href="../../">All example apps</a></span></footer>
 </body>
 </html>
