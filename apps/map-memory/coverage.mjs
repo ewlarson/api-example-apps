@@ -37,3 +37,9 @@ export function suggestedCities(city, cities, coverage) {
   return cities.filter(other => other.id !== city.id && coverage[other.id] >= 4)
     .sort((a, b) => Number(b.state === city.state) - Number(a.state === city.state) || distance(a) - distance(b)).slice(0, 3);
 }
+
+// Keep audited cities in the catalog for future coverage refreshes, but only
+// offer cities that can currently supply the minimum four distinct maps.
+export function playableCities(cities, coverage) {
+  return cities.filter(city => Number.isInteger(coverage[city.id]) && coverage[city.id] >= 4);
+}

@@ -34,9 +34,9 @@ export const normalize = (value) => String(value ?? '').toLowerCase().replace(/[
 // Inspected live thumbnails: a folded map's cover and a world map mis-bounded to SF.
 const NON_MAP_THUMBNAILS = new Set(['stanford-hm701yz9300', 'eacef6c9-3b5a-41e0-83ee-098d84947ad9']);
 const text = (value) => Array.isArray(value) ? value.join(', ') : String(value ?? '');
-export function filterCities(query) {
+export function filterCities(query, cities = CITIES) {
   const needle = normalize(query);
-  return CITIES.filter(city => [city.label, city.stateName, ...city.aliases].some(value => normalize(value).includes(needle)));
+  return cities.filter(city => [city.label, city.stateName, ...city.aliases].some(value => normalize(value).includes(needle)));
 }
 
 export function normalizeCandidates(payload, city) {

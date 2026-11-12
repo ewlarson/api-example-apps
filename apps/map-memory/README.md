@@ -43,7 +43,7 @@ inspected actual responses:
 
 ## Geographic coverage
 
-The picker includes 26 cities, preserving the original choices and representing all
+The audit catalog includes 26 cities, preserving the original choices and representing all
 14 states in the [BTAA university roster](https://btaa.org/about/member-universities)
 and [member-library roster](https://btaa.org/library/who-we-are/member-libraries),
 checked November 12, 2026. Chicago also covers the University of Chicago library.
@@ -65,14 +65,18 @@ checked November 12, 2026. Chicago also covers the University of Chicago library
 | Washington | Seattle |
 | Wisconsin | Milwaukee |
 
-A regression test protects this state-to-city coverage. The visible city count is
-derived from the picker data so it stays current as the collection grows.
+A regression test protects the audit catalog’s state-to-city coverage. The picker
+only includes cities with at least four verified maps; its visible count follows
+that filtered list. Iowa and Wisconsin remain in the audit catalog for restoration
+when enough map imagery becomes available.
 The [dated coverage audit](COVERAGE.md) records all 26 cities and accepted resource
 IDs. The revised pipeline finds 20 playable cities: 17 full boards, plus Columbus
 and Portland with four pairs and San Diego with seven. Atlanta, Denver, Des Moines,
-Miami, Milwaukee and New Orleans still fall below four maps. The picker displays
-availability before selection; insufficient results offer retry and three verified
-playable alternatives. Each game checks live availability again.
+Miami, Milwaukee and New Orleans still fall below four maps and are hidden from
+the picker. The 20 selectable cities show their board size before selection.
+Each game checks live availability again; if a previously playable city falls below
+four, it is removed from the picker for the session and offers retry/alternatives.
+API failures do not remove a city. A future coverage refresh can restore hidden cities.
 
 ## Selection and game behavior
 
@@ -133,7 +137,7 @@ card pattern remains usable if WebGL, the CDN, or tiles are unavailable.
 
 ## Verification
 
-- 43 repeatable Node tests: deck construction, dedupe/relevance, pair matching,
+- 44 repeatable Node tests: deck construction, dedupe/relevance, pair matching,
   mismatch timing, reset, modal pause/resume, stale city success/error, cancellation
   cleanup, unusable images, 3/4/7/8-map results, fallback queries, Pages assets, and
   one-shot confetti, replay cancellation, and reduced-motion behavior. Added quality
@@ -168,6 +172,10 @@ One live Milwaukee attempt encountered a fetch failure; it showed an API error
 rather than claiming zero maps. The successful recorded-response audit is the
 basis for its three-map availability count.
 
+The final picker was checked in the browser with exactly 20 options. Hidden cities
+are excluded from both filtering and typed form submission; keyboard selection and
+the 390px picker layout were rechecked.
+
 ## Screenshots
 
 ![Map Memory with city basemap card backs](screenshots/desktop.jpg)
@@ -180,4 +188,6 @@ basis for its three-map availability count.
 
 ![Large post-game map previews](screenshots/collection.jpg)
 
-![City availability and playable alternatives](screenshots/availability.jpg)
+![Picker showing only cities with playable maps](screenshots/cities.jpg)
+
+[Mobile city picker](screenshots/cities-mobile.jpg)

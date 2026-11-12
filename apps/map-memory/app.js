@@ -1,14 +1,15 @@
 import { CITIES, filterCities, normalize, chooseMaps, MemoryGame, LatestRequest } from './core.mjs';
-import { COVERAGE, COVERAGE_DATE, availabilityLabel, suggestedCities } from './coverage.mjs';
+import { COVERAGE, COVERAGE_DATE, availabilityLabel, suggestedCities, playableCities } from './coverage.mjs';
 import { loadCity } from './api.mjs';
 import { renderCityBasemap } from './basemap.mjs';
 import { createCelebration } from './celebration.mjs';
 
 const $ = id => document.getElementById(id);
 const input = $('citySearch'), options = $('cityOptions'), board = $('board');
-$('cityCount').textContent = `${CITIES.length} cities`;
-let city = CITIES[0], pendingCity = city, filtered = CITIES, active = -1;
 const availability = { ...COVERAGE };
+const cityChoices = () => playableCities(CITIES, availability);
+$('cityCount').textContent = `${cityChoices().length} cities`;
+let city = CITIES[0], pendingCity = city, filtered = cityChoices(), active = -1;
 let result = null, maps = [], buttons = [], loading = false;
 const requests = new LatestRequest();
 const basemapRequests = new LatestRequest();
@@ -45,8 +46,8 @@ function selectCity(item) {
   pendingCity = item; input.value = item.label; closePicker();
   $('cityHelp').textContent = `${item.label}: ${availabilityLabel(availability[item.id])}. Last checked ${COVERAGE_DATE}. Start game checks again.`;
 }
-input.addEventListener('focus', () => { filtered = pendingCity ? CITIES : filterCities(input.value); active = -1; showOptions(); });
-input.addEventListener('input', () => { pendingCity = null; filtered = filterCities(input.value); active = -1; showOptions(); });
+input.addEventListener('focus', () => { filtered = pendingCity ? cityChoices() : filterCities(input.value, cityChoices()); active = -1; showOptions(); });
+input.addEventListener('input', () => { pendingCity = null; filtered = filterCities(input.value, cityChoices()); active = -1; showOptions(); });
 input.addEventListener('blur', closePicker);
 input.addEventListener('keydown', event => {
   if (event.key === 'Escape') { closePicker(); return; }
@@ -61,7 +62,7 @@ input.addEventListener('keydown', event => {
 $('cityForm').addEventListener('submit', event => {
   event.preventDefault();
   const query = normalize(input.value);
-  const selected = pendingCity || CITIES.find(item => [item.label, item.name, ...item.aliases].some(label => normalize(label) === query));
+  const selected = pendingCity || cityChoices().find(item => [item.label, item.name, ...item.aliases].some(label => normalize(label) === query));
   if (!selected) {
     $('cityHelp').textContent = 'Choose one of the listed cities before starting.';
     input.focus(); return;
@@ -163,7 +164,14 @@ function startCity(selected) {
   board.setAttribute('aria-busy', 'true'); $('status').textContent = `Finding and checking maps of ${city.name}…`;
   requests.run(signal => loadCity(selected, signal), loaded => {
     result = loaded; loading = false;
-    if (!loaded.diagnostics.failed && !loaded.warning) availability[selected.id] = loaded.pool.length;
+    if (!loaded.diagnostics.failed && !loaded.warning) {
+      availability[selected.id] = loaded.pool.length;
+      $('cityCount').textContent = `${cityChoices().length} cities`;
+      if (!options.hidden) {
+        filtered = pendingCity ? cityChoices() : filterCities(input.value, cityChoices());
+        active = -1; showOptions();
+      }
+    }
     if (loaded.pool.length < 4) {
       board.setAttribute('aria-busy', 'false'); $('retry').hidden = false;
       const { candidates, failed, timedOut } = loaded.diagnostics;

@@ -7,7 +7,7 @@ const chicago = CITIES[0];
 const record = (i, overrides = {}) => ({ id: String(i), attributes: { ogm: { dct_title_s: `Chicago map ${i}`, gbl_resourceClass_sm: ['Maps'], dct_spatial_sm: ['Illinois--Chicago'], dcat_bbox: '-87.9,41.6,-87.5,42', ...overrides } }, meta: { ui: { thumbnail_url: `https://geo.btaa.org/api/v1/thumbnails/${i}` } } });
 const controller = () => new AbortController();
 
-test('city picker has 26 canonical choices, aliases, and separate search labels', () => {
+test('city catalog has 26 canonical choices, aliases, and separate search labels', () => {
   assert.equal(CITIES.length, 26);
   assert.equal(filterCities('NYC')[0].term, 'New York');
   assert.equal(filterCities('dc')[0].label, 'Washington, DC');
@@ -161,7 +161,7 @@ test('full viewer and metadata preserve safe record URLs and source fields', () 
   assert.equal(map.viewerUrl, 'https://geo.btaa.org/api/v1/resources/0/ogm-viewer?embed=true');
 });
 
-test('every BTAA member state has a major urban area in the city picker', () => {
+test('every BTAA member state has a major urban area in the audited city catalog', () => {
   // Current university and member-library rosters, checked November 12, 2026:
   // https://btaa.org/about/member-universities
   // https://btaa.org/library/who-we-are/member-libraries

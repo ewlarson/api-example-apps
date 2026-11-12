@@ -17,7 +17,7 @@ The root page is an app gallery. Each demo lives in its own folder under `apps/`
 - `apps/search-fight/` - compares two keyword searches by total matches and indexed-year facet counts.
 - `apps/metadata-scorecard/` - fetches a resource by ID, displays its OGM metadata record, and scores metadata quality from a CSV scoring matrix.
 - `apps/btaa-road-trip/` - follows the 18 BTAA campuses from Rutgers to the Pacific coast and loads map records for each stop.
-- `apps/map-memory/` - matches real map thumbnails from 26 U.S. city choices, with dated availability labels and major urban areas in every BTAA state. [Coverage audit](apps/map-memory/COVERAGE.md): 20 currently playable cities.
+- `apps/map-memory/` - matches real map thumbnails from 20 playable U.S. city choices. Cities without enough maps stay out of the picker until coverage improves. [Coverage audit of 26 cities](apps/map-memory/COVERAGE.md).
 
 ## Links
 
@@ -125,7 +125,7 @@ blank images are rejected; reviewed IIIF map sheets can replace known covers.
 It samples up to 48 candidates per query and retains up to 23 usable
 images for New maps; Play again reshuffles the current deck. Four to seven maps
 produce a smaller board; fewer than four show retry and playable-city suggestions.
-Dated picker labels disclose availability before selection; API failures remain
+The picker only offers cities with at least four verified maps and shows board size; API failures remain
 distinct from missing imagery.
 
 The public API and thumbnail endpoints allow browser CORS requests from the Pages

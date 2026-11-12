@@ -1,9 +1,14 @@
 # City coverage — November 12, 2026
 
 The revised loader produced **20 playable cities: 17 eight-pair boards and three
-smaller boards**. All 26 cities remain selectable, preserving every BTAA state.
-Six cities still have fewer than four usable maps; their picker labels and result
-screens explain this and offer retry plus nearby playable city choices.
+smaller boards**. Only those 20 cities appear in the picker. The six cities with
+fewer than four maps are hidden, and remain in this audit catalog for a future
+coverage refresh. If a selectable city later loses enough imagery, the game explains
+the result, offers retry/alternatives, and removes it from the picker for that session.
+Network failures do not remove cities from the list.
+
+Update `coverage.mjs` to restore a hidden city after verifying at least four maps.
+No city-specific UI change is needed.
 
 These are dated, sampled loader pools, not exhaustive collection totals or promises
 of future availability. The game always searches and validates live images again.
@@ -20,19 +25,19 @@ Counts above eight provide a pool for “New maps.”
 | Philadelphia, PA | 18 | 8 pairs |  |
 | Boston, MA | 20 | 8 pairs |  |
 | Washington, DC | 17 | 8 pairs |  |
-| Atlanta, GA | 3 | Not enough maps | Three usable local maps, including Camp Gordon. |
+| Atlanta, GA | 3 | Hidden (fewer than 4) | Three usable local maps, including Camp Gordon. |
 | Austin, TX | 22 | 8 pairs |  |
 | Baltimore, MD | 18 | 8 pairs |  |
 | Columbus, OH | 4 | 4 pairs | Four distinct maps, including a reviewed Columbus geological quadrangle. |
 | Dallas, TX | 21 | 8 pairs |  |
-| Denver, CO | 2 | Not enough maps | Two usable maps; remaining candidate has no playable raster. |
-| Des Moines, IA | 1 | Not enough maps | Camp Dodge recovered. City atlas/other candidates lack usable images; distant Des Moines County excluded. |
+| Denver, CO | 2 | Hidden (fewer than 4) | Two usable maps; remaining candidate has no playable raster. |
+| Des Moines, IA | 1 | Hidden (fewer than 4) | Camp Dodge recovered. City atlas/other candidates lack usable images; distant Des Moines County excluded. |
 | Detroit, MI | 22 | 8 pairs |  |
 | Indianapolis, IN | 23 | 8 pairs |  |
-| Miami, FL | 0 | Not enough maps | No usable raster thumbnails in the checked local candidates. |
-| Milwaukee, WI | 3 | Not enough maps | Highway map and two local survey plats. Most other records have no usable image; blank survey back rejected. |
+| Miami, FL | 0 | Hidden (fewer than 4) | No usable raster thumbnails in the checked local candidates. |
+| Milwaukee, WI | 3 | Hidden (fewer than 4) | Highway map and two local survey plats. Most other records have no usable image; blank survey back rejected. |
 | Minneapolis, MN | 20 | 8 pairs |  |
-| New Orleans, LA | 3 | Not enough maps | Near-duplicate exposition scans count once; three distinct maps remain. |
+| New Orleans, LA | 3 | Hidden (fewer than 4) | Near-duplicate exposition scans count once; three distinct maps remain. |
 | Newark, NJ | 20 | 8 pairs |  |
 | Omaha, NE | 8 | 8 pairs | Recovered reviewed city maps with coarse statewide catalog bounds. |
 | Portland, OR | 4 | 4 pairs | Four distinct maps; similar paper colors no longer collapse different images. |

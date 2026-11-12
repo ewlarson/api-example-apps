@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { CITIES, normalizeCandidates, deduplicate } from '../core.mjs';
+import { CITIES, normalizeCandidates, deduplicate, filterCities } from '../core.mjs';
 import { isBlankOrMask, REVIEWED_IMAGES } from '../quality.mjs';
 import { loadCity, collectUsable, ApiError, searchUrl, imagesSimilar } from '../api.mjs';
-import { availabilityLabel, suggestedCities } from '../coverage.mjs';
+import { availabilityLabel, suggestedCities, playableCities, COVERAGE } from '../coverage.mjs';
 const city = id => CITIES.find(value => value.id === id);
 const record = (id, title, bbox, spatial = [], extra = {}) => ({ id, attributes: { ogm: {
   dct_title_s: title, dcat_bbox: bbox, dct_spatial_sm: spatial, gbl_resourceClass_sm: ['Maps'], ...extra,
@@ -116,4 +116,16 @@ test('reviewed Columbus quadrangle is local while unreviewed statewide bounds st
   const box = '-84.820,38.403,-80.519,42.323';
   assert.equal(candidates([record('osu-dz0114110', 'Quaternary geology of Ohio, Columbus quadrangle', box)], 'columbus').length, 1);
   assert.equal(candidates([record('unreviewed-ohio', 'Columbus geological map', box)], 'columbus').length, 0);
+});
+
+test('picker only offers audited cities with at least four playable maps', () => {
+  const choices = playableCities(CITIES, COVERAGE);
+  assert.equal(choices.length, 20);
+  for (const id of ['atlanta', 'denver', 'des-moines', 'miami', 'milwaukee', 'new-orleans']) {
+    assert(!choices.some(city => city.id === id));
+    assert.equal(filterCities(city(id).name, choices).length, 0);
+  }
+  assert(choices.some(city => city.id === 'columbus'));
+  assert.deepEqual(playableCities(CITIES, { chicago: 3, milwaukee: 4 }).map(city => city.id), ['milwaukee']);
+  assert.deepEqual(playableCities(CITIES, {}).map(city => city.id), []);
 });
