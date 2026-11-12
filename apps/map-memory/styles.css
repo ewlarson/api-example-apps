@@ -106,9 +106,10 @@ button:focus-visible,a:focus-visible,input:focus-visible {
   color:#fff;
 }
 
-h1 {
+.brand-wordmark h1 {
   font:inherit;
-  font-weight:400;
+  font-size:.92em;
+  font-weight:600;
   letter-spacing:inherit;
   margin:0;
   white-space:nowrap;

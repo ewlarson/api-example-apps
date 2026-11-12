@@ -134,8 +134,8 @@ same full-map lightbox; title links still lead to the Geoportal.
 The header uses the official white [BTAA logo](https://geo.btaa.org/btaa-logo.png)
 from the Geoportal, bundled locally in `assets/btaa-logo.png` with its original
 transparency and aspect ratio. The logo, a pale vertical divider, “Geoportal”, and “Map Memory” share one
-horizontal line, with matching type sizes and a shared baseline. Weight separates
-“Geoportal” from “Map Memory”. Navigation links move beneath the lockup on narrow screens;
+horizontal line with a shared typeface and baseline. “Geoportal” is bold;
+“Map Memory” is slightly smaller and semibold to balance its wider name. Navigation links move beneath the lockup on narrow screens;
 the lockup links back to the example-app gallery. Explicit “Example apps” and
 “API docs” links also appear in the top navigation. The footer credits
 the BTAA Geospatial API and links to its documentation.
